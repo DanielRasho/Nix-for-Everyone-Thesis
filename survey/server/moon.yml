@@ -1,0 +1,37 @@
+tasks:
+  dev:
+    command: air
+    options:
+      persistent: true
+  build:
+    # Same build as the Dockerfile, output in tmp/ (ignored by git and docker)
+    command: go build -trimpath -o ./tmp/server ./cmd/main.go
+    outputs:
+      - tmp/server
+  test:
+    # Integration tests against the running API (moon run server:dev)
+    command: pnpm vitest run --no-color --bail=1 --fileParallelism=false
+    deps:
+      - ~:setup
+    options:
+      cache: false
+  test-unit:
+    command: go test ./...
+  gen:
+    # Regenerates internal/storage/survey_db from db/queries.sql and ../db/schema.sql
+    command: sqlc generate
+    options:
+      cache: false
+  setup:
+    command: pnpm install
+  docker-build:
+    # REGISTRY (default docker.io/danielrasho) and TAG (default latest) from the env
+    script: docker build -t "${REGISTRY:-docker.io/danielrasho}/nixty-survey-server:${TAG:-latest}" .
+    options:
+      cache: false
+  docker-push:
+    script: docker push "${REGISTRY:-docker.io/danielrasho}/nixty-survey-server:${TAG:-latest}"
+    deps:
+      - ~:docker-build
+    options:
+      cache: false

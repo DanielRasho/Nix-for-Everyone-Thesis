@@ -1,0 +1,58 @@
+# Asked at the end of every survey. "{tool}" is replaced by the survey's `tool`.
+# Source: annex/4/survey_nixlang_phase3.typ
+questions:
+  - id: intro
+    kind: info
+    prompt: |
+      ## Evaluación de {tool}
+
+      Gracias por tu tiempo. Con tu ayuda, nos gustaría examinar como usuarios perciben la usabilidad de _{tool}_. Esto nos ayudara a encontrar areas de optimización de una manera que sea tan eficiente y comprensible como sea posible.
+
+      No te detengas demasiado en las combinaciones de palabras y realiza tu evaluación de forma espontánea. Puede que algunas combinaciones no te parezcan del todo adecuadas para el producto. Sin embargo, te pedimos que des tu opinión de todos modos. Recuerda que no hay respuestas correctas ni incorrectas; lo que cuenta es tu opinión personal.
+
+  - id: experience
+    kind: likert
+    scale: 7
+    prompt: ¿Cómo calificarias la experiencia de usuario de {tool}?
+    items:
+      - { id: rating, left: Bueno, right: Malo }
+
+  - id: needs
+    kind: likert
+    scale: 7
+    prompt: ¿Qué tan bien {tool} respondió a tus necesidades?
+    items:
+      - { id: rating, left: Para nada, right: Completamente }
+
+  - id: word-pairs
+    kind: likert
+    scale: 7
+    prompt: Con la ayuda de los pares de palabras marca cual considerarias seria la descripción para {tool}.
+    items:
+      - { id: malo-bueno, left: Malo, right: Bueno }
+      - { id: feo-bonito, left: Feo, right: Bonito }
+      - { id: confuso-estructurado, left: Confuso, right: Estructurado }
+      - { id: practico, left: Practico, right: Impráctico }
+      - { id: impredecible-predecible, left: Impredecible, right: Predecible }
+      - { id: simple-complicado, left: Simple, right: Complicado }
+      - { id: antipatico-cautivador, left: Antipático, right: Cautivador }
+      - { id: elegante-tosco, left: Elegante, right: Tosco }
+      - { id: barato-premium, left: Barato, right: Prémium }
+      - { id: creativo, left: Creativo, right: No Imaginativo }
+      - { id: recomendable, left: Recomendable, right: No recomendable }
+      - { id: eficiente, left: Eficiente, right: Ineficiente }
+      - { id: flexible-rigido, left: Flexible, right: Rígido }
+      - { id: facil-aprender, left: Facil de aprender, right: Díficil de aprender }
+      - { id: limitado-extensivo, left: Limitado, right: Extensivo }
+      - { id: desinformativo-informativo, left: Desinformativo, right: Informativo }
+      - { id: motivador, left: Motivador, right: Desmotivador }
+      - { id: respeto-desconfianza, left: Genera respeto, right: Genera desconfianza }
+      - { id: agradable, left: Agradable, right: Desagradable }
+      - { id: creatividad, left: Promueve la creatividad, right: Suprime la creatividad }
+      - { id: envolvente-aburrido, left: Envolvente, right: Aburrido }
+      - { id: acerca-aleja, left: Me acerca a otros, right: Me aleja de otros }
+
+  - id: comments
+    kind: free_text
+    optional: true
+    prompt: ¿Algún comentario adicional que quieras destacar sobre tu experiencia usando {tool}? (Opcional)

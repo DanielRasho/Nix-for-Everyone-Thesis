@@ -1,0 +1,29 @@
+tasks:
+  setup:
+    command: pnpm install
+  dev:
+    # Vite on :3000, proxies /api to the server (API_PORT from ../server/.env).
+    command: pnpm dev
+    deps:
+      - ~:setup
+    options:
+      persistent: true
+  build:
+    command: pnpm build
+    outputs:
+      - dist
+  lint:
+    command: pnpm lint
+  docker-build:
+    # VITE_CLARITY_PROJECT_ID is inlined at build time, passed from the environment if set.
+    script: docker build --build-arg VITE_CLARITY_PROJECT_ID -t "${REGISTRY:-docker.io/danielrasho}/nixty-survey-client:${TAG:-latest}" .
+    options:
+      cache: false
+      runInCI: false
+  docker-push:
+    script: docker push "${REGISTRY:-docker.io/danielrasho}/nixty-survey-client:${TAG:-latest}"
+    deps:
+      - ~:docker-build
+    options:
+      cache: false
+      runInCI: false

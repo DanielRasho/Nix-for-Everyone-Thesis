@@ -1,0 +1,10 @@
+node_modules
+dist
+dist-ssr
+*.local
+*.log
+
+# Local env (VITE_CLARITY_PROJECT_ID...). See .env.example
+.env
+.env.*
+!.env.example

@@ -1,0 +1,10 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "./db/"
+    schema: "../db/schema.sql"
+    gen:
+      go:
+        package: "survey_db"
+        sql_package: "pgx/v5"
+        out: "./internal/storage/survey_db"

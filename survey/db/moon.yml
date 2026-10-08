@@ -1,0 +1,15 @@
+tasks:
+  dev:
+    script: |
+      cd ../ && docker compose up --build db
+  docker-build:
+    # REGISTRY (default docker.io/danielrasho) and TAG (default latest) from the env
+    script: docker build -t "${REGISTRY:-docker.io/danielrasho}/nixty-survey-db:${TAG:-latest}" .
+    options:
+      cache: false
+  docker-push:
+    script: docker push "${REGISTRY:-docker.io/danielrasho}/nixty-survey-db:${TAG:-latest}"
+    deps:
+      - ~:docker-build
+    options:
+      cache: false

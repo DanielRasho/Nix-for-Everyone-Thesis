@@ -1,0 +1,7 @@
+projects:
+- server
+- client
+- db
+vcs:
+  defaultBranch: master
+  provider: github

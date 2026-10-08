@@ -1,0 +1,12 @@
+
+# moon
+.moon/cache
+.moon/docker
+
+server/node_modules
+client/node_modules
+# production secrets
+.env.prod
+
+# air build output
+server/tmp

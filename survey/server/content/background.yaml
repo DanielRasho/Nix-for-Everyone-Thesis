@@ -1,0 +1,12 @@
+# Asked once per participant, before the first survey.
+# Source: annex/4/questionary_phase3.typ (first section).
+questions:
+  - id: experience
+    kind: likert
+    scale: 5
+    prompt: Marca en una escala del 1 al 5 tu nivel de experiencia en cada uno de los siguientes temas.
+    items:
+      - { id: package-management, label: Manejo de Paquetes, left: Muy poca, right: Muy avanzada }
+      - { id: typescript, label: TypeScript, left: Muy poca, right: Muy avanzada }
+      - { id: nixlang, label: NixLang, left: Muy poca, right: Muy avanzada }
+      - { id: functional, label: Lenguajes Funcionales, left: Muy poca, right: Muy avanzada }

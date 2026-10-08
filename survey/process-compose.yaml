@@ -1,0 +1,34 @@
+version: "0.5"
+
+# Runs the whole stack locally (inside `nix develop`):  process-compose up
+#   db -> server (:3003) -> integration tests
+#   client dev server on http://localhost:3000 (proxies /api to the server)
+# Everything stays up after the tests so the app can be used.
+# Stopping process-compose removes the db container AND its volume, so every run
+# starts with a fresh DB (migrations run again).
+#
+# CI (exit when the tests end, no client):
+#   process-compose -f process-compose.yaml -f process-compose.ci.yaml up -t=false
+processes:
+  db:
+    command: moon run db:dev
+    ready_log_line: database system is ready to accept connections
+    shutdown:
+      command: "docker compose down -v"
+
+  server:
+    command: moon run server:dev
+    ready_log_line: Running on http
+    depends_on:
+      db:
+        condition: process_log_ready
+
+  test:
+    command: moon run server:test
+    depends_on:
+      server:
+        condition: process_log_ready
+
+  client:
+    command: moon run client:dev
+    ready_log_line: ready in

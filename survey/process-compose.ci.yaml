@@ -1,0 +1,13 @@
+version: "0.5"
+
+# CI override, merged on top of process-compose.yaml:
+#   process-compose -f process-compose.yaml -f process-compose.ci.yaml up -t=false
+# Skips the client and shuts everything down when the tests end
+# (process-compose exits with the tests' exit code).
+processes:
+  test:
+    availability:
+      exit_on_end: true
+
+  client:
+    disabled: true
