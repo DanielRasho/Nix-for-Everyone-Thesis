@@ -17,6 +17,7 @@ import type {
 const BASE = '/api'
 
 export const EXPORT_CSV_URL = `${BASE}/admin/export.csv`
+export const EXPORT_CODE_URL = `${BASE}/admin/export-code.zip`
 
 /** A failed request. `status` 0 means the server could not be reached. */
 export class ApiError extends Error {

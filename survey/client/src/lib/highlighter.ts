@@ -38,12 +38,14 @@ export function shikiLang(language?: string): string {
  * Both themes are emitted as CSS variables (--shiki-light / --shiki-dark) and
  * index.css picks one from the `dark` class, so code follows the app theme
  * without re-highlighting.
+ * `focusable` keeps the <pre> in the tab order (to scroll it with the keyboard).
  */
-export function highlight(h: HighlighterCore, code: string, language?: string): string {
+export function highlight(h: HighlighterCore, code: string, language?: string, focusable = true): string {
   return h.codeToHtml(code, {
     lang: shikiLang(language),
     themes: { light: 'github-light', dark: 'github-dark' },
     defaultColor: false,
+    tabindex: focusable ? 0 : false,
   })
 }
 

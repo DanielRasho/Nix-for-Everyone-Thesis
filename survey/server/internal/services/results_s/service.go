@@ -1,10 +1,12 @@
 package results_s
 
 import (
+	"archive/zip"
 	"bytes"
 	"context"
 	"encoding/csv"
 	"fmt"
+	"io"
 	"slices"
 	"strconv"
 	"strings"
@@ -18,7 +20,7 @@ import (
 )
 
 // ResultsService exposes the answers to the admin: manual grading of
-// free_code answers and the CSV export.
+// free_code answers, the CSV export and the zip of free_code answers.
 type ResultsService struct {
 	DBClient  *pgxpool.Pool
 	DBQueries *survey_db.Queries
@@ -230,6 +232,53 @@ func (s *ResultsService) ExportCSV(ctx context.Context) ([]byte, error) {
 		return nil, fmt.Errorf("writing CSV: %w", err)
 	}
 	return buf.Bytes(), nil
+}
+
+// ExportCode zips every free_code answer as a file, one folder per participant:
+// <username>/<questionId>.<nix|ts> (extension from the survey language), dated
+// when it was answered. Usernames and ids are safe path segments (validated).
+func (s *ResultsService) ExportCode(ctx context.Context) ([]byte, error) {
+	answers, err := s.GradingAnswers(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	var buf bytes.Buffer
+	zw := zip.NewWriter(&buf)
+	for _, a := range answers {
+		name := fmt.Sprintf("%s/%s.%s", a.Username, a.QuestionID, s.codeExtension(a.QuestionID))
+		f, err := zw.CreateHeader(&zip.FileHeader{Name: name, Method: zip.Deflate, Modified: a.AnsweredAt})
+		if err != nil {
+			return nil, fmt.Errorf("adding %s to the zip: %w", name, err)
+		}
+		if _, err := io.WriteString(f, a.Value); err != nil {
+			return nil, fmt.Errorf("writing %s to the zip: %w", name, err)
+		}
+	}
+	if err := zw.Close(); err != nil {
+		return nil, fmt.Errorf("writing zip: %w", err)
+	}
+	return buf.Bytes(), nil
+}
+
+// codeExtension is the file extension of the code answered to a question.
+func (s *ResultsService) codeExtension(questionID string) string {
+	q, ok := s.Content.Question(questionID)
+	if !ok {
+		return "txt"
+	}
+	survey, ok := s.Content.Surveys[q.Survey]
+	if !ok {
+		return "txt"
+	}
+	switch survey.Language {
+	case "nix":
+		return "nix"
+	case "typescript":
+		return "ts"
+	default:
+		return "txt"
+	}
 }
 
 // questionIndex is the position of a question inside its step, in content order.

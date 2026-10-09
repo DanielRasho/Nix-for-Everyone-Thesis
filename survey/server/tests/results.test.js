@@ -11,6 +11,7 @@ import {
   loginAdmin,
   parseCSVObjects,
   sleep,
+  unzip,
   validAnswer,
 } from "./helpers.js";
 
@@ -19,6 +20,7 @@ let admin; // admin session cookie
 let participant;
 let choiceQuestion;
 let freeCodeQuestion;
+let freeCodeStep; // the step of freeCodeQuestion, with its language
 beforeAll(async () => {
   admin = await loginAdmin();
   participant = await createParticipant(admin);
@@ -28,7 +30,11 @@ beforeAll(async () => {
   ({ question: choiceQuestion } = await advanceTo(participant.cookie, first, isChoice));
   await api.post("/me/answers", validAnswer(choiceQuestion), as(participant.cookie));
 
-  ({ question: freeCodeQuestion } = await advanceTo(participant.cookie, first, (q) => q.kind === "free_code"));
+  ({ question: freeCodeQuestion, step: freeCodeStep } = await advanceTo(
+    participant.cookie,
+    first,
+    (q) => q.kind === "free_code",
+  ));
   await api.post(
     "/me/answers",
     { questionId: freeCodeQuestion.id, value: "{ answer = 42; }" },
@@ -262,6 +268,35 @@ describe("GET /admin/export.csv", () => {
 
   test("fails with 403 when called by a participant", async () => {
     const res = await api.get("/admin/export.csv", as(participant.cookie));
+
+    expect(res.status).toBe(403);
+  });
+});
+
+describe("GET /admin/export-code.zip", () => {
+  test("answers 200 with a zip of every free_code answer, a folder per participant", async () => {
+    const res = await api.get("/admin/export-code.zip", { ...as(admin), responseType: "arraybuffer" });
+
+    expect(res.status).toBe(200);
+    expect(res.headers["content-type"]).toBe("application/zip");
+    expect(res.headers["content-disposition"]).toMatch(/^attachment; filename=".+\.zip"$/);
+
+    // <username>/<questionId>.<nix|ts>, only free_code answers (not the choice one).
+    const files = unzip(Buffer.from(res.data));
+    const extension = { nix: "nix", typescript: "ts" }[freeCodeStep.language];
+    const own = Object.keys(files).filter((name) => name.startsWith(`${participant.username}/`));
+    expect(own).toEqual([`${participant.username}/${freeCodeQuestion.id}.${extension}`]);
+    expect(files[own[0]]).toBe("{ answer = 42; }");
+  });
+
+  test("fails with 401 without a session", async () => {
+    const res = await api.get("/admin/export-code.zip");
+
+    expect(res.status).toBe(401);
+  });
+
+  test("fails with 403 when called by a participant", async () => {
+    const res = await api.get("/admin/export-code.zip", as(participant.cookie));
 
     expect(res.status).toBe(403);
   });

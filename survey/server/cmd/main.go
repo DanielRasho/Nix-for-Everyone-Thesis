@@ -105,6 +105,7 @@ func main() {
 		r.Get("/grading", api.getGrading)
 		r.Put("/grading", api.putGrading)
 		r.Get("/export.csv", api.getExport)
+		r.Get("/export-code.zip", api.getExportCode)
 	})
 
 	// Start server
@@ -144,6 +145,7 @@ type api struct {
 	getGrading              http.HandlerFunc
 	putGrading              http.HandlerFunc
 	getExport               http.HandlerFunc
+	getExportCode           http.HandlerFunc
 }
 
 func newAPI(dbCli *pgxpool.Pool, surveyContent *content.Content, sessionConfig config.SessionConfig) api {
@@ -195,5 +197,6 @@ func newAPI(dbCli *pgxpool.Pool, surveyContent *content.Content, sessionConfig c
 		getGrading:              http_h.GetGrading(resultsService),
 		putGrading:              http_h.PutGrading(validator, resultsService),
 		getExport:               http_h.GetExport(resultsService),
+		getExportCode:           http_h.GetExportCode(resultsService),
 	}
 }

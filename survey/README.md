@@ -29,6 +29,9 @@ restart. In production they come from `.env.prod`.
 
 From the admin panel you create participants (username + survey order). Their
 password is shown **only once**; use "regenerate password" if it gets lost.
+"Exportar CSV" downloads every answer with its time; "Exportar código" downloads
+the code answers (free_code) as a zip, one folder per participant and one file
+per question (`<username>/<questionId>.nix`).
 
 ## Edit the questions
 

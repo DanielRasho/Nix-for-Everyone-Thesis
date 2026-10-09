@@ -164,6 +164,38 @@
     opacity: 0.6;
     user-select: none;
   }
+
+  /* Highlighted textarea (src/components/code-editor.tsx): a transparent textarea
+     over a <pre> of the same text, so both must lay out the text identically. */
+  .code-editor {
+    @apply overflow-x-auto rounded-lg border border-input bg-code text-[13px] leading-relaxed transition-colors focus-within:border-ring focus-within:ring-3 focus-within:ring-ring/50;
+  }
+  .code-editor-content {
+    @apply relative w-max min-w-full;
+    min-height: inherit;
+  }
+  .code-editor pre,
+  .code-editor textarea {
+    @apply m-0 rounded-none border-0 bg-transparent! px-4 py-3 font-mono;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: normal;
+    white-space: pre;
+    overflow-wrap: normal;
+    tab-size: 2;
+  }
+  .code-editor pre {
+    /* Room for the caret at the end of the longest line. */
+    @apply pr-8;
+    pointer-events: none;
+  }
+  .code-editor textarea {
+    @apply absolute inset-0 size-full resize-none overflow-hidden text-transparent caret-foreground outline-none placeholder:text-muted-foreground;
+  }
+  .code-editor textarea::selection {
+    color: transparent;
+    background-color: oklch(0.62 0.17 255 / 0.3);
+  }
 }
 
 .shiki,

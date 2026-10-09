@@ -4,6 +4,7 @@ import axios from "axios";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { inflateRawSync } from "node:zlib";
 
 // ============================================
 // CONFIG
@@ -213,4 +214,30 @@ export function parseCSV(text) {
 export function parseCSVObjects(text) {
   const [header, ...rows] = parseCSV(text);
   return rows.map((row) => Object.fromEntries(header.map((name, i) => [name, row[i]])));
+}
+
+/**
+ * Zip archive (Buffer) as `{ [path]: text }`, read from its central directory.
+ * Only what the server writes: stored or deflated entries, no zip64.
+ */
+export function unzip(buffer) {
+  const end = buffer.lastIndexOf(Buffer.from("PK\x05\x06", "latin1"));
+  const count = buffer.readUInt16LE(end + 10);
+  let entry = buffer.readUInt32LE(end + 16);
+  const files = {};
+  for (let i = 0; i < count; i++) {
+    const method = buffer.readUInt16LE(entry + 10);
+    const size = buffer.readUInt32LE(entry + 20);
+    const nameLength = buffer.readUInt16LE(entry + 28);
+    const extraLength = buffer.readUInt16LE(entry + 30);
+    const commentLength = buffer.readUInt16LE(entry + 32);
+    const local = buffer.readUInt32LE(entry + 42);
+    const name = buffer.toString("utf8", entry + 46, entry + 46 + nameLength);
+
+    const start = local + 30 + buffer.readUInt16LE(local + 26) + buffer.readUInt16LE(local + 28);
+    const data = buffer.subarray(start, start + size);
+    files[name] = (method === 8 ? inflateRawSync(data) : data).toString("utf8");
+    entry += 46 + nameLength + extraLength + commentLength;
+  }
+  return files;
 }

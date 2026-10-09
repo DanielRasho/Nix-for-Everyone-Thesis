@@ -17,7 +17,9 @@ questions:
     prompt: |
       ## Instrucciones
 
-      Se te presentaran una serie de ejercicios para poner a prueba tu aprendizaje en {tool}. Durante la prueba puedes consultar el contenido de aprendizaje dado por los investigadores, como buscar por internet, más no se permite el uso de asistentes de inteligencia artificial.
+      Se te presentaran una serie de ejercicios para poner a prueba tu aprendizaje en **{tool}**. 
+      
+      Durante la prueba puedes consultar el contenido de aprendizaje dado por los investigadores, como buscar por internet, más **no se permite el uso de asistentes de inteligencia artificial**.
 
   # ==========================================================================
   # PA: choose the code

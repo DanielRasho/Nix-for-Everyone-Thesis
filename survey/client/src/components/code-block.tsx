@@ -1,45 +1,26 @@
-import { useEffect, useMemo, useState } from 'react'
-import type { HighlighterCore } from 'shiki/core'
+import { useMemo } from 'react'
+import { CopyButton } from '@/components/copy-button'
+import { useHighlightedHtml } from '@/hooks/use-highlighted-html'
 import { cn } from '@/lib/utils'
-import { getHighlighter, highlight, loadedHighlighter } from '@/lib/highlighter'
 
 interface CodeBlockProps {
   code: string
   /** Survey language (`nix` | `typescript`); anything else renders as plain text. */
   language?: string
   lineNumbers?: boolean
+  /** Shows a copy button in the top right corner. */
+  copyable?: boolean
   className?: string
 }
 
 /** Syntax-highlighted, read-only code. Shows plain text until shiki has loaded. */
-export function CodeBlock({ code, language, lineNumbers = true, className }: CodeBlockProps) {
+export function CodeBlock({ code, language, lineNumbers = true, copyable = false, className }: CodeBlockProps) {
   const source = useMemo(() => code.replace(/\s+$/, ''), [code])
-  const [highlighter, setHighlighter] = useState<HighlighterCore | undefined>(loadedHighlighter)
-
-  useEffect(() => {
-    if (highlighter) return
-    let alive = true
-    getHighlighter()
-      .then((h) => alive && setHighlighter(h))
-      .catch((err: unknown) => console.error('shiki failed to load', err))
-    return () => {
-      alive = false
-    }
-  }, [highlighter])
-
-  const html = useMemo(() => {
-    if (!highlighter) return undefined
-    try {
-      return highlight(highlighter, source, language)
-    } catch (err) {
-      console.error('shiki failed to highlight', err)
-      return undefined
-    }
-  }, [highlighter, source, language])
+  const html = useHighlightedHtml(source, language)
 
   return (
     <div
-      className={cn('code-block', lineNumbers && 'line-numbers', className)}
+      className={cn('code-block', lineNumbers && 'line-numbers', copyable && 'relative', className)}
       data-language={language}
     >
       {html ? (
@@ -57,6 +38,7 @@ export function CodeBlock({ code, language, lineNumbers = true, className }: Cod
           </code>
         </pre>
       )}
+      {copyable && <CopyButton text={code} className="absolute top-2 right-2" />}
     </div>
   )
 }

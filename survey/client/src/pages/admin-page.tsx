@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { DownloadIcon } from 'lucide-react'
+import { DownloadIcon, FileArchiveIcon } from 'lucide-react'
 import { ErrorState, LoadingState } from '@/components/page-state'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { GradingList } from '@/features/admin/grading-list'
 import { NewParticipantDialog } from '@/features/admin/new-participant-dialog'
 import { ParticipantsTable } from '@/features/admin/participants-table'
-import { api, EXPORT_CSV_URL } from '@/lib/api'
+import { api, EXPORT_CODE_URL, EXPORT_CSV_URL } from '@/lib/api'
 import { keys } from '@/lib/query-client'
 
 export function AdminPage() {
@@ -34,6 +34,12 @@ export function AdminPage() {
           <a href={EXPORT_CSV_URL} download>
             <DownloadIcon />
             Exportar CSV
+          </a>
+        </Button>
+        <Button variant="outline" asChild>
+          <a href={EXPORT_CODE_URL} download title="Respuestas de código, una carpeta por participante">
+            <FileArchiveIcon />
+            Exportar código
           </a>
         </Button>
         <NewParticipantDialog participants={list} />

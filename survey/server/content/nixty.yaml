@@ -838,7 +838,7 @@ questions:
     prompt: |
       Tu script de clima ya está correctamente empaquetado. Ahora quieres crear un entorno de desarrollo donde ese paquete esté disponible.
 
-      Modifica el código para crear una devShell que incluya el paquete que definiste en el mismo flake.
+      Modifica el código para crear una `devShell` que incluya el paquete que definiste en el mismo flake.
 
       **Pista:** Puedes acceder a ese paquete mediante el atributo `self`, por ejemplo: `self.packages.<sistema>.<nombre-del-paquete>`.
     code: |

@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { ChevronRightIcon, ExternalLinkIcon } from 'lucide-react'
 import { CodeBlock } from '@/components/code-block'
+import { CodeEditor } from '@/components/code-editor'
 import { MarkdownContent } from '@/components/markdown'
 import { Button } from '@/components/ui/button'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
 import { SubmitBar, type QuestionProps } from '@/features/questions/shared'
 
 /** Solved in Codespaces, the resulting code is pasted back here. */
@@ -38,7 +38,7 @@ export function FreeCodeQuestion({ question, step, submitting, onSubmit }: Quest
             </Button>
           </CollapsibleTrigger>
           <CollapsibleContent>
-            <CodeBlock code={question.code} language={step.language} />
+            <CodeBlock code={question.code} language={step.language} copyable />
           </CollapsibleContent>
         </Collapsible>
       )}
@@ -50,17 +50,13 @@ export function FreeCodeQuestion({ question, step, submitting, onSubmit }: Quest
         <p className="text-sm text-muted-foreground">
           Cuando estés conforme con tu solución, copia el código solicitado y pégalo aquí.
         </p>
-        <Textarea
+        <CodeEditor
           id="free-code-answer"
           value={value}
-          onChange={(e) => setValue(e.target.value)}
-          spellCheck={false}
-          autoCapitalize="off"
-          autoCorrect="off"
-          autoComplete="off"
-          wrap="off"
+          onChange={setValue}
+          language={step.language}
           placeholder="Pega aquí tu código…"
-          className="min-h-80 font-mono text-[13px]! leading-relaxed whitespace-pre"
+          className="min-h-80"
         />
       </div>
 
