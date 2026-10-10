@@ -4,11 +4,13 @@ questions:
   - id: intro
     kind: info
     prompt: |
-      ## Evaluación de {tool}
+      ## Tu experiencia en {tool}
 
-      Gracias por tu tiempo. Con tu ayuda, nos gustaría examinar como usuarios perciben la usabilidad de _{tool}_. Esto nos ayudara a encontrar areas de optimización de una manera que sea tan eficiente y comprensible como sea posible.
+      Gracias por tu tiempo. Con tu ayuda, nos gustaría examinar como usuarios perciben la usabilidad de _{tool}_.
 
-      No te detengas demasiado en las combinaciones de palabras y realiza tu evaluación de forma espontánea. Puede que algunas combinaciones no te parezcan del todo adecuadas para el producto. Sin embargo, te pedimos que des tu opinión de todos modos. Recuerda que no hay respuestas correctas ni incorrectas; lo que cuenta es tu opinión personal.
+      No te detengas demasiado en las combinaciones de palabras y realiza tu evaluación de forma espontánea. Puede que algunas combinaciones no te parezcan del todo adecuadas para el producto. Sin embargo, te pedimos que des tu opinión de todos modos. 
+      
+      Recuerda que no hay respuestas correctas ni incorrectas; lo que cuenta es tu opinión personal.
 
   - id: experience
     kind: likert
