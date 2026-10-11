@@ -16,10 +16,10 @@ jobs:
             context: ./survey/client
             image: smaugtur/nixty-survey-client
           - name: server
-            context: ./server
+            context: ./survey/server
             image: smaugtur/nixty-survey-server
           - name: db
-            context: ./db/game
+            context: ./survey/db
             image: smaugtur/nixty-survey-db
 
     steps:
