@@ -1,4 +1,8 @@
 
+// Los anexos de annex/3 y annex/4 también se compilan como documentos independientes.
+// annex/annex.typ lo pone en true para que omitan su formato de hoja impresa y su título.
+#let in-thesis = state("in-thesis", false)
+
 #let answer-box(height: 3cm, label: "") = {
   if label != "" { text(weight: "bold")[#label]; v(0.2cm) }
   rect(width: 100%, height: height, stroke: 0pt)

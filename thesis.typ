@@ -383,41 +383,44 @@ Una segunda clasificación de los paquetes atiende a la forma en que son referen
 
 ==== Librerías estáticas
 
-// TODO: 
-Al compilar código fuente en `C`, el compilador traduce cada archivo fuente en un archivo objeto (_object file_), que contiene el código máquina de ese archivo junto con una tabla de símbolos aún sin resolver @StorySharedLibraries2026. Una *biblioteca estática* es, en esencia, un archivo (típicamente con extensión `.a` en sistemas Unix o `.lib` en Windows) que agrupa varios de estos archivos objeto mediante una herramienta archivadora, sin resolver todavía las referencias entre ellos.
+La opción más sencilla para que un ejecutable tenga acceso a las funcionalidades de una librería es copiar  el contenido de la librería en el código fuente, a las librerías que son referenciadas de esta forma se les conoce como *estáticas*, debido a que una vez referenciadas, su código no cambia a menos que se compile nuevamente @StorySharedLibraries2026. 
 
-// TODO: 
-La resolución ocurre en la fase de enlazado: el _linker_ toma el ejecutable en construcción, identifica los símbolos que aún no están definidos y copia dentro del binario final únicamente los archivos objeto de la biblioteca que los proveen. El resultado es un ejecutable autocontenido, que no depende de que la biblioteca esté presente en la computadora donde se ejecuta.
+En el caso de `C`, el proceso se hace evidente al traducir cada archivo fuente en un archivo objeto (_object file_ `.o`), estos artefactos cuentan dentro de sí con una tabla de símbolos de librerías externas pendiente por resolver. Es necesario resolver estos simbolos para producir el ejecutable, y es en este punto donde se copian los contenidos de las librerías estáticas @StorySharedLibraries2026
 
-Esta característica trae ventajas y desventajas. A favor, el enlazado estático produce binarios portables y con un comportamiento predecible, ya que no existe la posibilidad de que, en tiempo de ejecución, se cargue una versión de la biblioteca distinta a la usada durante la compilación, y evita la sobrecarga de resolver símbolos cada vez que el programa se ejecuta @StorySharedLibraries2026. En contra, cada ejecutable que enlaza una misma biblioteca contiene su propia copia del código, lo que incrementa el tamaño en disco y el consumo de memoria cuando varios programas la usan simultáneamente, y obliga a recompilar y redistribuir cada ejecutable ante cualquier actualización o corrección de la biblioteca, incluidos parches de seguridad @StorySharedLibraries2026.
+El _linker_ toma el ejecutable en construcción, identifica los símbolos que aún no están definidos y copia dentro del binario final únicamente las definiciones que son mencionadas en el código fuente. El resultado es un ejecutable autocontenido, que no depende de que la biblioteca esté presente en la computadora donde se ejecuta @StorySharedLibraries2026.
+
+Esta característica trae ventajas y desventajas. A favor, *produce binarios portables y con un comportamiento predecible*, ya que no existe la posibilidad de que, se utilice código diferente al probado por el desarrollador y evita la sobrecarga de resolver símbolos cada vez que el programa se ejecuta @StorySharedLibraries2026. Esta característica los hace sencillos de distribuir, porque su instalación se límita a copiar los ejecutables en la computadora destino #footnote[En realidad el proceso, puede involucrar otras actividad como la configuración de variables de entorno y creación de archivos de configuración, pero pueden considerarse triviales comparado a la resolución de dependencias @Dolstra2006].
+
+Por otro lado, cada ejecutable que enlaza una misma biblioteca contiene su propia copia del código, lo que incrementa el tamaño en disco y el consumo de memoria cuando varios programas la usan simultáneamente; también obliga a recompilar y redistribuir cada ejecutable ante cualquier actualización o corrección de la biblioteca, incluidos parches de seguridad @StorySharedLibraries2026.
 
 ==== Librerías dinámicas
+Cómo respuesta a los pesados binarios del enlazado estático ¿Qué tal si en vez de copiar el código solo indicamos en que archivo encontrarlo? Así muchos ejecutables podrían "compartir" las funcionalidaedes de la librería sin duplicarla, hemos descubierto el *enlazado dinámico*.
 
-Las *bibliotecas dinámicas* (o compartidas, _shared libraries_; `.so` en Unix, `.dll` en Windows, `.dylib` en macOS) posponen la resolución de símbolos hasta el momento de carga o, incluso, hasta la primera vez que la función es invocada (_lazy binding_) @StorySharedLibraries2026. En lugar de copiar el código de la biblioteca dentro de cada ejecutable, el binario final solo almacena una referencia a ella; es el cargador dinámico del sistema operativo (_dynamic loader_) quien, al iniciar el programa, localiza la biblioteca en el sistema, la mapea en el espacio de memoria del proceso y completa las referencias pendientes mediante tablas de relocalización y código independiente de posición (_Position Independent Code_, PIC) @StorySharedLibraries2026.
+Las *bibliotecas dinámicas* (o compartidas, _shared libraries_; `.so` en Unix, `.dll` en Windows, `.dylib` en macOS) posponen la resolución de símbolos hasta la ejecución o, incluso, hasta la primera vez que la función es invocada (_lazy binding_) @StorySharedLibraries2026. En lugar de copiar el código de la biblioteca dentro de cada ejecutable, el binario final solo almacena una referencia a ella; es el cargador dinámico del sistema operativo (_dynamic loader_) quien, al iniciar el programa, localiza la biblioteca en el sistema, la mapea en el espacio de memoria del proceso y completa las referencias pendientes mediante tablas de relocalización y código independiente de posición (_Position Independent Code_, PIC) @StorySharedLibraries2026.
 
 Esta indirección ofrece beneficios notables: el sistema operativo puede mantener una única copia de la biblioteca en memoria física y compartirla entre todos los procesos que la usan, reduciendo el consumo de RAM y el tamaño de los ejecutables en disco; además, una biblioteca puede corregirse o actualizarse sin necesidad de recompilar las aplicaciones que la consumen, siempre que se preserve su interfaz. Sin embargo, esta misma flexibilidad introduce el problema opuesto al de las bibliotecas estáticas: la aplicación depende de que, en la computadora donde se ejecute, exista una versión de la biblioteca compatible con la que se usó al compilarla, situación que puede derivar en conflictos cuando distintas aplicaciones del mismo sistema requieren versiones incompatibles entre sí, como se ilustró previamente en la @figura1.
 
 Las clasificaciones desarrolladas no son las únicas: distintos ecosistemas introducen conceptos adicionales, como los paquetes _peer_ que introduce `npm` @Gibb2026.
 
-=== Manejadores de paquetes al rescate <manejadores_de_paquetes>
+== Manejadores de paquetes al rescate <manejadores_de_paquetes>
 
 De las secciones anteriores debió quedar claro que instalar una aplicación junto con sus dependencias no es un problema trivial. Ante el auge en la disponibilidad y uso de paquetes descrito previamente, también ha surgido una plétora de herramientas —los manejadores de paquetes— orientadas a administrar la creciente complejidad derivada del tamaño de los proyectos.
 
-==== Evolución y Taxonomía de los Modelos Existentes
+=== Evolución y Taxonomía de los Modelos Existentes
 A partir de mediados de la década de 2000, se produjo lo que se ha descrito como una "explosión cámbrica" de soluciones, donde prácticamente cada sistema operativo y lenguaje de programación desarrolló su propia herramienta. Los modelos tradicionales pueden clasificarse bajo tres ejes principales:
 
-1.  *Por el tipo de artefacto (Binarios vs. Fuente):*
+1.  *Por el tipo de artefacto (Binarios vs. Fuente)*
     -   *Manejadores binarios (p. ej., APT, RPM, Pacman):* Descargan binarios precompilados de servidores centrales y los ubican en rutas específicas del sistema. Su ventaja es la velocidad, pero dependen de que el binario haya sido construido para una arquitectura y versión de sistema operativo exacta @Zwinger2026.
     -   *Manejadores basados en fuentes (p. ej., BSD Ports, Portage de Gentoo):* Copian el código fuente y producen los binarios localmente @Zwinger2026. Esto permite una personalización extrema y optimización para el hardware, pero a costa de tiempos de despliegue significativamente mayores @Dolstra2006.
 
-2.  *Por el alcance del ecosistema (Sistema vs. Lenguaje):*
+2.  *Por el alcance del ecosistema (Sistema vs. Lenguaje)*
     -   *Manejadores de sistema:* Administran el sistema operativo completo (p. ej., DNF para Red Hat, APT para Debian). Tienden a ser más conservadores, priorizando un conjunto de paquetes coordinado y coherente, lo que a menudo causa que las versiones de las librerías se retrasen respecto a las últimas novedades @Gibb2026.
     -   *Manejadores de lenguaje:* Distribuyen librerías para desarrolladores de lenguajes específicos (p. ej., pip para Python, Cargo para Rust, npm para JavaScript). Priorizan la frescura de las versiones, pero suelen ignorar las dependencias externas del sistema (como drivers o librerías de C), asumiendo que estas ya están presentes @Gibb2026.
 
 3.  *Por la resolución de dependencias:*
     La mayoría utiliza lenguajes de dominio específico (DSL) para describir las relaciones entre paquetes. La resolución de estas dependencias es un problema complejo que a menudo requiere algoritmos avanzados (SAT solvers) para encontrar un conjunto de versiones compatibles, un proceso que es inherentemente NP-completo @Gibb2026.
 
-==== El Problema de Fondo: El Paradigma Imperativo
+=== El Problema de Fondo: El Paradigma Imperativo
 A pesar de su utilidad, los modelos tradicionales comparten un defecto estructural: operan bajo un *paradigma de despliegue imperativo* . En este modelo, las acciones de instalación o actualización se realizan "en el lugar" (_in-place_), modificando destructivamente el estado del sistema operativo @Courts2013. Esta mutación del entorno global conlleva problemas críticos que limitan la fiabilidad del software:
 
 -   *Conflictos de dependencias ("Dependency Hell"):* Al intentar satisfacer a múltiples aplicaciones en un entorno global único, surge el problema del "diamante de dependencias". Si la aplicación A requiere la versión 1.0 de una librería y la aplicación B requiere la 2.0, el sistema se ve forzado a elegir una sola, rompiendo potencialmente la otra aplicación @Zwinger2026.
@@ -425,7 +428,7 @@ A pesar de su utilidad, los modelos tradicionales comparten un defecto estructur
 -   *Actualizaciones destructivas y falta de reversión:* Dado que las actualizaciones sobrescriben archivos existentes, si un proceso falla a mitad de camino o la nueva versión es inestable, el sistema puede quedar en un estado inconsistente. No suele haber una forma sencilla de realizar un *rollback* atómico al estado anterior @Dolstra2006.
 -   *Fragmentación de herramientas:* Los proyectos multilingües modernos se ven obligados a coordinar múltiples manejadores de paquetes ad-hoc (p. ej., usar Cargo, pip y APT simultáneamente), lo que oculta vulnerabilidades de seguridad y dificulta el despliegue portátil @Gibb2026.
 
-==== Hacia un nuevo modelo
+=== Hacia un nuevo modelo
 La disyuntiva tradicional obligaba a elegir entre manejadores que arriesgan conflictos en el entorno global o soluciones de virtualización (contenedores) que evitan conflictos duplicando entornos completos a costa de almacenamiento y memoria @figura1. 
 
 En este contexto surge *Nix*, que propone una tercera vía: un *modelo de despliegue puramente funcional*. Nix busca fusionar la eficiencia de los manejadores de paquetes con el aislamiento de la virtualización, tratando el despliegue de software de forma análoga a la gestión de memoria en los lenguajes de programación, donde cada componente es inmutable y se identifica de forma unívoca por sus insumos exactos @Dolstra2006.

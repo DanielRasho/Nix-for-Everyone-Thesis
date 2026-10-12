@@ -1,17 +1,16 @@
 #set page(
   paper: "us-letter",
-  numbering: "1",
-  margin: 1.5cm
+  margin: 1.2cm
 )
 
-#set text(size: 10pt, lang: "es")
-#set par(justify: true, leading: 0.75em)
+#set text(size: 8.5pt, lang: "es")
+#set par(justify: true, leading: 0.5em, spacing: 0.8em)
 
 #set heading(numbering: none)
 #show heading.where(level: 2): it => {
-  v(0.5em)
-  text(size: 10pt, weight: "bold", it.body)
-  v(0.2em)
+  v(0.25em)
+  text(size: 8.5pt, weight: "bold", it.body)
+  v(0.1em)
 }
 
 // ---------- Encabezado ----------
@@ -19,13 +18,13 @@
     #text(size: 10pt, weight: "bold")[Consentimiento Informado - Fase 1]
 ]
 
-#v(0.5em)
+#v(0.3em)
 
 #let campo(label) = text(style: "italic")[#label]
 
 #grid(
   columns: (auto, 1fr),
-  row-gutter: 0.6em,
+  row-gutter: 0.35em,
   column-gutter: 0.6em,
   [*PROYECTO:*], [#campo[Nix para todos: Impacto del uso de un lenguaje de propósito general en la usabilidad de Nix]],
   [*Investigador:*], [#campo[Daniel Alfredo Rayo Roldán - ray22933\@uvg.edu.gt]],

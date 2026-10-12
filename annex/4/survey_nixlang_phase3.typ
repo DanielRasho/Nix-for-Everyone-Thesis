@@ -1,19 +1,5 @@
-
-#set text(lang: "es")
-
-#set page(
-  paper: "a4",
-  number-align: center,
-  numbering: none
-)
-
-#set text(
-  size: 11pt,
-)
-
-#set par(
-  justify: true
-)
+// Misma llave que `in-thesis` en utilities.typ.
+#let in-thesis = state("in-thesis", false)
 
 #let linkert(
   pairs: (), 
@@ -43,13 +29,25 @@
 }
 
 
-#align(center)[= Evaluación de NixLang]
+// Formato de la hoja impresa. Dentro de la tesis (annex/annex.typ) se omite y el título
+// lo pone el encabezado del anexo.
+#show: doc => context if in-thesis.get() { doc } else [
+  #set text(lang: "es", size: 11pt)
+  #set page(paper: "a4", number-align: center, numbering: none)
+  #set par(justify: true)
 
-Gracias por tu tiempo. Con tu ayuda, nos gustaría examinar como usuarios perciben la usabilidad de _Nixlang_. Esto nos ayudara a encontrar areas de optimización de una manera que sea tan eficiente y comprensible como sea posible.
+  #align(center)[= Tu experiencia en NixLang]
 
-No te detengas demasiado en las combinaciones de palabras y realiza tu evaluación de forma espontánea. Puede que algunas combinaciones no te parezcan del todo adecuadas para el producto. Sin embargo, te pedimos que des tu opinión de todos modos. Recuerda que no hay respuestas correctas ni incorrectas; lo que cuenta es tu opinión personal.
+  #doc
+]
 
-*¿ Cómo calificarias la experiencia de usuario de NixLang?*
+Gracias por tu tiempo. Con tu ayuda, nos gustaría examinar como usuarios perciben la usabilidad de _NixLang_.
+
+No te detengas demasiado en las combinaciones de palabras y realiza tu evaluación de forma espontánea. Puede que algunas combinaciones no te parezcan del todo adecuadas para el producto. Sin embargo, te pedimos que des tu opinión de todos modos.
+
+Recuerda que no hay respuestas correctas ni incorrectas; lo que cuenta es tu opinión personal.
+
+*¿Cómo calificarias la experiencia de usuario de NixLang?*
 
 #linkert(pairs: (
     ("Bueno", "Malo"),
@@ -57,7 +55,7 @@ No te detengas demasiado en las combinaciones de palabras y realiza tu evaluaci�
   grades: 7
 )
 
-*¿ Qué tan bien NixLang respondió a tus necesidades?*
+*¿Qué tan bien NixLang respondió a tus necesidades?*
 
 #linkert(pairs: (
     ("Para nada", "Completamente"),
@@ -67,31 +65,30 @@ No te detengas demasiado en las combinaciones de palabras y realiza tu evaluaci�
 
 *Con la ayuda de los pares de palabras marca cual considerarias seria la descripción para NixLang.*
 #linkert(pairs: (
-    ("Malo", "Bueno"),
-    ("Feo", "Bonito"),
-    ("Recomendable", "No recomendable"),
-    ("Confuso", "Estructurado"), 
-    ("Practico", "Impráctico"),
-    ("Impredecible", "Predecible"),
-    ("Simple", "Complicado"),
-    ("Antipático", "Cautivador"),
-    ("Elegante", "Tosco"),
-    ("Barato", "Prémium"),
-    ("Elegante", "Tosco"),
-    ("Creativo", "No Imaginativo"),
-    ("Eficiente", "Ineficiente"),
-    ("Flexible", "Rígido"),
-    ("Facil de aprender", "Díficil de aprender"),
-    ("Limitado", "Extensivo"),
-    ("Desinformativo", "Informativo"),
-    ("Motivador", "Desmotivador"),
-    ("Genera respeto", "Genera desconfianza"),
-    ("Agradable", "Desagradable"),
-    ("Promueve la creatividad", "Suprime la creatividad"),
-    ("Envolvente", "Aburrido"),
-    ("Me acerca a otros", "Me aleja de otros"),
+    ("Malo", "Bueno"), // SAD_GENERAL
+    ("Feo", "Bonito"), // SAD_GENERAL
+    ("Confuso", "Estructurado"), // SAD_PRACTICAL
+    ("Practico", "Impráctico"), // SAD_PRACTICAL
+    ("Impredecible", "Predecible"), // SAD_PRACTICAL
+    ("Simple", "Complicado"), // SAD_PRACTICAL
+    ("Antipático", "Cautivador"), // SAD_HEDONIC
+    ("Elegante", "Tosco"), // SAD_HEDONIC
+    ("Barato", "Prémium"), // SAD_HEDONIC
+    ("Creativo", "No Imaginativo"), // SAD_HEDONIC
+    ("Recomendable", "No recomendable"), // DEXI_GENERAL
+    ("Eficiente", "Ineficiente"), // DEXI_P
+    ("Flexible", "Rígido"), // DEXI_P
+    ("Facil de aprender", "Díficil de aprender"), // DEXI_P
+    ("Limitado", "Extensivo"), // DEXI_P
+    ("Desinformativo", "Informativo"), // DEXI_P
+    ("Motivador", "Desmotivador"), // DEXI_H
+    ("Genera respeto", "Genera desconfianza"), // DEXI_H
+    ("Agradable", "Desagradable"), // DEXI_H
+    ("Promueve la creatividad", "Suprime la creatividad"), // DEXI_H
+    ("Envolvente", "Aburrido"), // DEXI_H
+    ("Me acerca a otros", "Me aleja de otros"), // DEXI_H
   ),
   grades: 7
 )
 
-*¿Algún comentario adicional que quieras destacar sobre tu experiencia usando Nixlang? (Opcional)*
+*¿Algún comentario adicional que quieras destacar sobre tu experiencia usando NixLang? (Opcional)*

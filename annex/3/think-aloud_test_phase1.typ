@@ -3,11 +3,12 @@
 #set page(
   paper: "a4",
   number-align: center,
-  numbering: none
+  numbering: none,
+  margin: 1.2cm
 )
 
 #set text(
-  size: 11pt,
+  size: 9pt,
 )
 
 #set par(
@@ -18,10 +19,6 @@
 
 #align(center)[= Guía de Entrevistador \ Estudio de Pensar-en-alto]
 
-== Antes de comenzar
-
-- Confirma que la grabación de voz y pantalla está activa
-- Entrega al participante el formulario de consentimiento e indica que la sesión será grabada
 
 == Introducción
 
@@ -75,17 +72,24 @@ _Leer al participante:_
 - Abrir espacio para preguntas o comentarios
 
 == Actividades
+\
 
 1. Crear un archivo `flake.nix` con los campos `description`, `inputs` y `outputs`. Hazlo de tal manera que puedas correr `nix flake show` sin errores.
+\
 
 2. Agrega `nixpkgs` como `input` apuntando a `github:NixOS/nixpkgs/release-26.05`.
+\
 
 3. Has que `outputs` sea una función que reciba los parámetros `self` y `nixpkgs` y retorne un _attribute set_ con una llave `version` y valor `nixpkgs.lib.version`. Verifica que corre sin errores con `nix eval .#version`
+\
 
 4. Modifica tu función `outputs` para que declaré una variable `pkgs` que guarde los resultados de importar `nixpkgs` configurado para `x84_64-linux`.
+\
 
 5. Quieres crear un entorno de desarollo (`devShell`) para la arquitectura `x84_64-linux`. Utiliza la función `pkgs.mkShell` para construirla, basta con que especifiques el atributo `name`. Entra a ella con el comando `nix develop`.
+\
 
 6. Agrega aplicaciones `jp` y `tree` a tu entorno de desarrollo. Verifica que estan disponibles dentro del entorno. 
+\
 
 7. Quisieras que este mismo entorno de desarrollo estuviera disponible para otras arquitecturas, pero no quieres repetir la configuración para cada una. ¿Cómo lo resolverías?
