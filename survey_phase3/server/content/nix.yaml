@@ -7,7 +7,7 @@
 title: Nix
 tool: NixLang
 language: nix
-# Codespaces repo: DanielRasho/Thesis-survey, config .devcontainer/<survey>/devcontainer.json.
+# Codespaces repo: DanielRasho/Thesis-codespaces, config .devcontainer/<survey>/devcontainer.json.
 # quickstart=1 resumes the participant's codespace instead of creating a second one.
 codespace: https://codespaces.new/DanielRasho/Thesis-codespaces?quickstart=1&devcontainer_path=.devcontainer/nix/devcontainer.json
 

@@ -78,7 +78,7 @@ Questions live in `server/content/` (YAML, one file per part):
 ## Codespaces
 
 The `free_code` tasks (PE9-PE11) are solved in GitHub Codespaces, from the public repo
-[`DanielRasho/Thesis-survey`](https://github.com/DanielRasho/Thesis-survey) (local clone:
+[`DanielRasho/Thesis-codespaces`](https://github.com/DanielRasho/Thesis-codespaces) (local clone:
 `~/Documents/thesis-survey`). Everything about it lives there: the devcontainers, the
 answer key of the tasks (kept out of git, the repo is public) and the check that builds every
 starter and solution. This repo only holds each survey's `codespace` link.
