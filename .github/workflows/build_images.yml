@@ -13,13 +13,13 @@ jobs:
       matrix:
         service:
           - name: client
-            context: ./survey/client
+            context: ./survey_phase3/client
             image: smaugtur/nixty-survey-client
           - name: server
-            context: ./survey/server
+            context: ./survey_phase3/server
             image: smaugtur/nixty-survey-server
           - name: db
-            context: ./survey/db
+            context: ./survey_phase3/db
             image: smaugtur/nixty-survey-db
 
     steps:

@@ -1,0 +1,1202 @@
+# Nixty survey: nix.yaml with every task written in Nixty (TypeScript).
+#
+# - Keep it equivalent to nix.yaml: same question ids, order, prompts and correct option. The
+#   code is the same program written in TypeScript, so where TypeScript evaluates differently the
+#   answer follows TypeScript: PP7-1 (eager: b) and PP7-2 (computes x: e).
+# - Question and option ids must not change once participants start: answers reference them.
+# - Prompts and option texts are Markdown. Quote option texts that start with a backtick.
+# - "{tool}" is replaced by `tool` (here and in feedback.yaml).
+# - "{codespace}" is replaced by `codespace` (only here, not in feedback.yaml).
+# - The `code` of PE9-1, PE10-1 and PE11-1 must equal the Codespaces repo's
+#   tasks/nixty/*/starter.ts (PE9-1 also nixty/nixty.ts).
+title: Nixty
+tool: Nixty
+language: typescript
+# Codespaces repo: DanielRasho/Thesis-survey, config .devcontainer/<survey>/devcontainer.json.
+# quickstart=1 resumes the participant's codespace instead of creating a second one.
+codespace: https://codespaces.new/DanielRasho/Thesis-codespaces?quickstart=1&devcontainer_path=.devcontainer/nixty/devcontainer.json
+
+questions:
+  - id: instructions
+    kind: info
+    prompt: |
+      ## Instrucciones
+
+      Se te presentaran una serie de ejercicios para poner a prueba tu aprendizaje en **{tool}**.
+
+      Durante la prueba puedes consultar el contenido de aprendizaje dado por el investigador, como buscar por internet, más **no se permite el uso de asistentes de inteligencia artificial**.
+
+  # ==========================================================================
+  # PA: choose the code
+  # ==========================================================================
+
+  - id: PA1-1
+    kind: choice_code
+    prompt: Escoge el código correcto (Sin errores sintácticos).
+    options:
+      - id: a
+        code: |
+          import { Definition, DevShell, Nixpkgs, System } from "nixty-lib"
+
+          const NIX_PKGS = new Nixpkgs({ tag: "nixos-unstable" })
+
+          const dev = new DevShell({
+              name: "default"
+              systems: [System.x86_64Linux]
+              packages: (system) => NIX_PKGS.getPackages(
+                ["python3", "git"], system)
+              onEnter: `echo "Welcome to the dev shell"`
+          })
+      - id: b
+        code: |
+          import { Definition, DevShell, Nixpkgs, System } from "nixty-lib"
+
+          const NIX_PKGS := new Nixpkgs({ tag := "nixos-unstable" })
+
+          const dev = new DevShell({
+              name: "default",
+              systems := [System.x86_64Linux],
+              packages: (system) => NIX_PKGS.getPackages(
+                ["python3" "git"], system),
+              onEnter := "echo Welcome to the dev shell",
+          })
+
+      - id: c
+        code: |
+          import { Definition, DevShell, Nixpkgs, System }
+
+          const NIX_PKGS = new Nixpkgs({ tag: "nixos-unstable" })
+
+          const dev = new DevShell({
+              name: "default",
+              systems: [System.x86_64Linux],
+              packages: (system) => NIX_PKGS.getPackages(
+                ["python3", "git"], ${system}),
+              onEnter: `echo "Welcome to the dev shell"`,
+          })
+
+      - id: d
+        correct: true
+        code: |
+          import { Definition, DevShell, Nixpkgs, System } from "nixty-lib"
+
+          const NIX_PKGS = new Nixpkgs({ tag: "nixos-unstable" })
+
+          const dev = new DevShell({
+              name: "default",
+              systems: [System.x86_64Linux],
+              packages: (system) => NIX_PKGS.getPackages(
+                ["python3", "git"], system),
+              onEnter: `echo "Welcome to the dev shell"`,
+          })
+
+      - id: e
+        code: |
+          get { Definition, DevShell, Nixpkgs, System } from "nixty-lib"
+
+          const NIX_PKGS = new Nixpkgs({ tag: "nixos-unstable" })
+
+          const dev = new DevShell
+              name: "default"
+              systems: [System.x86_64Linux]
+              packages: (system) => NIX_PKGS.getPackages(
+                ["python3", "git"], system)
+              onEnter: `echo "Welcome to the dev shell"`,
+          })
+
+
+  - id: PA1-2
+    optional: true
+    kind: choice_code
+    prompt: Escoge el código correcto (Sin errores sintácticos).
+    options:
+      - id: a
+        code: |
+          // more code...
+          const greet = new Package({
+              name: "greet"
+              systems: SYSTEMS,
+              definition: (system) => ({
+                  version: "1.0.0",
+                  src: new Source(Path.fetchFromGithub({
+                      owner: "example",
+                      repo: "greet",
+                      tag: "v1.0.0",
+                  })),
+                  deps: {},
+                  phases: (out) => ({
+                      build: nix`
+                          gcc -O2 -o greet main.c
+                      `,
+                      install: nix`
+                          mkdir -p ${out}/bin
+                          cp greet ${out}/bin/greet
+                      `,
+                  }),
+              }),
+          })
+          // more code...
+      - id: b
+        correct: true
+        code: |
+          // more code...
+          const greet = new Package({
+              name: "greet",
+              systems: SYSTEMS,
+              definition: (system) => ({
+                  version: "1.0.0",
+                  src: new Source(Path.fetchFromGithub({
+                      owner: "example",
+                      repo: "greet",
+                      tag: "v1.0.0",
+                  })),
+                  deps: {
+                      atBuild: NIX_PKGS.getPackages(["gcc"], system),
+                  },
+                  phases: (out) => ({
+                      build: nix`
+                          gcc -O2 -o greet main.c
+                      `,
+                      install: nix`
+                          mkdir -p ${out}/bin
+                          cp greet ${out}/bin/greet
+                      `,
+                  }),
+              }),
+          })
+          // more code...
+      - id: c
+        code: |
+          // more code...
+          const greet := new Package({
+              name := "greet",
+              systems := SYSTEMS,
+              definition := (system) => ({
+                  version := "1.0.0",
+                  src := new Source(Path.fetchFromGithub(
+                      owner = "example",
+                      repo = "greet",
+                      tag = "v1.0.0")),
+                  deps := {},
+                  phases := (out) => ({
+                      build := "gcc -O2 -o greet main.c",
+                      install := "mkdir -p $out/bin; cp greet $out/bin/greet",
+                  }),
+              }),
+          })
+          // more code...
+      - id: d
+        code: |
+          // more code...
+          const greet = new Package({
+              name: "greet",
+              systems: SYSTEMS,
+              definition: (system) => ({
+                  version: "1.0.0"
+                  src: new Source(Path.fetchFromGithub({
+                      owner = "example";
+                      repo = "greet";
+                      tag = "v1.0.0";
+                  }))
+                  deps: {},
+                  phases: (out) => ({
+                      build: nix`
+                          gcc -O2 -o greet main.c
+                      `,
+                      install: nix`
+                          mkdir -p ${out}/bin
+                          cp greet ${out}/bin/greet
+                      `,
+                  }),
+              }),
+          })
+          // more code...
+      - id: e
+        code: |
+          // more code...
+          const greet = new Package({
+              name: "greet",
+              systems: SYSTEMS,
+              definition: (system) => ({
+                  version: "1.0.0",
+                  src: new Source(Path.fetchFromGithub({
+                      owner: "example";
+                      repo: "greet";
+                      tag: "v1.0.0";
+                  })),
+                  deps: {},
+                  phases: (out) => ({
+                      build: nix`
+                          gcc -O2 -o greet main.c
+                      `,
+                      install: nix`
+                          mkdir -p ${out}/bin
+                          cp greet ${out}/bin/greet
+                      `,
+                  }),
+              }),
+          })
+          // more code...
+
+  - id: PA2-1
+    kind: choice_code
+    prompt: Selecciona el trozo de código que **NO** tiene sentido.
+    options:
+      - id: a
+        code: |
+          //  ...
+          const dev = new DevShell({
+              name: "default",
+              systems: SYSTEMS,
+              packages: (system) => NIX_PKGS.getPackages(["python3"], system),
+              onEnter: `echo "Welcome to the dev shell"`,
+          })
+          //  ...
+      - id: b
+        code: |
+          //  ...
+          const dev = new DevShell({
+              name: "default",
+              systems: SYSTEMS,
+              packages: (system) => NIX_PKGS.getPackages(["python3", "git"], system),
+              onEnter: ["echo", "Welcome to the dev shell"].join(" "),
+          })
+          //  ...
+      - id: c
+        correct: true
+        code: |
+          //  ...
+          const SYSTEMS = NIX_PKGS.getPackages(["git"], System.x86_64Linux)
+          const dev = new DevShell({
+              name: "default",
+              systems: SYSTEMS,
+              packages: (system) => NIX_PKGS.getPackages(["python3", "git"], system),
+          })
+          //  ...
+      - id: d
+        code: |
+          //  ...
+          const dev = new DevShell({
+              name: "default",
+              systems: SYSTEMS,
+              packages: (system) => NIX_PKGS.getPackages(["python3", "git", "nodejs"], system),
+              onEnter: `echo "Welcome to the dev shell"`,
+          })
+          //  ...
+      - id: e
+        code: |
+          //  ...
+          const dev = new DevShell({
+              name: "default",
+              systems: SYSTEMS,
+              packages: (system) => NIX_PKGS.getPackages(["python3", "git"], system),
+              onEnter: `echo "Welcome to the dev shell"`,
+          })
+          //  ...
+
+  - id: PA2-2
+    optional: true
+    kind: choice_code
+    prompt: Selecciona el trozo de código que **SI** tiene sentido.
+    options:
+      - id: a
+        correct: true
+        code: |
+          //  ...
+          new Package({
+              name: "greet",
+              systems: SYSTEMS,
+              definition: (system) => ({
+                  version: "1.0.0",
+                  src: new Source(Path.fetchFromGithub(
+                    { owner: "example", repo: "greet", tag: "v1.0.0" })),
+                  deps: { atBuild: NIX_PKGS.getPackages(["gcc"], system) },
+                  phases: (out) => ({
+                      build: nix`gcc -O2 -o greet main.c`,
+                      install: nix`mkdir -p ${out}/bin; cp greet ${out}/bin/greet`,
+                  }),
+              }),
+          })
+          //  ...
+      - id: b
+        code: |
+          //  ...
+          new Package({
+              name: "greet",
+              systems: SYSTEMS,
+              definition: (system) => ({
+                  version: "1.0.0",
+                  src: new Source(Path.fetchFromGithub(
+                    { owner: "example", repo: "greet", tag: "v1.0.0" })),
+                  deps: { atBuild: NIX_PKGS.getPackages(["gcc"], system)[0] },
+                  phases: (out) => ({
+                      build: nix`gcc -O2 -o greet main.c`,
+                      install: nix`mkdir -p ${out}/bin; cp greet ${out}/bin/greet`,
+                  }),
+              }),
+          })
+          //  ...
+      - id: c
+        code: |
+          //  ...
+          new Package({
+              name: "greet",
+              systems: SYSTEMS,
+              definition: (system) => ({
+                  version: "1.0.0",
+                  src: new Source(Path.fetchFromGithub(
+                    { owner: "example", repo: "greet", tag: "v1.0.0" })),
+                  deps: { atBuild: NIX_PKGS.getPackages(["gcc"], system) },
+                  phases: (out) => ({
+                      build: nix`gcc -O2 -o greet main.c`,
+                      install: out,
+                  }),
+              }),
+          })
+          //  ...
+      - id: d
+        code: |
+          //  ...
+          new Package({
+              name: "greet",
+              systems: SYSTEMS,
+              definition: (system) => ({
+                  version: "1.0.0",
+                  src: "main.c",
+                  deps: { atBuild: NIX_PKGS.getPackages(["gcc"], system) },
+                  phases: (out) => ({
+                      build: nix`gcc -O2 -o greet main.c`,
+                      install: nix`mkdir -p ${out}/bin; cp greet ${out}/bin/greet`,
+                  }),
+              }),
+          })
+          //  ...
+      - id: e
+        code: |
+          //  ...
+          new Package({
+              name: "greet",
+              systems: SYSTEMS,
+              definition: (system) => ({
+                  version: "1.0.0",
+                  src: new Source(
+                    Path.fetchFromGithub({owner: "example", repo: "greet", tag: "v1.0.0",})
+                  ),
+                  deps: {},
+                  phases: (out) => ({
+                      build: nix`gcc -O2 -o greet main.c`,
+                      install: nix`mkdir -p ${out}/bin; cp greet ${out}/bin/greet`,
+                      build: nix`make`,
+                  }),
+              }),
+          })
+          //  ...
+
+  - id: PA3-1
+    kind: choice_code
+    prompt: |
+      Selecciona el programa correcto con el resultado solicitado.
+
+      _"Dado `x = 10`, seleciona el programa donde `respuesta `evalúa a "grande"."_
+    options:
+      - id: a
+        correct: true
+        code: |
+          const x = 10
+          let respuesta
+
+          if (x < 5) respuesta = "pequeño"
+          else if (x < 10) respuesta = "mediano"
+          else respuesta = "grande"
+      - id: b
+        code: |
+          const x = 10
+          let respuesta
+
+          if (x < 5) respuesta = "pequeño"
+          else if (x <= 10) respuesta = "mediano"
+          else respuesta = "grande"
+      - id: c
+        code: |
+          const x = 10
+          let respuesta
+
+          if (x > 10) respuesta = "grande"
+          else if (x > 5) respuesta = "mediano"
+          else respuesta = "pequeño"
+      - id: d
+        code: |
+          const x = 10
+          let respuesta
+
+          if (x < 5) respuesta = "manzanas"
+          else if (x < 10) respuesta = "peras"
+          else respuesta = "bananos"
+      - id: e
+        code: |
+          const x = 10
+          let respuesta
+
+          if (x < 5) respuesta = "pequeño"
+          else if (x < 10) respuesta = "mediano"
+
+  - id: PA3-2
+    optional: true
+    kind: choice_code
+    prompt: |
+      Selecciona el programa correcto con el resultado solicitado.
+
+      _"Un programa de Nixty que produzca una *DevShell* para linux 🐧, y construya un paquete para macos 🍎 (Darwin)."_
+    options:
+      - id: a
+        code: |
+          export default new Definition({
+              //... more code
+              nixpkgs: new Nixpkgs({ tag: "nixos-unstable" }),
+              commands: [
+                  new DevShell({
+                      name: "default",
+                      systems: [System.x86_64Darwin],
+                      //... more code
+                  }),
+              ],
+              commands: [
+                  new Package({
+                      name: "default",
+                      systems: [System.x86_64Linux],
+                      //... more code
+                  }),
+              ],
+          })
+      - id: b
+        code: |
+          export default new Definition({
+              //... more code
+              nixpkgs: new Nixpkgs({ tag: "nixos-unstable" }),
+              systems: [System.x86_64Linux],
+              devShells: [
+                  new DevShell({
+                      name: "default",
+                      //... more code
+                  }),
+              ],
+              packages: [
+                  new Package({
+                      name: "default",
+                      //... more code
+                  }),
+              ],
+          })
+      - id: c
+        correct: true
+        code: |
+          export default new Definition({
+              //... more code
+              nixpkgs: new Nixpkgs({ tag: "nixos-unstable" }),
+              devShells: [
+                  new DevShell({
+                      name: "default",
+                      systems: [System.x86_64Linux],
+                      //... more code
+                  }),
+              ],
+              packages: [
+                  new Package({
+                      name: "default",
+                      systems: [System.x86_64Darwin],
+                      //... more code
+                  }),
+              ],
+          })
+      - id: d
+        code: |
+          export default new Definition({
+              //... more code
+              nixpkgs: new Nixpkgs({ tag: "nixos-unstable" }),
+              devShells: [
+                  new DevShell({
+                      name: "default",
+                      systems: [System.x86_64Linux],
+                      //... more code
+                  }),
+              ],
+              packages: [
+                  new Package({
+                      name: "default",
+                      systems: [System.x86_64Linux],
+                      //... more code
+                  }),
+              ],
+          })
+      - id: e
+        code: |
+          export default new Definition({
+              //... more code
+              nixpkgs: new Nixpkgs({ tag: "nixos-unstable" }),
+              packages: [
+                  new Package({
+                      name: "default",
+                      systems: [System.x86_64Darwin],
+                      //... more code
+                  }),
+              ],
+          })
+
+  # ==========================================================================
+  # PP: read the code
+  # ==========================================================================
+
+  - id: PP4-1
+    kind: choice_text
+    prompt: Selecciona el valor final de `[ f, a ]` tras ser evaluado.
+    code: |
+      const f = (x: number) => x + 1
+      const a = 1
+
+      const result = [f, a]
+    options:
+      - { id: a, text: "`[ [Function: f], 1 ]`", correct: true }
+      - { id: b, text: "`[ 2 ]`" }
+      - { id: c, text: "`2`" }
+      - { id: d, text: "`[ [Function: f] ]`" }
+      - { id: e, text: "Error de evaluación" }
+
+  - id: PP4-2
+    optional: true
+    kind: choice_text
+    prompt: "Selecciona el resultado correcto para cuando se corre `nixty build greet` con el programa dado:"
+    code: |
+      const greet = new Package({
+          name: "greet",
+          systems: SYSTEMS,
+          definition: (system) => ({
+              version: "1.0.0",
+              src: new Source(Path.fetchFromGithub({
+                  owner: "example", repo: "greet", tag: "v1.0.0",
+              })),
+              deps: {
+                  atBuild: NIX_PKGS.getPackages(["gcc"], system),
+              },
+              phases: (out) => ({
+                  build: nix`gcc -O2 -o greet main.c`,
+                  install: nix`
+                      mkdir -p ${out}/bin
+                      cp greet ${out}/bin/greet
+                  `,
+              }),
+          }),
+      })
+    options:
+      - id: a
+        text: Nix compila usando el código fuente del directorio de trabajo actual en lugar de GitHub, ya que `fetchFromGithub` solo se usa con fines de documentación.
+      - id: b
+        correct: true
+        text: Nix obtiene el código fuente de GitHub en el tag fijado (`v1.0.0`), y compila `main.c` con `gcc` y genera `bin/greet`.
+      - id: c
+        text: Nix crea un entorno de desarrollo (dev shell) con `gcc` disponible.
+      - id: d
+        text: Nix obtiene el código fuente, pero como no se proporcionó ningún hash, descarga siempre la versión más reciente del repositorio, ignorando el tag, y se ejecuta correctamente sin mostrar ningún error.
+      - id: e
+        text: Nix compila el programa correctamente, pero el binario resultante se llama main, no greet, porque ese es el nombre del archivo fuente (`main.c`).
+
+  - id: PP5-1
+    kind: choice_text
+    prompt: "Identifica cuantas variables son accesibles desde el bloque señalado en el comentario:"
+    code: |
+        const outputs = (name: string) => {
+            const a = "A"
+            const b = "B"
+            return {
+                a: () => { const c = "C"; return d },
+                b: () => {
+                    const c = "D"
+                    return {
+                        // <= HERE
+                    }
+                },
+            }
+        }
+    options:
+      - { id: a, text: "6" }
+      - { id: b, text: "7" }
+      - { id: c, text: "8" }
+      - { id: d, text: "5" }
+      - { id: e, text: "4", correct: true}
+
+  - id: PP5-2
+    optional: true
+    kind: choice_text
+    prompt: "En base a la estructura del siguiente código que puedes decir de los tipos de `x, y, z, a`:"
+    code: |
+      ( x: Function, y: number, z: number ) => x(y).a(z)
+    options:
+      - { id: a, text: "`x` es una función | `y` es un número | `z` es un objeto | `a` es una función." }
+      - { id: b, text: "`x` es una función | `y` es un número | `z` es un número | `a` es una función.", correct: true }
+      - { id: c, text: "`x` es un objeto | `y` es una función | `z` es un número | `a` es un tipo cualquiera." }
+      - { id: d, text: "`x` es una función | `y` es un objeto | `z` es un número | `a` es una función." }
+      - { id: e, text: "`x` es una función | `y` es un número | `z` es un número | `a` es un objeto." }
+
+  - id: PP6-1
+    kind: choice_text
+    prompt: "Selecciona el programa que evalué una expresión equivalente a:"
+    code: |
+      {
+          name: "api",
+          port: "8080",
+          server: {
+              routes: [["GET", "/users"], ["POST", "/login"]],
+              database: {
+                  engine: "sqlite",
+                  file: "data/app.db",
+              },
+          },
+      }
+    options:
+      - id: a
+        text: |
+          ```ts
+          const server = {
+              routes: [["GET", "/users"], ["POST", "/login"]],
+          }
+
+          const result = {
+              name: "api",
+              port: "8080",
+              server: { ...server, database: { engine: "sqlite" } },
+          }
+          ```
+      - id: b
+        text: |
+          ```ts
+          const settings = {
+              routes: [["GET", "/users"], ["POST", "/login"]],
+              database: {
+                  engine: "sqlite",
+                  file: "data/app.db",
+              },
+          }
+
+          const result = {
+              name: "api",
+              port: "8080",
+              server: { settings },
+          }
+          ```
+      - id: c
+        correct: true
+        text: |
+          ```ts
+          const db = {
+              engine: "sqlite",
+              file: "data/app.db",
+          }
+          const { engine, file } = db
+
+          const result = {
+              name: "api",
+              port: "8080",
+              server: {
+                  routes: [["GET", "/users"], ["POST", "/login"]],
+                  database: { engine, file },
+              },
+          }
+          ```
+      - id: d
+        text: |
+          ```ts
+          const result = {
+              name: "api",
+              port: "8080",
+              server: {
+                  routes: [["GET", "/users"], ["POST", "/login"]],
+                  database: {
+                      engine: Path.fetchExternalPath("/sqlite"),
+                      file: Path.fetchInternalPath("data/app.db"),
+                  },
+              },
+          }
+          ```
+      - id: e
+        text: |
+          ```ts
+          const users = ["GET", "/users"]
+          const login = ["POST", "/login"]
+
+          const result = {
+              name: "api",
+              port: "8080",
+              server: {
+                  routes: [...users, ...login],
+                  database: {
+                      engine: "sqlite",
+                      file: "data/app.db",
+                  },
+              },
+          }
+          ```
+
+  - id: PP6-2
+    optional: true
+    kind: choice_code
+    prompt: "Selecciona el programa que evalúa a una expresión equivalente a:"
+    code: |
+      { A: "BLUE", B: "LARGE", C: "MONO" }
+    options:
+      - id: a
+        code: |
+          const defaults = { A: "BLUE", B: "MEDIUM" }
+          const user = { B: "LARGE", C: "MONO" }
+
+          const result = { ...user, ...defaults }
+      - id: b
+        correct: true
+        code: |
+          const defaults = { A: "BLUE", B: "MEDIUM" }
+          const user = { B: "LARGE", C: "MONO" }
+
+          const result = { ...defaults, ...user }
+      - id: c
+        code: |
+          const defaults = { A: "BLUE", B: "MEDIUM" }
+          const user = { B: "LARGE", C: "MONO" }
+
+          const result = { ...defaults, user }
+      - id: d
+        code: |
+          const defaults = { A: "BLUE", B: "MEDIUM" }
+          const user = { B: "LARGE", C: "MONO" }
+
+          const result = { {}, {}, B: user.B }
+      - id: e
+        code: |
+          const defaults = { A: "BLUE", B: "MEDIUM" }
+          const user = { B: "LARGE", C: "MONO" }
+
+          const result = { ...defaults, ...user, B: "MEDIUM" }
+
+  - id: PP7-1
+    kind: choice_text
+    prompt: |
+      En qué orden crees que se van a evaluar las diferentes variables de este programa de Typescript.
+
+      El `&` significa que se evaluan a la vez en el mismo paso.
+    code: |
+      const a = 1
+      const b = a + 2
+      const c = b * 3
+    options:
+      - { id: a, text: "c → b → a" }
+      - { id: b, text: "a → b → c", correct: true }
+      - { id: c, text: "c & b → a" }
+      - { id: d, text: "a & b & c" }
+      - { id: e, text: "c & a → b" }
+
+  - id: PP7-2
+    optional: true
+    kind: choice_text
+    prompt: Indica cual será el resultado de evaluar el siguiente programa, **recuerda que TypeScript evalúa de forma estricta (_eager_)**.
+    code: |
+      const averages = [10 / 0, 0 / 0, -5 / 0]
+      // Este cálculo tarda muchísimo
+      let total = 0
+      for (let n = 0; n < 5_000_000_000_000; n++) total += n
+
+      const message = averages.length > 2
+          ? "listo!"
+          : total
+    options:
+      - { id: a, text: "Evalúa a `\"listo!\"`." }
+      - { id: b, text: "Falla por división por cero." }
+      - { id: c, text: "Falla por variable indefinida." }
+      - { id: d, text: "Evalúa a `\"listo!\"`, pero porque TypeScript elimina automáticamente la rama else no usada." }
+      - { id: e, text: "Tarda mucho en responder, porque TypeScript calcula `total`.", correct: true }
+
+  - id: PP8-1
+    kind: choice_text
+    prompt: Indica cual será el resultado de la siguiente operación.
+    code: |
+      const prices = [10, 20, 30]
+      const stock = [
+          ["pan", 5],
+          ["leche", 3],
+      ]
+
+      const result = {
+          // map aplica una función a cada elemento de una lista,
+          // devolviendo una nueva lista con los resultados
+          prices: prices.map((p) => p + 5),
+
+          // Object.fromEntries convierte una lista de pares [clave, valor]
+          // en un objeto, usando el primer elemento como clave y el segundo como valor
+          stock: Object.fromEntries(stock),
+      }
+    options:
+      - id: a
+        text: |
+          ```ts
+          {
+              prices: [10, 20, 30],
+              stock: [["pan", 5], ["leche", 3]],
+          }
+          ```
+      - id: b
+        text: |
+          ```ts
+          {
+              prices: [15, 25, 35],
+              stock: [5, 3],
+          }
+          ```
+      - id: c
+        text: |
+          ```ts
+          {
+              prices: 60,
+              stock: { pan: 5, leche: 3 },
+          }
+          ```
+      - id: d
+        correct: true
+        text: |
+          ```ts
+          {
+              prices: [15, 25, 35],
+              stock: { pan: 5, leche: 3 },
+          }
+          ```
+      - id: e
+        text: |
+          ```ts
+          {
+              prices: [15, 25, 35],
+              stock: ["leche", 3],
+          }
+          ```
+
+  - id: PP8-2
+    optional: true
+    kind: choice_text
+    prompt: |
+      Indica cual será el resultado de la siguiente operación. Recuerda que:
+        - `map`: aplica una función a cada elemento de una lista,
+        devolviendo una nueva lista con los resultados
+        - `Object.fromEntries`: convierte una lista de pares [clave, valor]
+        en un objeto, usando el primer elemento como clave y el segundo como valor
+    code: |
+      function createInventory ( items: string[] ) : Object {
+          return Object.fromEntries(
+              items.map( item => [ item, 100 ])
+          )
+      }
+
+      createInventory(["banana", "apple"])
+    options:
+      - id: a
+        text: |
+          ```ts
+          TypeError: Iterator value banana is not an entry object
+          ```
+      - id: b
+        correct: true
+        text: |
+          ```ts
+          { banana: 100, apple: 100 }
+          ```
+      - id: c
+        text: |
+          ```ts
+          [
+              ["banana", 100],
+              ["apple", 100],
+          ]
+          ```
+      - id: d
+        text: |
+          ```ts
+          { banana: undefined, apple: undefined }
+          ```
+      - id: e
+        text: |
+          ```ts
+          ["apple", 100]
+          ```
+
+  # ==========================================================================
+  # PE: free answers, written in Codespaces
+  # ==========================================================================
+
+  - id: free-answers
+    kind: info
+    prompt: |
+      ## Respuestas Libres
+
+      **En esta sección editaras `weathercli` un programa ya empaquetado en Nixty**. En cada ejercicio deberás modificar el código siguiendo las instrucciones.
+
+      **Se te proporcionará un entorno de desarrollo en línea (Codespaces)** con todas las herramientas necesarias, asi que no necesitas instalar nada en tu computadora.
+
+      Abre ahora el entorno: [Abrir Codespace]({codespace}). Tarda unos minutos en iniciar; déjalo abierto en otra pestaña.
+
+      Para cada ejercicio:
+
+      1. Lee la instrucción.
+      2. Modifica el código proporcionado.
+      3. Guarda el archivo (`Ctrl+S`) y verifica que la solución funcione desde una terminal del Codespace (menú *Terminal → New Terminal*). **Cada ejercicio indica qué comando usar y qué resultado esperar**.
+      4. Cuando estés conforme con tu respuesta, copia el código solicitado y pégalo en el cuestionario.
+      5. No cierres el editor, lo usarás en cada ejercicio.
+
+      **Los ejercicios son independientes entre sí. Si no logras resolver uno, puedes continuar con el siguiente.**
+
+  - id: PE9-1
+    kind: free_code
+    prompt: |
+      Abre **Codespaces** (link abajo), trabajaras en `nixty.ts`. Reemplaza el contenido con el **Código inicial**.
+
+      ### Contexto
+      Has empaquetado **`weathercli`** un script que consulta el clima de una ciudad. Actualmente el paquete solo está disponible para la plataforma `x86_64-linux`.
+
+      ### Instrucciones
+      Modifica el archivo `nixty.ts` para que también soporte los siguientes sistemas:
+
+      - `x86_64-linux`
+      - `aarch64-linux`
+      - `x86_64-darwin`
+      - `aarch64-darwin`
+
+      ### Cómo probarlo
+      Ejecuta `nixty generate` y luego `nix flake show`. Bajo `packages` deben aparecer los 4 sistemas (los que no son el del Codespace aparecen como `omitted`, eso es normal):
+
+      ```
+      └───packages
+          ├───aarch64-darwin
+          │   └───weathercli omitted (use '--all-systems' to show)
+          ├───aarch64-linux
+          │   └───weathercli omitted (use '--all-systems' to show)
+          ├───x86_64-darwin
+          │   └───weathercli omitted (use '--all-systems' to show)
+          └───x86_64-linux
+              └───weathercli: package 'weathercli-1.0.0'
+      ```
+
+      Luego ejecuta `nixty run weathercli`: el programa debe seguir funcionando y mostrar el clima de Tokyo:
+
+      ```
+      https://wttr.in/Tokyo?m&format=%l:+%c+%t
+      Tokyo: ☀️  +23°C
+      ```
+
+      Cuando termines, copia todo el contenido de `nixty.ts` y pégalo abajo.
+
+      **❓ Pista**: Los sistemas se indican con los valores de `System`, por ejemplo `System.aarch64Linux`, en el atributo `systems` del paquete.
+
+    code: |
+      import { Definition, Nixpkgs, Package, Path, Source, System, nix } from "nixty-lib"
+
+      const SYSTEMS = [System.x86_64Linux]
+
+      const NIX_PKGS = new Nixpkgs({ tag: "nixos-unstable" })
+
+      const DefaultConfig = (system: System) =>
+          NIX_PKGS.getExpresion("writeText", system)(
+              "weathercli-config.json",
+              JSON.stringify({
+                  city: "Tokyo",
+                  units: "metric",
+                  format: "compact",
+              }),
+          )
+
+      // PACKAGES
+      // ===========
+      // Paquete WeatherCLI
+      const weathercli = new Package({
+          name: "weathercli",
+          systems: SYSTEMS,
+          definition: (system) => ({
+              version: "1.0.0",
+              src: new Source(Path.fetchInternalPath(".")),
+              deps: {
+                  atRuntime: NIX_PKGS.getPackages(["curl", "jq"], system),
+              },
+              phases: (out) => ({
+                  install: nix`
+                      mkdir -p ${out}/bin ${out}/share/weathercli
+                      install -m755 weathercli.sh ${out}/bin/weathercli
+                      install -m644 ${DefaultConfig(system)} ${out}/share/weathercli/config.json
+                  `,
+                  postFixup: nix`
+                      wrapProgram ${out}/bin/weathercli \
+                          --set-default WEATHERCLI_CONFIG ${out}/share/weathercli/config.json
+                  `,
+              }),
+          }),
+      })
+
+      export default new Definition({
+          description: "weathercli — reporte del clima en la terminal",
+          nixpkgs: NIX_PKGS,
+          packages: [weathercli],
+      })
+
+  - id: PE10-1
+    kind: free_code
+    prompt: |
+      **Antes de empezar, reemplaza todo el contenido de `nixty.ts` con el código inicial de abajo.**
+
+      ### Contexto
+      `weathercli` utiliza un archivo de configuración llamado `weathercli-config.json` para indicar la ciudad a consultar. Sin embargo, el programa **también funciona si ese archivo no existe**.
+
+      Actualmente ese archivo es creado por Nixty.
+
+      ### Instrucciones
+      Modifica el código para que Nixty deje de generar el archivo de configuración.
+
+      ### Cómo probarlo
+      Ejecuta `nixty run weathercli`. Debería mostrar una ciudad diferente a Roma:
+
+      ```
+      https://wttr.in/?m&format=%l:+%c+%t
+      Ashburn, Virginia, US: ☀️  +18°C
+      ```
+
+      Cuando termines, copia todo el contenido de `nixty.ts` y pégalo abajo.
+
+      **❓ Pista** Busca la parte del código donde se crea o escribe el archivo `weathercli-config.json` y los lugares donde son usadas.
+    code: |
+      import { Definition, Licenses, Nixpkgs, Package, Path, Source, System, nix } from "nixty-lib"
+
+      const SYSTEMS = [System.x86_64Linux, System.aarch64Linux, System.x86_64Darwin, System.aarch64Darwin]
+
+      const NIX_PKGS = new Nixpkgs({ tag: "nixos-unstable" })
+
+      // Genera el archivo de configuración por defecto como JSON,
+      // a partir de un objeto de TypeScript.
+      const DefaultConfig = (system: System) =>
+          NIX_PKGS.getExpresion("writeText", system)(
+              "weathercli-config.json",
+              JSON.stringify({
+                  city: "Roma",
+                  units: "metric",
+                  format: "compact",
+              }),
+          )
+
+      // PACKAGES
+      // ==========
+      // Paquete WeatherCLI
+      const weathercli = new Package({
+          name: "weathercli",
+          systems: SYSTEMS,
+          definition: (system) => ({
+              version: "1.0.0",
+              src: new Source(Path.fetchInternalPath(".")),
+              deps: {
+                  atRuntime: NIX_PKGS.getPackages(["curl", "jq"], system),
+              },
+              phases: (out) => ({
+                  install: nix`
+                      mkdir -p ${out}/bin ${out}/share/weathercli
+                      install -m755 weathercli.sh ${out}/bin/weathercli
+                      install -m644 ${DefaultConfig(system)} ${out}/share/weathercli/config.json
+                  `,
+                  postFixup: nix`
+                      wrapProgram ${out}/bin/weathercli \
+                          --set-default WEATHERCLI_CONFIG ${out}/share/weathercli/config.json
+                  `,
+              }),
+              metadata: {
+                  description: "Reporte del clima en la terminal, configurable vía un archivo JSON",
+                  mainProgram: "weathercli",
+                  license: Licenses.MIT,
+              },
+          }),
+      })
+
+      export default new Definition({
+          description: "weathercli — reporte del clima en la terminal",
+          nixpkgs: NIX_PKGS,
+          packages: [weathercli],
+      })
+
+  - id: PE11-1
+    kind: free_code
+    prompt: |
+      **Antes de empezar, reemplaza todo el contenido de `nixty.ts` con el código inicial de abajo.**
+
+      ### Contexto
+      `weathercli` ya está correctamente empaquetado. Ahora quieres crear una `DevShell` donde ese paquete esté disponible.
+
+      ### Instrucciones
+      Modifica el código para crear una `DevShell` llamada `dev` que incluya el paquete `weathercli`.
+
+      ### Cómo probarlo
+      Ejecuta `nixty develop dev` para entrar a la `DevShell`, dentro de ella, ejecuta `weathercli`. Debe mostrar el clima de Roma:
+
+      ```
+      https://wttr.in/Roma?m&format=%l:+%c+%t
+      Roma: ☀️  +23°C
+      ```
+
+      Sal del entorno con `exit`.
+
+      Cuando termines, copia todo el contenido de `nixty.ts` y pégalo abajo.
+
+      **❓ Pista:** Puedes acceder al paquete de `weathercli` mediante el método `getDerivation`, por ejemplo: `weathercli.getDerivation(System.x86_64Linux)`. Y crear una DevShell con `new DevShell`.
+    code: |
+      import { Definition, Licenses, Nixpkgs, Package, Path, Source, System, nix } from "nixty-lib"
+
+      const SYSTEMS = [System.x86_64Linux, System.aarch64Linux, System.x86_64Darwin, System.aarch64Darwin]
+
+      const NIX_PKGS = new Nixpkgs({ tag: "nixos-unstable" })
+
+      // Genera el archivo de configuración por defecto como JSON,
+      // a partir de un objeto de TypeScript.
+      const DefaultConfig = (system: System) =>
+          NIX_PKGS.getExpresion("writeText", system)(
+              "weathercli-config.json",
+              JSON.stringify({
+                  city: "Roma",
+                  units: "metric",
+                  format: "compact",
+              }),
+          )
+
+      // PACKAGES
+      // ===========
+      // WeatherCLI package
+      const weathercli = new Package({
+          name: "weathercli",
+          systems: SYSTEMS,
+          definition: (system) => ({
+              version: "1.0.0",
+              src: new Source(Path.fetchInternalPath(".")),
+              deps: {
+                  atRuntime: NIX_PKGS.getPackages(["curl", "jq"], system),
+              },
+              phases: (out) => ({
+                  install: nix`
+                      mkdir -p ${out}/bin ${out}/share/weathercli
+                      install -m755 weathercli.sh ${out}/bin/weathercli
+                      install -m644 ${DefaultConfig(system)} ${out}/share/weathercli/config.json
+                  `,
+                  postFixup: nix`
+                      wrapProgram ${out}/bin/weathercli \
+                          --set-default WEATHERCLI_CONFIG ${out}/share/weathercli/config.json
+                  `,
+              }),
+              metadata: {
+                  description: "Reporte del clima en la terminal, configurable vía un archivo JSON",
+                  mainProgram: "weathercli",
+                  license: Licenses.MIT,
+              },
+          }),
+      })
+
+      // DEVSHELLS
+      // ===========
+      // escribe aqui...
+
+      export default new Definition({
+          description: "weathercli — reporte del clima en la terminal",
+          nixpkgs: NIX_PKGS,
+          packages: [weathercli],
+      })
