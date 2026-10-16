@@ -962,7 +962,7 @@ questions:
               └───weathercli: package 'weathercli-1.0.0'
       ```
 
-      Luego ejecuta `nix run .#weathercli`: el programa debe seguir funcionando y mostrar el clima de Tokyo:
+      Luego ejecuta `nix run ".#weathercli"`: el programa debe seguir funcionando y mostrar el clima de Tokyo:
 
       ```
       https://wttr.in/Tokyo?m&format=%l:+%c+%t
