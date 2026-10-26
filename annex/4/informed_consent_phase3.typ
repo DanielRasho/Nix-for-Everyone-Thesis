@@ -1,25 +1,35 @@
-#set page(
-  paper: "us-letter",
-  numbering: "1",
-  margin: 1.5cm
-)
-
-#set text(size: 10pt, lang: "es")
-#set par(justify: true, leading: 0.75em)
+// Misma llave que `in-thesis` en utilities.typ.
+#let in-thesis = state("in-thesis", false)
 
 #set heading(numbering: none)
-#show heading.where(level: 2): it => {
-  v(0.5em)
-  text(size: 10pt, weight: "bold", it.body)
-  v(0.2em)
-}
 
-// ---------- Encabezado ----------
-#align(center)[
-    #text(size: 10pt, weight: "bold")[Consentimiento Informado - Fase 3]
+// Formato de la hoja impresa. Dentro de la tesis (annex/annex.typ) se omite y el título
+// lo pone el encabezado del anexo.
+#show: doc => context if in-thesis.get() { doc } else [
+  #set page(
+    paper: "us-letter",
+    numbering: "1",
+    margin: 1.5cm
+  )
+
+  #set text(size: 10pt, lang: "es")
+  #set par(justify: true, leading: 0.75em)
+
+  #show heading.where(level: 2): it => {
+    v(0.5em)
+    text(size: 10pt, weight: "bold", it.body)
+    v(0.2em)
+  }
+
+  // ---------- Encabezado ----------
+  #align(center)[
+      #text(size: 10pt, weight: "bold")[Consentimiento Informado - Fase 3]
+  ]
+
+  #v(0.5em)
+
+  #doc
 ]
-
-#v(0.5em)
 
 #let campo(label) = text(style: "italic")[#label]
 

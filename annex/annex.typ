@@ -52,6 +52,13 @@ Con datos extraidos de Github del repositorio de `mozilla-firefox/firefox` para 
 
 Del archivo SBOM se extrajeron 21,295 paquetes y 37,926 relaciones de dependencia directa (`DEPENDS_ON`)#footnote[La diferencia con las 22,732 dependencias reportadas por la interfaz de Github se debe a que, según indica el propio archivo, la versión exacta de algunos paquetes no pudo ser resuelta.], que se usaron para construir un grafo de dependencias. Los dependencias son mostradas en la @figure3.
 
+== Consentimientos Informados
+
+=== Plantilla Fase 1
+#embed("3/informed_consent_phase1.typ")
+
+=== Plantilla Fase 3
+#embed("4/informed_consent_phase3.typ")
 
 == Cuestionarios Fase 1 <Appenddix3>
 
