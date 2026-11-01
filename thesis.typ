@@ -210,9 +210,6 @@
     #v(1in)
     #line(length: 4in, stroke: 0.5pt)
     #nombreprimerex
-    #v(1in)
-    #line(length: 4in, stroke: 0.5pt)
-    #nombresegundoex
   ]
   #v(1in)
 
@@ -524,7 +521,7 @@ La promesa de un DSL o eDSL —mayor expresividad y facilidad de uso— es, sin 
 
 === Cómo se mide en la actualidad
 
-La usabilidad de un lenguaje de programación no se demuestra por argumento de diseño, sino que se mide: la funcionalidad de una herramienta no garantiza que sea utilizable, ni siquiera que llegue a usarse @goodwinFunctionalityUsability1987. Bajo la premisa de que los programadores son, ante todo, usuarios de sus herramientas @Myers2016a, la literatura adapta métodos propios de la interacción humano-computadora para evaluarlos empíricamente: experimentos controlados que comparan directamente el efecto de una característica del lenguaje sobre tareas de mantenimiento o comprensión, como el de Hanenberg et al. @hanenbergEmpiricalStudyImpact2013 sobre tipado estático; estudios de programación natural, que documentan cómo personas sin experiencia previa expresan intuitivamente una solución antes de aprender la sintaxis de un lenguaje @paneStudyingLanguageStructure2001 @panePDFMoreNatural2006; el protocolo de pensar en voz alta, que expone el razonamiento del usuario mientras resuelve una tarea @PDFThinkAloud; y marcos analíticos como las Dimensiones Cognitivas de las Notaciones, que descomponen un lenguaje en atributos evaluables y comparables entre sí @PDFCognitiveDimensions @PDFComparisonXAML2026. A estos métodos centrados en la tarea se suma el campo de la Experiencia de Desarrollo (DX), que incorpora instrumentos de experiencia de usuario —como DEXI @Kuusinen2016— para capturar también la dimensión subjetiva de usar una herramienta, no solo su desempeño medible.
+La usabilidad de un lenguaje de programación no se demuestra por argumento de diseño, sino que se mide: la funcionalidad de una herramienta no garantiza que sea utilizable, ni siquiera que llegue a usarse @goodwinFunctionalityUsability1987. Bajo la premisa de que los programadores son, ante todo, usuarios de sus herramientas @Myers2016a, la literatura adapta métodos propios de la interacción humano-computadora para evaluarlos empíricamente: experimentos controlados que comparan directamente el efecto de una característica del lenguaje sobre tareas de mantenimiento o comprensión, como el de Hanenberg et al. @hanenbergEmpiricalStudyImpact2013 sobre tipado estático; estudios de programación natural, que documentan cómo personas sin experiencia previa expresan intuitivamente una solución antes de aprender la sintaxis de un lenguaje @paneStudyingLanguageStructure2001 @panePDFMoreNatural2006; el protocolo de pensar en voz alta, que expone el razonamiento del usuario mientras resuelve una tarea @PDFThinkAloud; y marcos analíticos como las Dimensiones Cognitivas de las Notaciones, que descomponen un lenguaje en atributos evaluables y comparables entre sí @PDFCognitiveDimensions @mernikPDFComparisonXAML2009. A estos métodos centrados en la tarea se suma el campo de la Experiencia de Desarrollo (DX), que incorpora instrumentos de experiencia de usuario —como DEXI @Kuusinen2016— para capturar también la dimensión subjetiva de usar una herramienta, no solo su desempeño medible.
 
 === Los proyectos de código abierto ignoran estos aspectos
 
@@ -532,7 +529,7 @@ Esta caja de herramientas empíricas, sin embargo, rara vez se aplica dentro de 
 
 === Metodología para medir la usabilidad en lenguajes
 
-Comparar la usabilidad de dos lenguajes exige combinar más de uno de estos métodos: una fase exploratoria y cualitativa, que identifique los problemas específicos de un lenguaje antes de proponer una alternativa, mediante pensar en voz alta y programación natural @PDFThinkAloud @paneStudyingLanguageStructure2001; y una fase comparativa y cuantitativa, que contraste el lenguaje original contra la alternativa propuesta bajo condiciones controladas. Para esta última, Mernik et al. han adaptado el marco de Dimensiones Cognitivas específicamente a la comparación de lenguajes y notaciones @PDFComparisonXAML2026, mientras que el marco Usa-DSL extiende esa misma lógica al caso particular de los DSL @Poltronieri2018; ambos se complementan con instrumentos de experiencia de usuario y de desarrollo —AttrakDiff @PDFNeedsAffect, DEXI @Kuusinen2016— para capturar la dimensión subjetiva que las métricas de desempeño, por sí solas, no reflejan. Esta combinación de métodos es la que se aplica en la metodología de este trabajo.
+Comparar la usabilidad de dos lenguajes exige combinar más de uno de estos métodos: una fase exploratoria y cualitativa, que identifique los problemas específicos de un lenguaje antes de proponer una alternativa, mediante pensar en voz alta y programación natural @PDFThinkAloud @paneStudyingLanguageStructure2001; y una fase comparativa y cuantitativa, que contraste el lenguaje original contra la alternativa propuesta bajo condiciones controladas. Para esta última, Mernik et al. han adaptado el marco de Dimensiones Cognitivas específicamente a la comparación de lenguajes y notaciones @mernikPDFComparisonXAML2009, mientras que el marco Usa-DSL extiende esa misma lógica al caso particular de los DSL @Poltronieri2018; ambos se complementan con instrumentos de experiencia de usuario y de desarrollo —AttrakDiff @PDFNeedsAffect, DEXI @Kuusinen2016— para capturar la dimensión subjetiva que las métricas de desempeño, por sí solas, no reflejan. Esta combinación de métodos es la que se aplica en la metodología de este trabajo.
 
 = Metodología
 
@@ -627,25 +624,25 @@ consentimiento informado. Si el usuario necesitaba información de Nix, podía b
 Los datos recolectados se analizaron con los siguientes objetivos: caracterizar el
 perfil de los participantes, identificar patrones en sus respuestas de
 programación natural, y categorizar los puntos de dolor cognitivos observados
-durante las sesiones de pensar en alto. Los fragmentos verbales más
-representativos fueron citados de forma textual en el análisis, con previa
+durante las sesiones de pensar en alto. 
+
+Las respuestas dadas para la encuesta de programacion natural fueron procesadas para crear archivos de código ficticio que contuvieran las características compartidas por cada participante, esto homogenizaba las respuestas y facilitaba la comparación de caracteristicas entre participantes.
+
+Para las entrevistas los usuarios se analizaron las grabaciones y anotaron los puntos de dolor mencionados.Los fragmentos verbales más representativos fueron citados de forma textual en el análisis, con previa
 anonimización. Los hallazgos de esta fase orientaron el diseño del eDSL en la
 Fase 2.
 
 \
 == Fase 2: Desarrollo del eDSL
+Antes de definir el enfoque, se revisaron los proyectos con los que la comunidad ha buscado mejorar la usabilidad de Nixlang (véase @Appendix1). La revisión mostró que estas soluciones tienden a introducir nuevas fuentes de complejidad o a depender de factores externos, sin atender las causas estructurales de la fricción del lenguaje. Por ello, se optó por interactuar con Nix desde un lenguaje tipado y ampliamente conocido: TypeScript. Se eligió por su popularidad @stackoverflowMostPopularTechnologies y por su cercanía sintáctica con Nixlang, al que la documentación oficial describe como "JSON con funciones" @NixdevDocumentation.
 
-Con base en los hallazgos de la Fase 1, se desarrolló un eDSL en TypeScript
-capaz de generar archivos de configuración válidos en Nixlang. El diseño del
-eDSL buscó abordar directamente los puntos de dolor identificados en la fase
-anterior, cubriendo al menos las funcionalidades de la biblioteca estándar de
-Nix. Esta fase no involucró participantes humanos y el código fuente se encuentra bajo la licencia MIT @MITLicense.
+El resultado fue *Nixty* @rayoNixtyGenerateNix2026 un eDSL cuya interfaz se diseñó para atender directamente los puntos de dolor identificados en la Fase 1 y que cubre la gran mayoría las funcionalidades de la biblioteca estándar de Nix (_builtins_, por su nombre en inglés), junto con una batería de pruebas. Para facilitar su instalación durante la Fase 3, Nixty se publicó en el registro de `npm` bajo la licencia MIT @MITLicense. Esta fase no involucró participantes humanos.
 
 \
 == Fase 3: Evaluación comparativa
 La Fase 3 adoptó un estudio cuantitativo basado en la ingeniería de _software_ empírica
-propuesto por @PDFComparisonXAML2026, adaptado al contexto de
-comparación entre un DSL (Nixlang) y un eDSL en TypeScript. La fase se estructuró en dos partes: una evaluación de comprensión cognitiva mediante un cuestionario estructurado, y una evaluación de experiencia de desarrollo mediante instrumentos de Experiencia de Usuario.
+propuesto por @mernikPDFComparisonXAML2009, adaptado al contexto de
+comparación entre un DSL (Nixlang) y un eDSL (Nixty) en TypeScript. La fase se estructuró en dos partes: una evaluación de comprensión cognitiva mediante un cuestionario estructurado, y una evaluación de experiencia de desarrollo mediante instrumentos de Experiencia de Usuario.
 
 
 === Población y muestra
@@ -656,56 +653,193 @@ Se usó una muestra de N = 20, obtenida mediante un análisis de potencia realiz
 
 === Instrumentos
 
-- *Formulario de perfil*: Idéntico al utilizado en la Fase 1. Incluyó una
-  autoevaluación del nivel general de programación, experiencia en TypeScript y
+Se usaron 4 instrumentos combinados para recopilar información sobre los participantes, exponerlos a NixLang y Nixty (el eDSL desarrollado) y saber su experiencia de uso con ambas herramientas.
+
+- *Formulario de perfil*: Incluyó una autoevaluación del nivel general de programación, experiencia en TypeScript y
   familiaridad previa con DSLs.
-- *Manuales de Nixlang y eDSL*: Presentación del dominio del problema (gestión y
-  empaquetado de aplicaciones) y de la sintaxis de Nixlang y el eDSL desarrollado, con ejemplos
-  representativos, una copia se puede encontrar en @NixEveryoneRepository en `survey_phase3/manuals`.
-- *Cuestionarios de comprensión cognitiva*: Disponible en la @Appendix4 Instrumento estructurado con
-  preguntas que evaluaron el uso de Nixlang y el eDSL en tres categorías cognitivas basadas en el marco de
-  Dimensiones Cognitivas @PDFComparisonXAML2026:
-  - *Aprendizaje*: Selección de declaraciones sintácticamente correctas y
+- *Manuales de Nixlang y eDSL*: Presenta el contexto general (
+  empaquetado de aplicaciones y Nix), seguido de la sintaxis de Nixlang y Nixty, con ejemplos
+  representativos, una copia se puede encontrar en @rayoNixEveryoneRepository en `survey_phase3/manuals`.
+- *Cuestionarios de comprensión cognitiva*: Disponible en la @Appendix4, fue un instrumento estructurado con
+  19 preguntas por lenguaje: 16 de selección múltiple y 3 de programación libre, que evaluaron el uso de Nixlang y Nixty en tres categorías de entendimiento de programación @mernikPDFComparisonXAML2009:
+
+  - *Aprendizaje (6 preguntas)*: Selección de declaraciones sintácticamente correctas y
     programas válidos para un resultado dado.
-  - *Percepción*: Identificación de constructos del lenguaje y
+  - *Percepción (10 preguntas)*: Identificación de constructos del lenguaje y
     significados correctos de programas.
-  - *Evolución*: Preguntas de tipo ensayo donde se solicitó al
+  - *Evolución (3 preguntas)*: Preguntas de tipo ensayo donde se solicitó al
     participante expandir, eliminar o modificar la funcionalidad de código
     existente.
-  Además, también se midieron el tiempo de respuesta y la tasa de éxito.
+  
+  A su vez en la sección de *Aprendizaje* y *Percepción* las preguntas se presentaron en pares de dificultad, que evaluaban el mismo concepto pero en dificultad fácil y díficil, dando origen a la notación `PP5-1` (fácil) y `PP5-2` (díficil) donde el último número representaba su difícultad.
 
 - *Encuesta de Satisfacción*: Disponible en la @Appendix4 Instrumento para medir la experiencia de los usuarios, fusionó 3 pruebas estandarizadas: OUX (Evaluación general de experiencia de usuario) @Kuusinen2016, AttrakDiff-2 corto @PDFNeedsAffect y DEXI (Índice de Experiencia de Desarrollo) @Kuusinen2016.
 
+
+
+
 === Diseño experimental
 
-Se empleó un diseño intra-sujetos en el que cada participante interactuó con ambas herramientas: Nixlang y el eDSL desarrollado. El orden de presentación fue contrabalanceado, de modo que la mitad de los participantes comenzó con Nixlang y la otra mitad con el eDSL, con el fin de controlar posibles efectos de orden. Cada herramienta fue evaluada en una sesión independiente, pudiendo realizarse en días distintos, con el fin de adaptarse a la disponibilidad de los participantes.
+Se empleó un diseño intra-sujetos en el que cada participante interactuó con ambas herramientas: Nixlang y el eDSL desarrollado. El orden de presentación fue contrabalanceado, de modo que la mitad de los participantes comenzó con Nixlang y la otra mitad con el eDSL, con el fin de controlar posibles efectos de orden. Cada herramienta fue evaluada en una sesión independiente a travez de una versión web de los formularios (código fuente en @rayoNixEveryoneRepository), pudiendo realizarse en días distintos, con el fin de adaptarse a la disponibilidad de los participantes. Se le permitio a los participantes saltar las preguntas díficiles.
+
 === Procedimiento
 
-Al inicio de cada sesión, el participante firmó el consentimiento informado si era su primera sesión, o confirmó su continuidad si era la segunda, y completó el formulario de perfil correspondiente. A continuación, se le presentó el tutorial de la herramienta asignada para esa sesión. Una vez revisado el material, el participante respondió el cuestionario de comprensión cognitiva. Inmediatamente al finalizar, completó la encuesta de satisfacción evaluando su experiencia con dicha herramienta. Este procedimiento se repitió de forma idéntica en la sesión correspondiente a la segunda herramienta.
+Al inicio de cada sesión, el participante firmó el consentimiento informado si era su primera sesión, o confirmó su continuidad si era la segunda, y completó el formulario de perfil correspondiente. A continuación, se le presentó el tutorial de la herramienta asignada para esa sesión. Una vez revisado el material, el participante respondió el cuestionario de comprensión cognitiva. Inmediatamente al finalizar, completó la encuesta de satisfacción evaluando su experiencia con dicha herramienta. Este procedimiento se repitió de forma idéntica en la sesión correspondiente a la segunda herramienta, que el participante puede iniciar inmediatamente.
 
 === Métricas y análisis de datos
 
-==== Comprensión cognitiva
+De esta tercera fase se buscó recopilar 2 categorías de métricas: de rendimiento de los usuarios en cada herramienta (obtenido con el cuestionario de Comprensión Cognitiva), y su experiencia de desarrollo (obtenido de la encuesta de satisfacción).
 
-Para cada cuestionario se calculó la tasa de éxito $S_j$, definida como el
-porcentaje promedio de respuestas correctas para cada pregunta $j$. Las
-dimensiones cognitivas se evaluaron mediante la fórmula:
+==== Rendimiento
 
-$ D_i = sum_(j=1)^(N) frac(Q_(i j) dot S_j, C_j) $
+Las preguntas de selección múltiple se calificaron como correctas o incorrectas con 1 y 0, respectivamente. Los ejercicios de programación libre de Evolución fueron calificados por el investigador con el mismo criterio binario. Con ello se calculó la tasa de éxito de cada participante en cada categoría: Aprendizaje ($P_1$–$P_3$), Percepción ($P_4$–$P_8$) y Evolución ($P_9$–$P_(11)$) @mernikPDFComparisonXAML2009.
 
-Donde N es la cantidad de participantes, $Q_(i j)$ indica si la dimensión $i$ está asociada a la pregunta $j$,
-$S_j$ es la tasa de éxito en la pregunta $j$, y $C_j$ es el número de
-dimensiones relevantes para esa pregunta @PDFComparisonXAML2026. Las dimensiones evaluadas
-incluyeron: cercanía de mapeo, viscosidad, dependencias
-ocultas, operaciones mentales difíciles, difusión y
-expresividad de rol @PDFCognitiveDimensions.
+Además, cada pregunta se relacionó con las 13 Dimensiones Cognitivas @PDFCognitiveDimensions:
+
+- *Cercanía de mapeo*: los lenguajes deben ser específicos para la tarea.
+- *Viscosidad*: las revisiones deben ser sencillas.
+- *Dependencias ocultas*: las consecuencias de los cambios deben ser claras.
+- *Operaciones mentales difíciles*: no se permite nada enigmático.
+- *Anticipación impuesta*: sin compromisos prematuros.
+- *Notación secundaria*: permitir incluir información adicional.
+- *Visibilidad*: los recorridos de búsqueda deben ser cortos.
+- *Consistencia*: no se deben romper las expectativas del usuario.
+- *Difusión*: el lenguaje no debe ser demasiado verboso.
+- *Propensión a errores*: la notación debe detectar las equivocaciones para evitar errores.
+- *Evaluación progresiva*: obtener retroalimentación inmediata.
+- *Expresividad de rol*: ver claramente las relaciones entre los componentes.
+- *Gradiente de abstracción*: los lenguajes deben permitir distintos niveles de abstracción.
+
+Las relaciones entre preguntas y dimensiones (@cuadro1) son las mismas que usaron Mernik et al. @mernikPDFComparisonXAML2009, ya que el cuestionario tiene los mismos tipos de preguntas, en el mismo orden, pero adaptadas al campo de NixLang y Nixty.
+
+#figure(
+  caption: [Dimensiones Cognitivas relacionadas a cada pregunta @mernikPDFComparisonXAML2009. `1` indica que están relacionadas y `0` que no.],
+  table(
+    columns: 12,
+    inset: (x: 4pt, y: 3pt),
+    align: (left,) + (center,) * 11,
+    table.header(
+      [*Dimensión*], [*P1*], [*P2*], [*P3*], [*P4*], [*P5*], [*P6*], [*P7*], [*P8*], [*P9*], [*P10*], [*P11*],
+    ),
+    [Cercanía de mapeo],             [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1],
+    [Viscosidad],                    [0], [0], [0], [0], [0], [0], [0], [0], [1], [1], [1],
+    [Dependencias ocultas],          [0], [0], [1], [1], [1], [1], [0], [1], [0], [1], [0],
+    [Operaciones mentales difíciles], [0], [1], [1], [1], [1], [1], [1], [1], [0], [0], [0],
+    [Anticipación impuesta],         [0], [0], [0], [0], [0], [0], [0], [0], [1], [0], [1],
+    [Notación secundaria],           [0], [0], [0], [0], [0], [0], [0], [1], [0], [0], [0],
+    [Visibilidad],                   [0], [0], [1], [1], [1], [1], [1], [1], [0], [0], [0],
+    [Consistencia],                  [0], [0], [0], [0], [0], [1], [1], [0], [0], [0], [0],
+    [Difusión],                      [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1],
+    [Propensión a errores],          [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1],
+    [Evaluación progresiva],         [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0],
+    [Expresividad de rol],           [0], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1],
+    [Gradiente de abstracción],      [0], [0], [1], [1], [1], [1], [1], [1], [0], [0], [0],
+  ),
+)<cuadro1>
+
+El puntaje de cada dimensión $i$ ($D_i$) se calculó con la fórmula de Mernik et al. @mernikPDFComparisonXAML2009:
+
+  $ D_i = sum_(j=1)^(11) Q_(i j) dot frac(S_j, C_j) $
+
+Donde $Q_(i j)$ indica si la dimensión $i$ está relacionada con la pregunta $j$ (@cuadro1), $C_j$ es el número de dimensiones relacionadas con la pregunta $j$ y $S_j$ es 1 si el participante respondió correctamente la pregunta $j$ y 0 si no. A diferencia de Mernik et al., que usaron como $S_j$ la tasa de éxito de todo el grupo, $D_i$ se calculó para cada participante y sesión, para poder compararlo estadísticamente entre herramientas. Cada $D_i$ se expresó como porcentaje de su máximo, $sum_j Q_(i j) \/ C_j$.
 
 ==== Experiencia de desarrollo
 
-Las diferencias entre ambos experimentos fueron analizadas conn los instrumentos DEXI, OUX y AttrakDiff mediante la prueba no paramétrica de Mann-Whitney, apropiada dado el tamaño reducido de la muestra.
+La encuesta de satisfacción se compuso de tres preguntas: la evaluación general de la experiencia de usuario (OUX), qué tan bien la herramienta respondió a las necesidades del participante (NFS) @Kuusinen2016, y de 22 pares de palabras antónimas: 10 de la versión corta de AttrakDiff 2 (SAD-2) @PDFNeedsAffect y 12 de DEXI @Kuusinen2016. Todos los ítems usaron una escala de 7 puntos, y cada par pertenece a una categoría General, Pragmática o Hedónica según el modelo hedónico-pragmático de la experiencia de usuario @hassenzahlPDFInterplayBeauty2026 (@cuadro2). El puntaje de cada categoría es el promedio de sus ítems.
+
+#figure(
+  caption: [Ítems de la encuesta de satisfacción en el orden en que se presentaron, con su par original @Kuusinen2016],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (auto, auto, 1fr, 1fr),
+    inset: (x: 4pt, y: 3pt),
+    align: left + horizon,
+    table.header(
+      [*Instrumento*], [*Categoría*], [*Ítem (izquierda – derecha)*], [*Original*],
+    ),
+    [OUX], [—], [Bueno – Malo ], [_Bad – Good_],
+    [NFS], [—], [Para nada – Completamente], [_Not at all – Completely_],
+    table.cell(rowspan: 10)[SAD-2],
+    table.cell(rowspan: 2)[General],
+    [Malo – Bueno], [_Bad – Good_],
+    [Feo – Bonito], [_Ugly – Beautiful_],
+    table.cell(rowspan: 4)[Pragmática],
+    [Confuso – Estructurado], [_Confusing – Structured_],
+    [Práctico – Impráctico ], [_Practical – Impractical_],
+    [Impredecible – Predecible], [_Unpredictable – Predictable_],
+    [Simple – Complicado ], [_Simple – Complicated_],
+    table.cell(rowspan: 4)[Hedónica],
+    [Antipático – Cautivador], [_Dull – Captivating_],
+    [Elegante – Tosco ], [_Stylish – Tacky_],
+    [Barato – Prémium], [_Cheap – Premium_],
+    [Creativo – No imaginativo ], [_Creative – Unimaginative_],
+    table.cell(rowspan: 12)[DEXI],
+    [General], [Recomendable – No recomendable ], [_Recommendable – Not recommendable_],
+    table.cell(rowspan: 5)[Pragmática],
+    [Eficiente – Ineficiente ], [_Efficient – Inefficient_],
+    [Flexible – Rígido ], [_Flexible – Inflexible_],
+    [Fácil de aprender – Difícil de aprender ], [_Easy to learn – Difficult to learn_],
+    [Limitado – Extensivo], [_Limited – Extensive_],
+    [Desinformativo – Informativo], [_Uninformative – Informative_],
+    table.cell(rowspan: 6)[Hedónica],
+    [Motivador – Desmotivador ], [_Motivating – Discouraging_],
+    [Genera respeto – Genera desconfianza ], [_Increases respect – Decreases respect_],
+    [Agradable – Desagradable ], [_Enjoyable – Unenjoyable_],
+    [Promueve la creatividad – Suprime la creatividad ], [_Promotes creativity – Suppresses creativity_],
+    [Envolvente – Aburrido ], [_Engaging – Uninvolving_],
+    [Me acerca a otros – Me aleja de otros ], [_Brings me closer to others – Separates me from others_],
+  )
+  },
+)<cuadro2>
+
+  ==== Análisis estadístico
+Como cada participante usó ambas herramientas en una de dos secuencias (Nixlang → Nixty o Nixty → Nixlang), las métricas se compararon con la prueba de Mann-Whitney-Wilcoxon para diseños cruzados 2 × 2 @koch328NoteUse1972 con el fin de eliminar efectos de orden o de habilidad. El puntaje de un participante en la primera sesión $Y_1$ se compone de su habilidad $h$, del efecto $T$ de la herramienta usada en esa sesión y, en la segunda sesión $Y_2$, se agrega el efecto de orden $o$ (mejores resultados en el segundo intento por práctica, o peores por cansancio):
+
+$ Y_1 = h + T_1, quad Y_2 = h + T_2 + o $
+
+Para remover la habilidad de cada participante se calculó la diferencia entre su primera y su segunda sesión:
+
+$ d = Y_1 - Y_2 = T_1 - T_2 - o $
+
+Siendo $Delta = T_"Nixty" - T_"Nixlang"$ la ventaja de Nixty sobre Nixlang, $d$ toma un valor distinto en cada secuencia:
+
+$ d_"Nixty → Nixlang" = Delta - o, quad d_"Nixlang → Nixty" = -Delta - o $
+
+Suponiendo que el efecto del orden es el mismo en ambas secuencias, al restarlas este se elimina y queda solo la diferencia entre herramientas:
+
+$ d_"Nixty → Nixlang" - d_"Nixlang → Nixty" = (Delta - o) - (-Delta - o) = 2 Delta $
+
+Si ambas herramientas rinden igual ($Delta = 0$), $d$ solo refleja el orden y se distribuye igual en las dos secuencias. Por ello, la prueba compara la distribución de $d$ entre las dos secuencias y, a diferencia de Kuusinen @Kuusinen2016, que comparó a los participantes que calificaron OUX como bueno o malo, los grupos comparados fueron las secuencias.
+
+Para cada métrica se probó la hipótesis nula de que la distribución de $d$ es la misma en ambas secuencias, de forma bilateral y con α = 0.05. Se compararon la tasa de éxito de cada categoría, el puntaje de cada dimensión cognitiva, OUX, NFS y el puntaje de cada calidad de SAD-2 y DEXI; los pares de palabras se compararon individualmente como análisis exploratorio. Para pruebas de hipótesis que verificaban variables relacionadas (entendimiento de programación, dimensiones cognitivas, categorías de SAD-2 y DEXI), los valores _p_ se ajustaron con la corrección de Holm.
+
+Junto al valor _p_ se reportó la diferencia estimada entre herramientas y el tamaño de efecto. Como la diferencia entre secuencias vale $2 Delta$, $Delta$ se estimó como la mitad del estimador de Hodges-Lehmann (la mediana de las $n_1 n_2$ diferencias entre un $d$ de cada secuencia), con su intervalo de confianza del 95 % de Moses también dividido entre 2. El factor 2 no afecta la prueba ni el tamaño de efecto, porque ambos dependen solo del orden de los $d$. El tamaño de efecto fue la correlación biserial de rangos:
+
+$ r_g = frac(2 U, n_1 n_2) - 1 $
+
+donde $U$ es el estadístico de Mann-Whitney de la secuencia Nixty → Nixlang, es decir, el número de pares en que su $d$ supera al de Nixlang → Nixty (un empate cuenta como medio par). $r_g$ va de −1 a 1, donde 0 indica que no hay diferencia entre las secuencias, y es positivo cuando Nixty obtuvo mejores resultados. Su magnitud se interpretó con los rangos de @fielperesEffectSizesNonparametric: pequeño si $|r_g| >= 0.11$, mediano si $|r_g| >= 0.28$ y grande si $|r_g| >= 0.43$.
+
 #pagebreak()
 
 = Resultados
+Por facilidad de lectura los resultados también serán divididos por cada fase de la metodología, más no sin empezar conociendo la demografía de los participantes.
+
+== Demografía
+Entre la fase 1 y la fase 2 se captaron las respuestas de 24 participantes, 6 de ellos participando en ambas fases. A continuación hay un detalle de sus perfiles en cada fase.
+
+
+
+
+== Fase 1
+
+
+== Fase 2
+
+
+== Fase 3
+
 
 = Discusión
 
