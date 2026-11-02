@@ -65,6 +65,9 @@ Del archivo SBOM se extrajeron 21,295 paquetes y 37,926 relaciones de dependenci
 === Formulario de Programación Natural
 #embed("3/natural_programming_test_phase1.typ")
 
+=== Guia Entrevistador Pensar en Alto
+#embed("3/think-aloud_test_phase1.typ")
+
 == Cuestionarios Fase 2 <Appendix4>
 
 === Cuestionario de comprensión cognitiva de NixLang

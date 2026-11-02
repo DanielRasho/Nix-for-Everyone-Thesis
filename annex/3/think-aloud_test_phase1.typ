@@ -1,23 +1,18 @@
-#set text(lang: "es")
+// Misma llave que `in-thesis` en utilities.typ.
+#let in-thesis = state("in-thesis", false)
 
-#set page(
-  paper: "a4",
-  number-align: center,
-  numbering: none,
-  margin: 1.2cm
-)
+// Formato de la hoja impresa. Dentro de la tesis (annex/annex.typ) se omite y el título
+// lo pone el encabezado del anexo.
+#show: doc => context if in-thesis.get() { doc } else [
+  #set text(lang: "es", size: 9pt)
+  #set page(paper: "a4", number-align: center, numbering: none, margin: 1.2cm)
+  #set par(justify: true)
+  #show raw: set text(fill: rgb("#438cb6"))
 
-#set text(
-  size: 9pt,
-)
+  #align(center)[= Guía de Entrevistador \ Estudio de Pensar-en-alto]
 
-#set par(
-  justify: true
-)
-
-#show raw: set text(fill: rgb("#438cb6"))
-
-#align(center)[= Guía de Entrevistador \ Estudio de Pensar-en-alto]
+  #doc
+]
 
 
 == Introducción

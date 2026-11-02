@@ -496,6 +496,8 @@ Es aquí donde el hash descrito antes es usado, al ser el prefijo del nombre de 
 
 Nixlang es, en última instancia, un medio declarativo para describir y componer derivaciones: cualquier expresión Nix se evalúa hasta producir una o más derivaciones, que Nix evalua para obtener las rutas de salida correspondientes en el store @Dolstra2006. Es un lenguaje de dominio específico funcional y de evaluación perezosa, con tipado dinámico y una sintaxis descrita en ocasiones como JSON con funciones @NixdevDocumentation. Estos dos últimos rasgos —el paradigma funcional y la evaluación perezosa— emergen, como respuesta al diseño funcional de las derivaciones.
 
+En la actualidad se ha popularizado el uso de los Flakes @2025CommunitySurvey, una formato estructurado para escribir con NixLang que ofrecen ventajas al agregar más salvaguardas para preservar el determinismo @NixdevDocumentation.
+
 Antes de examinar cómo estas propiedades inciden en la usabilidad de Nixlang, conviene precisar qué significan en términos de teoría de lenguajes de programación.
 
 == Fundamentos de lenguajes de programación
@@ -536,7 +538,11 @@ Comparar la usabilidad de dos lenguajes exige combinar más de uno de estos mét
 La investigación se dividió en tres fases ejecutadas de forma secuencial, con el
 objetivo de desarrollar y evaluar un lenguaje de dominio específico embebido
 (eDSL, por sus siglas en inglés) en TypeScript como alternativa al lenguaje de
-configuración original de Nix (en adelante, Nixlang).
+configuración original de Nix (en adelante, Nixlang), @figura10 sintetiza lo ya dicho.
+
+#figure(image("media/figures/Figure10.svg", width: 100%), caption: [
+  Diagrama de las fases que comprende la metodología.
+])<figura10>
 
 == Confidencialidad
 Todas las fases que involucraron participantes humanos se sometieron a un proceso ético con las siguientes características:
@@ -815,30 +821,445 @@ Si ambas herramientas rinden igual ($Delta = 0$), $d$ solo refleja el orden y se
 
 Para cada métrica se probó la hipótesis nula de que la distribución de $d$ es la misma en ambas secuencias, de forma bilateral y con α = 0.05. Se compararon la tasa de éxito de cada categoría, el puntaje de cada dimensión cognitiva, OUX, NFS y el puntaje de cada calidad de SAD-2 y DEXI; los pares de palabras se compararon individualmente como análisis exploratorio. Para pruebas de hipótesis que verificaban variables relacionadas (entendimiento de programación, dimensiones cognitivas, categorías de SAD-2 y DEXI), los valores _p_ se ajustaron con la corrección de Holm.
 
-Junto al valor _p_ se reportó la diferencia estimada entre herramientas y el tamaño de efecto. Como la diferencia entre secuencias vale $2 Delta$, $Delta$ se estimó como la mitad del estimador de Hodges-Lehmann (la mediana de las $n_1 n_2$ diferencias entre un $d$ de cada secuencia), con su intervalo de confianza del 95 % de Moses también dividido entre 2. El factor 2 no afecta la prueba ni el tamaño de efecto, porque ambos dependen solo del orden de los $d$. El tamaño de efecto fue la correlación biserial de rangos:
+Junto al valor _p_ se reportó el tamaño de efecto. El factor 2 de la diferencia entre secuencias no afecta la prueba ni el tamaño de efecto, porque ambos dependen solo del orden de los $d$. El tamaño de efecto fue la correlación biserial de rangos:
 
 $ r_g = frac(2 U, n_1 n_2) - 1 $
 
-donde $U$ es el estadístico de Mann-Whitney de la secuencia Nixty → Nixlang, es decir, el número de pares en que su $d$ supera al de Nixlang → Nixty (un empate cuenta como medio par). $r_g$ va de −1 a 1, donde 0 indica que no hay diferencia entre las secuencias, y es positivo cuando Nixty obtuvo mejores resultados. Su magnitud se interpretó con los rangos de @fielperesEffectSizesNonparametric: pequeño si $|r_g| >= 0.11$, mediano si $|r_g| >= 0.28$ y grande si $|r_g| >= 0.43$.
+donde $U$ es el estadístico de Mann-Whitney de la secuencia Nixty → Nixlang, es decir, el número de pares en que su $d$ supera al de Nixlang → Nixty (en caso de empate, se suma la mitad del puntaje a cada $U$). $r_g$ va de −1 a 1, donde 0 indica que no hay diferencia entre las secuencias, y es positivo cuando Nixty obtuvo mejores resultados. Su magnitud se interpretó con los rangos de @fielperesEffectSizesNonparametric: pequeño si $|r_g| >= 0.11$, mediano si $|r_g| >= 0.28$ y grande si $|r_g| >= 0.43$.
 
 #pagebreak()
 
 = Resultados
-Por facilidad de lectura los resultados también serán divididos por cada fase de la metodología, más no sin empezar conociendo la demografía de los participantes.
-
-== Demografía
-Entre la fase 1 y la fase 2 se captaron las respuestas de 24 participantes, 6 de ellos participando en ambas fases. A continuación hay un detalle de sus perfiles en cada fase.
-
-
-
+Por facilidad de lectura los resultados estan divididos por cada fase de la metodología.
 
 == Fase 1
+Se cuenta con las respuestas de 10 participantes, 10 de ellos responden el cuestionario de Programación Natural; y solo 2 de ellos la prueba de pensar-en-alto . Sobre sus perfiles, el 100% indican tener experiencia en manejadores de paquetes, más solo el 60% mencionan tener experiencia empaquetando una aplicación para su consumo por otros usuarios; sobre lenguajes la gran mayoría muestra cómodidad en el uso de lenguajes de alto nivel imperativos interpretados y no tipados como Python, y Javascript , seguido de lenguajes de alto nivel tipados y compilados, y terminando con lenguajes de bajo nivel (@cuadro3).
 
+#figure(
+  caption: [Lenguajes de programación que los participantes indican estar cómodos para realizar un proyecto.],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (auto, auto),
+    inset: (x: 4pt, y: 3pt),
+    align: (left + horizon, right + horizon, right + horizon),
+    table.header(
+      [*Lenguajes*], [*Porcentaje (%)*],
+    ),
+    [Python], [90.0],
+    [Javascript], [60.0],
+    [Java], [40.0],
+    [Typescript], [40.0],
+    [Bash], [20.0],
+    [C], [10.0],
+    [Sin respuesta], [10.0],
+  )
+  },
+)<cuadro3>
+
+En el cuestionario de programación natural se observan las siguientes tendencias:
+
+- *Fuentes como variables o módulos*: la mitad de los participantes declara las fuentes (los registros de donde se descargan los paquetes) como variables, `fuente = "https://github.com/nixos/nixpkgs"`; la otra mitad, como módulos importados, `import "https://github.com/nixos/nixpkgs"`.
+
+- *Verbos como palabras clave*: todos los participantes usan verbos como `install`, `update` o `delete` como palabras clave para dar instrucciones al manejador de paquetes, por ejemplo `install(fuente, ["A", "B"])`.
+
+- *JSON para definir paquetes*: 9 de los 10 participantes definen los paquetes con objetos JSON:
+
+#utilities.code_block(
+  content: [ ```javascript
+  {name : "hello", version: 3, dependencies : ["A", "B"]}
+  ```]
+)
+El participante restante propone definir el paquete mediante una función para permitir cambios con parámetros.
+
+- *Perfiles con condicionales*: la mitad de los participantes usa condicionales (`if`, `switch`) o etiquetas (`section`) para dar a cada perfil, como desarrollador o control de calidad, su propio entorno de desarrollo:
+
+#utilities.code_block(
+content: [
+```nix
+if ( args.user = "colaborador" ) then [ fuente.node ] 
+else (fuente1.node@1.03)
+```
+])
+Otros tres participantes proponen un archivo de configuración distinto para cada perfil.
+
+- *Paquetes y entornos de desarrollo como entidades distintas*: todos los participantes tratan los paquetes y los entornos de desarrollo como entidades diferentes, cada una con sus propios atributos. Lo que discrepa con la realidad de Nix donde ambas son derivaciones.
+
+En las sesiones de pensar en alto, los dos participantes, sin experiencia previa con Nix, deben crear un _flake_ desde cero. Tras 1 hora y 30 minutos solo llegan a la actividad 3 de la guía (de 7), y se identifican tres puntos de dolor:
+
+- *Relación entre `inputs` y `outputs`*: no comprenden que lo declarado en `inputs` se recibe como parámetros de la función `outputs`.
+- *Sintaxis de funciones*: confunden la definición de una función con un objeto; les toma 30 minutos entender que `outputs` es una función.
+- *Parámetro `self`*: no comprenden su propósito dentro de `outputs`.
+- *Mensajes de error*: Los participantes no logran comprender los mensajes de error por compilación.
 
 == Fase 2
+A partir de las observaciones de la Fase 1 se desarrolla Nixty @rayoNixtyGenerateNix2026, un eDSL en TypeScript que traduce las definiciones del usuario a Flakes de Nix @NixdevDocumentation. Esta sección describe primero el diseño de su interfaz y después su implementación.
 
+=== Diseño
+
+La preferencia de los participantes por lenguajes de alto nivel interpretados (@cuadro3) refuerza la elección de TypeScript como lenguaje anfitrión. Esta elección evita, además, reimplementar buena parte de la biblioteca estándar de Nix, cuyas funciones son en su mayoría utilidades para manipular cadenas, listas y conjuntos de atributos que TypeScript ya ofrece de forma nativa.
+
+Los hallazgos de la Fase 1 se traducen en una interfaz de pocos bloques que se componen entre sí (@figura9). Todo parte de un `Path`, que indica dónde vive un recurso: en el proyecto, en la computadora o en internet. Si el recurso es código por construir, se envuelve en un `Source`; si representa código Nix ya escrito, en una `Expresion`. Con ellos se crean los tres tipos de derivación que escribe el usuario —`Package`, `DevShell` y `Command`—, y una `Definition` final agrupa lo que ofrece el proyecto; es este último objeto el que Nixty interpreta. Limitar la interfaz a pocos bloques reduce los conceptos por aprender, sin perder la versatilidad necesaria para cubrir la mayoría de las expresiones de un Flake.
+
+#figure(image("media/figures/Figure9.svg", width: 70%), caption: [
+  Bloques de la interfaz de Nixty y cómo se componen hasta formar una `Definition`.
+])<figura9>
+
+A continuación se resumen las principales decisiones de diseño y la ventaja de cada una.
+
+*Fuentes como variables*
+
+En un Flake, las fuentes se declaran en `inputs` y llegan como parámetros de la función `outputs`, junto con `self`: justo la relación que los participantes de la Fase 1 no logran comprender. En Nixty, una fuente es una variable más —tal como la declara la mitad de los participantes— y se usa directamente donde se necesita. El compilador deduce las entradas del Flake a partir de las variables que efectivamente se usan, por lo que el usuario no escribe la función `outputs` ni necesita `self`.
+
+#utilities.code_block(content: [
+```nix
+# Nixlang: la fuente llega como parámetro de outputs
+inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+outputs = { self, nixpkgs }: { ... };
+```
+```ts
+// Nixty: la fuente es una variable
+const NIX_PKGS = new Nixpkgs({ tag: "nixos-25.05" })
+```])
+
+*Sistemas como una lista de constantes*
+
+En Nixlang, el sistema es una cadena dentro de la ruta de cada salida (`packages.x86_64-linux.hello`), y soportar varios sistemas obliga a repetir la definición o a recurrir a funciones auxiliares. Nixty expone los sistemas como constantes de `System`: cada salida declara la lista de sistemas que soporta y describe su contenido una sola vez, en una función que recibe el sistema y que el compilador llama una vez por cada uno. Así, el editor autocompleta los sistemas válidos y un nombre mal escrito se detecta antes de generar el Flake.
+
+#utilities.code_block(content: [
+```ts
+import { System } from "nixty-lib"
+const SYSTEMS = [System.x86_64Linux, System.aarch64Darwin]
+```])
+
+*Paquetes y entornos de desarrollo son objetos separados*
+
+Aunque en Nix ambos son derivaciones, todos los participantes los conciben como entidades distintas. Nixty respeta esa intuición con un objeto para cada caso —`Package`, `DevShell` y `Command`—, cada uno con solo las opciones que le corresponden y escrito como un objeto similar a JSON, la notación que usan 9 de los 10 participantes. Las dependencias se agrupan según el momento en que se usan (`atBuild`, `atRuntime`, `atTest`) en lugar de los nombres internos de Nix, como `nativeBuildInputs`. Además, un entorno puede extender a otro con `extends`, lo que permite reutilizar expresiones.
+
+#utilities.code_block(
+content:[```ts
+// Paquete
+const hello = new Package({
+    name: "hello",
+    systems: SYSTEMS,
+    definition: (system) => ({
+        version: "1.0.0",
+        src: SRC,
+        deps: { atRuntime: NIX_PKGS.getPackages(["figlet"], system) },
+        phases: (out) => ({ install: nix`npm install` }),
+    }),
+})
+
+// Entorno de desarrollo
+const dev = new DevShell({
+    name: "dev",
+    systems: SYSTEMS,
+    packages: (system) => [hello.getDerivation(system), ...NIX_PKGS.getPackages(["shellcheck"], system)],
+    onEnter: `echo "Try: hello Ana"`,
+})
+
+// Perfil de control de calidad: una copia de `dev` con una variable más
+const qa = new DevShell({ name: "qa", extends: dev, env: { CI: "true" } })
+```])
+
+*Sistema de tipos previniendo errores tempranos*
+
+Ante la dificultad para interpretar los mensajes de error de Nix, Nixty traslada la mayor parte de la validación a TypeScript. Cada concepto tiene su propio tipo, de modo que usar uno en lugar de otro es un error que el editor señala mientras se escribe y que `nixty generate` vuelve a verificar antes de generar el Flake. Los errores aparecen así antes de que Nix evalúe el código, junto a la línea que los causa y con los mensajes de TypeScript. Lo que los tipos no alcanzan a expresar se verifica al ejecutar el evaluar el Flake.
+
+*Las expresiones como método de compatibilidad con código Nixlang*
+
+Ninguna interfaz puede cubrir todo lo que ofrece Nix, por lo que `Expresion` sirve de puente: importa código Nix desde un `Path` —un archivo `.nix`, otro Flake o Nixpkgs— y permite usarlo un valor, ya sea accediendo a sus atributos (`expr.name`), a los elementos de una lista (`expr[0]`) o llamándolo como función (`expr(a, b)`). `Nixpkgs` y `Flake` son expresiones con métodos para los usos más comunes, como `getPackages`. Así, el usuario reutiliza el ecosistema existente en lugar de reescribirlo, a cambio de que TypeScript no pueda verificar su contenido.
+
+#utilities.code_block(content: [
+```nix
+# nix/saludo.nix
+nombre: "Hola, ${nombre}!"
+```
+```ts
+const saludo = new Expresion(Path.fetchInternalPath("nix/saludo.nix"))
+const dev = new DevShell({
+    // ...
+    env: { SALUDO: nix`${saludo("Ana")}` },  // "Hola, Ana!"
+})
+```])
+
+*Diseño reminiscente de un Flake*
+
+  La `Definition` conserva la estructura de un Flake para reducir la fricción de quienes ya los utilizan. La correspondencia también puede funcionar sentido inverso, pues quien aprende Nixty puede traducir sus conocimientos a la sintaxis de los Flakes.
+
+#utilities.code_block(content: [
+```ts
+export default new Definition({
+    description: "Mi proyecto",  // description
+    nixpkgs: NIX_PKGS,           // inputs.nixpkgs
+    packages: [hello],           // packages.<sistema>.hello
+    devShells: [dev, qa],        // devShells.<sistema>.dev y .qa
+    commands: [lint],            // apps.<sistema>.lint
+})
+```])
+
+=== Implementación
+
+En la práctica, Nixty se sitúa como una nueva capa de abstracción en la cadena de Nix (@figura8): el usuario describe su proyecto con la interfaz de Nixty, que genera de forma implícita un Flake en Nixlang, y luego usa la interfaz de comandos de Nixty para solicitar al Nix Daemon que construya e instale lo descrito.
+
+#figure(image("media/figures/Figure8.svg", width: 90%), caption: [
+  Nixty como capa de abstracción sobre Nix: genera el código Nixlang que el Nix Daemon evalúa para guardar los paquetes en la Nix Store.
+])<figura8>
+
+Nixty se distribuye como un único paquete que contiene tanto la biblioteca que importa el usuario como la interfaz de comandos que la interpreta. El usuario escribe un archivo `nixty.ts` que exporta una `Definition`, y el comando `nixty generate` lo traduce a un `flake.nix`. Los objetos del @figura9 se traducen a nodos que representan constructos de Nixlang,  formando un grafo sintáctico. A partir de ese grafo, la transpilación ocurre en cuatro fases:
+
++ *Expansión*: prepara una versión de la configuración para cada sistema declarado, por ejemplo Linux y macOS.
++ *Recorrido*: revisa la configuración en busca de errores y averigua qué fuentes se usan realmente; las que no se usan se descartan.
++ *Nombramiento*: da un nombre único a cada fuente y a cada elemento que se usa más de una vez, para que Nix lo prepare una sola vez y lo reutilice.
++ *Emisión*: traduce todo a Nixlang y lo guarda en el archivo `flake.nix`.
+
+El resultado es un `flake.nix` convencional, que puede leerse, versionarse y usarse con Nix aun sin tener Nixty instalado. Para el resto del ciclo, la interfaz de comandos ofrece verbos que regeneran el Flake y delegan cada tarea al comando de Nix equivalente (@cuadro-cli). Esto retoma la preferencia de los participantes de la Fase 1 por expresar las acciones como verbos.
+
+#figure(
+  caption: [Comandos de Nixty y el comando de Nix que ejecutan],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (auto, auto),
+    inset: (x: 4pt, y: 3pt),
+    align: left + horizon,
+    table.header(
+      [*Nixty*], [*Nix*],
+    ),
+    [`nixty develop dev`], [`nix develop .#devShells.<sistema>.dev`],
+    [`nixty build hello`], [`nix build .#packages.<sistema>.hello`],
+    [`nixty run hello`], [`nix run .#packages.<sistema>.hello`],
+    [`nixty command lint`], [`nix run .#apps.<sistema>.lint`],
+    [`nixty update`], [`nix flake update`],
+  )
+  },
+)<cuadro-cli>
 
 == Fase 3
+Se cuenta con las respuestas de 20 participantes, 6 de ellos asistieron también en la Fase 1. Sus perfiles revelan ser usuarios familiarizados con el manejo de paquetes, experiencia media-avanzada en Typescript (@cuadro-experiencia), y poca experiencia en Nixlang; sus respuestas no mostraron una clara tendencia en su conocimiento de lenguajes funcionales.
+
+#figure(
+  caption: [Nivel de experiencia autorreportado por los participantes de la Fase 3, como porcentaje de participantes (escala 1–5)],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (auto, auto, auto, auto, auto, auto),
+    inset: (x: 4pt, y: 3pt),
+    align: (left + horizon,) + (right + horizon,) * 5,
+    table.header(
+      [*Experiencia en*], [*1 \ (Muy poca)*], [*2*], [*3*], [*4*], [*5 \ (Muy avanzada)*],
+    ),
+    [Manejo de paquetes], [0.0], [15.0], [25.0], [45.0], [15.0],
+    [TypeScript], [5.0], [5.0], [35.0], [40.0], [15.0],
+    [Nixlang], [65.0], [20.0], [15.0], [0.0], [0.0],
+    [Lenguajes funcionales], [30.0], [10.0], [25.0], [30.0], [5.0],
+  )
+  },
+)<cuadro-experiencia>
+
+Los participantes tomaron más tiempo en promedio en completar el cuestionario de Nixty (41.7 minutos), que Nixlang (34.4 minutos) y sus indices de acierto mostrado en el @cuadro-preguntas no dista mucho entre herramientas, pero eso se determinará con las pruebas estadísticas.
+
+#figure(
+  caption: [Tasa de éxito por pregunta con cada herramienta; la diferencia se expresa en puntos porcentuales (pp)],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (auto, auto, auto, auto, auto, auto),
+    inset: (x: 4pt, y: 3pt),
+    align: (left + horizon, center + horizon, left + horizon) + (right + horizon,) * 3,
+    table.header(
+      [*Categoría*], [*Pregunta*], [*ID*], [*Nixlang \ (%)*], [*Nixty \ (%)*], [*Nixty − \ Nixlang (pp)*],
+    ),
+    table.cell(rowspan: 3)[Aprendizaje],
+    [$P_1$], [PA1-1], [70.0], [60.0], [−10.0],
+    [$P_2$], [PA2-1], [55.0], [60.0], [5.0],
+    [$P_3$], [PA3-1], [90.0], [95.0], [5.0],
+    table.cell(rowspan: 5)[Percepción],
+    [$P_4$], [PP4-1], [55.0], [60.0], [5.0],
+    [$P_5$], [PP5-1], [35.0], [60.0], [25.0],
+    [$P_6$], [PP6-1], [45.0], [35.0], [−10.0],
+    [$P_7$], [PP7-1], [75.0], [70.0], [−5.0],
+    [$P_8$], [PP8-1], [70.0], [90.0], [20.0],
+    table.cell(rowspan: 3)[Evolución],
+    [$P_9$], [PE9-1], [75.0], [100.0], [25.0],
+    [$P_10$], [PE10-1], [90.0], [95.0], [5.0],
+    [$P_11$], [PE11-1], [75.0], [70.0], [−5.0],
+    table.cell(colspan: 3)[*Total*], [*66.8*], [*72.3*], [*5.5*],
+  )
+  },
+)<cuadro-preguntas>
+
+Las siguientes secciones comparten los resultados obtenidos. Los cálculos, más no los datos, se encuentran en @rayoNixEveryoneRepository en `analysis/`.
+
+=== Rendimiento
+Las variantes difíciles de $P_1$–$P_8$ son opcionales, de las 320 presentadas (8 por herramienta a cada participante), se responde el 28.8 % : el 27.5 % con Nixlang y el 30.0 % con Nixty . Por ello se excluyen del análisis, y con cada herramienta se usan 11 preguntas: la variante fácil de $P_1$–$P_8$ y $P_9$–$P_11$. Se trabaja haciendo pruebas estadísticas con Mann-Whitney-Wilcoxon @koch328NoteUse1972 (prueba bilateral, α = 0.05) usando las siguientes hipotesis:
+
+*$H_0$* = La distribución de la diferencia entre las secuencias $d_"Nixlang → Nixty"$ y $d_"Nixty → Nixlang"$ para la variable $X$, *es la misma*. (El rendimiento en ambas herramientas es el mismo).
+
+*$H_a$* = La distribución de la diferencia entre las secuencias $d_"Nixlang → Nixty"$ y $d_"Nixty → Nixlang"$ para la variable $X$, *es diferente* (El rendimiento en ambas herramientas es el mismo).
+
+Donde $X$ es la variable evaluada. Cuando se aplica la corrección de Holm, la decisión se toma con _p_ Holm. Las columnas Nixlang y Nixty son el promedio de los 20 participantes con cada herramienta.
+
+Nixty no muestra ninguna diferencia estadística contra Nixlang en ninguna de las categorías de entendimiento de programación (@cuadro4), más si un tamaño de efecto medio ($r_g >= 0.28$) en Aprendizaje y Evolución, indicando que la tasa de exito fue medianamente mayor en Nixty.
+
+
+#figure(
+  caption: [Prueba de Mann-Whitney-Wilcoxon de la tasa de éxito por categoría de entendimiento de programación],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (1fr, auto, auto, auto, auto, auto, auto),
+    inset: (x: 4pt, y: 3pt),
+    align: (left + horizon,) + (right + horizon,) * 5 + (center + horizon,),
+    table.header(
+      [*Categoría*], [*Nixlang \ (%)*], [*Nixty \ (%)*], [*$r_g$*], [*_p_*], [*_p_ \ Holm*], [*Se rechaza \ H₀*],
+    ),
+    [Aprendizaje], [71.7], [71.7], [0.10], [0.719], [0.721], [No],
+    [Percepción], [56.0], [63.0], [0.31], [0.240], [0.721], [No],
+    [Evolución], [80.0], [88.3], [0.30], [0.247], [0.721], [No],
+  )
+  },
+)<cuadro4>
+
+Tampoco se encontra una diferencia estadística entre ninguna de las dimensiones cognitivas (@cuadro5). Pero se observa un tamaño de efecto grande ($r_g >= 0.28$) en Dependencias Ocultas, y medio en otras 6 dimensiones, indicando que los participantes tuvieron un mejor rendimiento en esas dimensiones con Nixty; por otro lado se muestra un efecto pequeño negativo en la Consistencia de Nixty. Evaluación progresiva no se incluye por no relacionarse con ninguna pregunta, y las dimensiones relacionadas con las mismas preguntas, que obtienen el mismo puntaje, se agrupan en una fila en el @cuadro5.
+
+#figure(
+  caption: [Prueba de Mann-Whitney-Wilcoxon del puntaje de cada dimensión cognitiva, como porcentaje de su máximo],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (1fr, auto, auto, auto, auto, auto, auto),
+    inset: (x: 4pt, y: 3pt),
+    align: (left + horizon,) + (right + horizon,) * 5 + (center + horizon,),
+    table.header(
+      [*Dimensión*], [*Nixlang \ (%)*], [*Nixty \ (%)*], [*$r_g$*], [*_p_*], [*_p_ \ Holm*], [*Se rechaza \ H₀*]
+    ),
+    [Cercanía de mapeo / Difusión / Propensión a errores], [67.8], [71.6], [0.14 - pequeño], [0.623], [1.000], [No],
+    [Viscosidad], [80.0], [88.3], [0.30 - medio], [0.247], [1.000], [No],
+    [Dependencias ocultas], [65.8], [74.1], [0.43 - grande], [0.111], [0.997], [No],
+    [Operaciones mentales difíciles], [60.3], [66.7], [0.20 - pequeño], [0.470], [1.000], [No],
+    [Anticipación impuesta], [75.0], [85.0], [0.30 - medio], [0.232], [1.000], [No],
+    [Notación secundaria], [70.0], [90.0], [0.32 - medio], [0.182], [1.000], [No],
+    [Visibilidad / Gradiente de abstracción], [61.8], [68.6], [0.40 - medio], [0.137], [1.000], [No],
+    [Consistencia], [60.9], [53.5], [−0.14 - pequeño], [0.605], [1.000], [No],
+    [Expresividad de rol], [67.3], [74.3], [0.39 - medio], [0.150], [1.000], [No],
+  )
+  },
+)<cuadro5>
+
+=== Experiencia de desarrollo
+El @cuadro-oux-nfs muestra que la Experiencia de Usuario General (OUX, por sus siglas en inglés) difiere significativamente entre herramientas, con $r_g$ = 0.65 y _p_ = 0.014, mientras que en el Puntaje de Cumplimiento de Necesidades (NFS, por sus siglas en inglés) la diferencia no es significativa. En el análisis por cualidad del @cuadro-calidades se rechaza H₀ en dos casos: la cualidad General de SAD-2, con $r_g$ = 0.75 y _p_ Holm = 0.014, y la Pragmática de DEXI, con $r_g$ = 0.75 y _p_ Holm = 0.015. 
+
+Enfoncandose en el tamaño de efecto, Nixty presenta un tamaño grande en todas las cualidades de ambos cuestionarios, excepto en el aspecto Hedónico de SAD-2, significando que los usuarios puntuaron la mayoría de estos aspectos de Nixty de forma considerablemente superior a NixLang. Un comportamiento parecido se puede ver en los puntajes de palabras por separado en @cuadro-pares-sad2 y @cuadro-pares-dexi.
+
+#figure(
+  caption: [Prueba de Mann-Whitney-Wilcoxon de OUX y NFS (escala 1–7), sin corrección de Holm por ser una prueba por instrumento],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (1fr, auto, auto, auto, auto, auto),
+    inset: (x: 4pt, y: 3pt),
+    align: (left + horizon,) + (right + horizon,) * 4 + (center + horizon,),
+    table.header(
+      [*Instrumento*], [*Nixlang*], [*Nixty*], [*$r_g$*], [*_p_*], [*Se rechaza \ H₀*],
+    ),
+    [OUX], [4.45], [5.85], [0.65], [0.014], [Sí],
+    [NFS], [4.85], [5.10], [0.12], [0.667], [No],
+  )
+  },
+)<cuadro-oux-nfs>
+
+#figure(
+  caption: [Prueba de Mann-Whitney-Wilcoxon del puntaje de cada cualidad de SAD-2 y DEXI (escala 1–7), con corrección de Holm sobre las tres calidades de cada instrumento],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (1fr, auto, auto, auto, auto, auto, auto),
+    inset: (x: 4pt, y: 3pt),
+    align: (left + horizon,) + (right + horizon,) * 5 + (center + horizon,),
+    table.header(
+      [*Cualidad*], [*Nixlang*], [*Nixty*], [*$r_g$*], [*_p_*], [*_p_ \ Holm*], [*Se rechaza \ H₀*],
+    ),
+    table.cell(colspan: 7)[*SAD-2*],
+    [General], [4.70], [5.90], [0.75], [0.005], [0.014], [Sí],
+    [Pragmática], [4.28], [5.18], [0.55], [0.041], [0.081], [No],
+    [Hedónica], [4.39], [4.81], [0.38], [0.160], [0.160], [No],
+    table.cell(colspan: 7)[*DEXI*],
+    [General], [4.55], [6.00], [0.57], [0.031], [0.062], [No],
+    [Pragmática], [4.52], [5.28], [0.75], [0.005], [0.015], [Sí],
+    [Hedónica], [4.70], [5.24], [0.51], [0.058], [0.062], [No],
+  )
+  },
+)<cuadro-calidades>
+
+Por pares de palabras, seis pares de SAD-2 pasan la prueba $p$ sin corregir, pero ninguno sobrevive después de la corrección de Holm (@cuadro-pares-sad2). En DEXI, solo el par Difícil de aprender – Fácil de aprender rechaza H₀ ($r_g$ = 0.86, _p_ Holm = 0.014) (@cuadro-pares-dexi). 
+
+#figure(
+  caption: [Puntaje promedio por par de palabras de SAD-2 (escala 1–7, 7 es el polo positivo) y prueba de Mann-Whitney-Wilcoxon por par, con corrección de Holm sobre los 10 pares.],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (auto, 1fr, auto, auto, auto, auto, auto),
+    inset: (x: 4pt, y: 3pt),
+    align: (left + horizon, left + horizon) + (right + horizon,) * 5,
+    table.header(
+      [*Cualidad*], [*Par (negativo – positivo)*], [*Nixlang*], [*Nixty*], [*$r_g$*], [*_p_*], [*_p_ \ Holm*],
+    ),
+    table.cell(rowspan: 2)[General],
+    [Malo – Bueno], [5.00], [5.95], [0.72], [0.006], [0.058],
+    [Feo – Bonito], [4.40], [5.85], [0.66], [0.013], [0.120],
+    table.cell(rowspan: 4)[Pragmática],
+    [Confuso – Estructurado], [4.35], [5.60], [0.64], [0.016], [0.125],
+    [Impráctico – Práctico], [4.20], [4.50], [0.10], [0.731], [1.000],
+    [Impredecible – Predecible], [4.85], [5.85], [0.63], [0.017], [0.125],
+    [Complicado – Simple], [3.70], [4.75], [0.53], [0.048], [0.240],
+    table.cell(rowspan: 4)[Hedónica],
+    [Antipático – Cautivador], [4.10], [4.95], [0.61], [0.020], [0.125],
+    [Tosco – Elegante], [4.60], [5.25], [0.37], [0.157], [0.629],
+    [Barato – Prémium], [4.35], [4.40], [−0.10], [0.700], [1.000],
+    [No imaginativo – Creativo], [4.50], [4.65], [0.04], [0.908], [1.000],
+  )
+  },
+)<cuadro-pares-sad2>
+
+#figure(
+  caption: [Puntaje promedio por par de palabras de DEXI (escala 1–7, 7 es el polo positivo) y prueba de Mann-Whitney-Wilcoxon por par, con corrección de Holm sobre los 12 pares.],
+  {
+  set par(justify: false)
+  set text(hyphenate: false)
+  table(
+    columns: (auto, 1fr, auto, auto, auto, auto, auto),
+    inset: (x: 4pt, y: 3pt),
+    align: (left + horizon, left + horizon) + (right + horizon,) * 5,
+    table.header(
+      [*Calidad*], [*Par (negativo – positivo)*], [*Nixlang*], [*Nixty*], [*$r_g$*], [*_p_*], [*_p_ \ Holm*],
+    ),
+    [General], [No recomendable – Recomendable], [4.55], [6.00], [0.57], [0.031], [0.343],
+    table.cell(rowspan: 5)[Pragmática],
+    [Ineficiente – Eficiente], [5.55], [5.55], [−0.10], [0.714], [1.000],
+    [Rígido – Flexible], [4.55], [5.15], [0.24], [0.366], [1.000],
+    [Difícil de aprender – Fácil de aprender], [3.25], [5.40], [0.86], [0.001], [0.014],
+    [Limitado – Extensivo], [4.60], [5.15], [0.48], [0.066], [0.661],
+    [Desinformativo – Informativo], [4.65], [5.15], [0.37], [0.152], [0.913],
+    table.cell(rowspan: 6)[Hedónica],
+    [Desmotivador – Motivador], [4.00], [5.30], [0.44], [0.095], [0.762],
+    [Genera desconfianza – Genera respeto], [5.50], [5.15], [−0.22], [0.403], [1.000],
+    [Desagradable – Agradable], [4.75], [5.60], [0.42], [0.114], [0.797],
+    [Suprime la creatividad – Promueve la creatividad], [4.90], [5.30], [0.36], [0.172], [0.913],
+    [Aburrido – Envolvente], [4.10], [4.90], [0.46], [0.081], [0.729],
+    [Me aleja de otros – Me acerca a otros], [4.95], [5.20], [0.22], [0.351], [1.000],
+  )
+  },
+)<cuadro-pares-dexi>
 
 
 = Discusión
