@@ -4,3 +4,7 @@ desktop.ini
 **.pkl
 **.pdf
 **/.venv
+analysis/.venv
+analysis/free-code-grading.md
+analysis/free-code-patterns.md
+analysis/data
