@@ -224,13 +224,6 @@
 #counter(page).update(1)
 
 // ------------------------------------------------------------------------------
-// a-prefacio.tex -- AGRADECIMIENTOS
-// ------------------------------------------------------------------------------
-#heading(level: 1, numbering: none, outlined: true)[Reconocimientos]
-
-Pendientes
-
-// ------------------------------------------------------------------------------
 // b-resumen.tex -- RESUMEN
 // ------------------------------------------------------------------------------
 #heading(level: 1, numbering: none, outlined: true)[Resumen]
@@ -357,7 +350,7 @@ Para lidiar con esta dependencia del contexto han surgido distintas familias de 
 
 A este conjunto de código fuente, binarios y otros archivos reutilizables se le conoce como librerías, dependencias o paquetes @mensSoftwareEcosystemsTooling2023, y constituyen un método eficaz para reducir el tiempo de desarrollo y permitir a los desarrolladores enfocarse en el producto final. Además, se percibe que el código de los paquetes es de mejor calidad, probablemente porque gran parte de ellos es de código abierto, es decir, revisado y modificado por múltiples desarrolladores @societyGuideSoftwareEngineering2026.
 
-El uso de código de terceros se ha convertido en una práctica extendida: en 2026, la compañía Black Duck @blackduck2026OSSRAReport —que ofrece herramientas para evaluar la seguridad de paquetes de código abierto en proyectos de _software_— realiza un estudio sobre 2,843 proyectos de distintas industrias, en el que encuentra que el 98% de ellos utiliza paquetes de código abierto, con un promedio de 1,180 paquetes por proyecto; ambas cifras superiores a las reportadas en un estudio previo de 2025. Este crecimiento no se limita al uso de bibliotecas, sino también a su cantidad dentro de cada proyecto: un ejemplo es el navegador Mozilla Firefox, cuyo árbol de dependencias supera los 2,000 paquetes (@Appendix5), complejidad que se ilustra en la @figure3, donde cada punto representa un paquete coloreado por ecosistema: `npm` en azul, `cargo` en naranja, `pypi` en verde y otros en gris; el punto negro central es el propio repositorio de Firefox. A simple vista se puede intuir que mantenerlos manualmente no resultaría divertido para ningún desarrollador.
+El uso de código de terceros se ha convertido en una práctica extendida: en 2026, la compañía Black Duck @blackduck2026OSSRAReport —que ofrece herramientas para evaluar la seguridad de paquetes de código abierto en proyectos de _software_— realiza un estudio sobre 2,843 proyectos de distintas industrias, en el que encuentra que el 98% de ellos utiliza paquetes de código abierto, con un promedio de 1,180 paquetes por proyecto; ambas cifras superiores a las reportadas en un estudio previo de 2025. Este crecimiento no se limita al uso de bibliotecas, sino también a su cantidad dentro de cada proyecto: un ejemplo es el navegador Mozilla Firefox, cuyo árbol de dependencias supera los 20,000 paquetes (@Appendix5), complejidad que se ilustra en la @figure3, donde cada punto representa un paquete coloreado por ecosistema: `npm` en azul, `cargo` en naranja, `pypi` en verde y otros en gris; el punto negro central es el propio repositorio de Firefox. A simple vista se puede intuir que mantenerlos manualmente no resultaría divertido para ningún desarrollador.
 
 #figure(
   image("./media/figures/Figure3.png", width: 85%),
@@ -530,7 +523,7 @@ Esta caja de herramientas empíricas, sin embargo, rara vez se aplica dentro de 
 
 === Metodología para medir la usabilidad en lenguajes
 
-Comparar la usabilidad de dos lenguajes exige combinar más de uno de estos métodos: una fase exploratoria y cualitativa, que identifique los problemas específicos de un lenguaje antes de proponer una alternativa, mediante pensar en voz alta y programación natural @PDFThinkAloud @paneStudyingLanguageStructure2001; y una fase comparativa y cuantitativa, que contraste el lenguaje original contra la alternativa propuesta bajo condiciones controladas. Para esta última, Mernik et al. han adaptado el marco de Dimensiones Cognitivas específicamente a la comparación de lenguajes y notaciones @mernikPDFComparisonXAML2009, mientras que el marco Usa-DSL extiende esa misma lógica al caso particular de los DSL @Poltronieri2018; ambos se complementan con instrumentos de experiencia de usuario y de desarrollo —AttrakDiff @PDFNeedsAffect, DEXI @Kuusinen2016— para capturar la dimensión subjetiva que las métricas de desempeño, por sí solas, no reflejan. Esta combinación de métodos es la que se aplica en la metodología de este trabajo.
+Comparar la usabilidad de dos lenguajes exige combinar más de uno de estos métodos: una fase exploratoria y cualitativa, que identifique los problemas específicos de un lenguaje antes de proponer una alternativa, mediante pensar en voz alta y programación natural @PDFThinkAloud @paneStudyingLanguageStructure2001; y una fase comparativa y cuantitativa, que contraste el lenguaje original contra la alternativa propuesta bajo condiciones controladas. Para esta última, Mernik et al. han adaptado el marco de Dimensiones Cognitivas de la Notaciones específicamente a la comparación de lenguajes y notaciones @mernikPDFComparisonXAML2009, mientras que el marco Usa-DSL extiende esa misma lógica al caso particular de los DSL @Poltronieri2018; ambos se complementan con instrumentos de experiencia de usuario y de desarrollo —AttrakDiff @PDFNeedsAffect, DEXI @Kuusinen2016— para capturar la dimensión subjetiva que las métricas de desempeño, por sí solas, no reflejan. Esta combinación de métodos es la que se aplica en la metodología de este trabajo.
 
 = Metodología
 
@@ -699,7 +692,7 @@ De esta tercera fase se buscó recopilar 2 categorías de métricas: de rendimie
 
 Las preguntas de selección múltiple se calificaron como correctas o incorrectas con 1 y 0, respectivamente. Los ejercicios de programación libre de Evolución fueron calificados por el investigador con el mismo criterio binario. Con ello se calculó la tasa de éxito de cada participante en cada categoría: Aprendizaje ($P_1$–$P_3$), Percepción ($P_4$–$P_8$) y Evolución ($P_9$–$P_(11)$) @mernikPDFComparisonXAML2009.
 
-Además, cada pregunta se relacionó con las 13 Dimensiones Cognitivas @PDFCognitiveDimensions:
+Además, cada pregunta se relacionó con 13 de las Dimensiones Cognitivas de las Notaciones @PDFCognitiveDimensions:
 
 - *Cercanía de mapeo*: los lenguajes deben ser específicos para la tarea.
 - *Viscosidad*: las revisiones deben ser sencillas.
@@ -718,7 +711,7 @@ Además, cada pregunta se relacionó con las 13 Dimensiones Cognitivas @PDFCogni
 Las relaciones entre preguntas y dimensiones (@cuadro1) son las mismas que usaron Mernik et al. @mernikPDFComparisonXAML2009, ya que el cuestionario tiene los mismos tipos de preguntas, en el mismo orden, pero adaptadas al campo de Nixlang y Nixty.
 
 #figure(
-  caption: [Dimensiones Cognitivas relacionadas a cada pregunta @mernikPDFComparisonXAML2009. `1` indica que están relacionadas y `0` que no.],
+  caption: [Dimensiones Cognitivas de las Notaciones relacionadas a cada pregunta @mernikPDFComparisonXAML2009. `1` indica que están relacionadas y `0` que no.],
   table(
     columns: 12,
     inset: (x: 4pt, y: 3pt),
@@ -1006,7 +999,7 @@ En la práctica, Nixty se sitúa como una nueva capa de abstracción en la caden
   Nixty como capa de abstracción sobre Nix: genera el código Nixlang que el Nix Daemon evalúa para guardar los paquetes en la Nix Store.
 ])<figura8>
 
-Nixty se distribuye como un único paquete que contiene tanto la biblioteca que importa el usuario como la interfaz de comandos que la interpreta. El usuario escribe un archivo `nixty.ts` que exporta una `Definition`, y el comando `nixty generate` lo traduce a un `flake.nix`. Los objetos de la @figura9 se traducen a nodos que representan constructos de Nixlang, formando un grafo sintáctico. A partir de ese grafo, la transpilación ocurre en cuatro fases:
+Nixty se distribuye como un único paquete que contiene tanto la biblioteca que importa el usuario como la interfaz de comandos que la interpreta. El usuario escribe un archivo `nixty.ts` que exporta una `Definition`, y el comando `nixty generate` lo traduce a un `flake.nix`. Los objetos de la @figura9 se traducen a nodos que representan constructos de Nixlang, formando un grafo sintáctico#footnote[La traducción de estos nodos a sintaxis de Nix fue implementada con ayuda de Inteligencia Artificial.]. A partir de ese grafo, la transpilación ocurre en cuatro fases:
 
 + *Expansión*: Expande los objetos de Nixty en un grafo sintáctico equivalente para cada sistema declarado, por ejemplo Linux y macOS.
 + *Recorrido*: Revisa el grafo sintáctico en busca de errores y averigua qué fuentes se usan realmente; las que no se usan se descartan.
