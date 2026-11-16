@@ -1,4 +1,4 @@
-= Nix for Everyone
+# Nix for Everyone
 
 The problem of moving _software_ from one computer to another and having it keep working (a process known as _software_ Deployment) is a burden that Computer Science has not yet found a definitive solution to, essentially because for a piece of _software_ to work correctly it depends not only on the source code in which it is written, but also on the surrounding context (hardware, operating system, dependencies, etc.). It is in this context that Nix emerges as a package manager and build system #footnote[Systems that automate the execution of repetitive tasks, usually to create _software_ artifacts that can be deployed.] that uses an approach inspired by functional purity, where each package explicitly defines the context in which it expects to be built and run. This approach has demonstrated the ability to create more than 700,000 binarily identical artifacts on different computers and boasts one of the largest package repositories as of the writing of this document. The idea evolved to the point of being able to define the nearly complete state of an operating system through a single configuration file.
 

@@ -1,0 +1,842 @@
+\chapter{Metodología}
+
+La investigación se dividió en tres fases ejecutadas de forma secuencial, con el
+objetivo de desarrollar y evaluar un lenguaje de dominio específico embebido
+(eDSL, por sus siglas en inglés) en TypeScript como alternativa al lenguaje de
+configuración original de Nix (en adelante, Nixlang). La Figura~\ref{figura10} sintetiza lo ya dicho.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Figure10}
+\caption{Diagrama de las fases que comprende la metodología.}
+\label{figura10}
+\end{figure}
+
+\section{Confidencialidad}
+
+Todas las fases que involucraron participantes humanos se sometieron a un proceso ético con las siguientes características:
+
+\begin{itemize}
+\item \textbf{Participación voluntaria}: La participación fue completamente voluntaria. Los
+participantes podían retirarse en cualquier momento sin consecuencia alguna.
+\item \textbf{Mayoría de edad}: Todos los participantes debían ser mayores de 18 años.
+\item \textbf{Riesgos}: La participación conllevó riesgos mínimos. Los participantes podían
+experimentar leve fatiga cognitiva o incomodidad al verbalizar su razonamiento
+durante las tareas. Para minimizarlos, las sesiones tuvieron una duración acotada
+y el participante podía solicitar pausas en cualquier momento.
+\item \textbf{Anonimización:} Los datos recolectados fueron disociados de la identidad de los participantes mediante el uso de códigos de identificación internos. Ningún dato publicado o analizado contiene información que permita identificar a los participantes. Las transcripciones de los fragmentos verbales citados en el análisis fueron igualmente anonimizadas.
+\item \textbf{Responsable del resguardo de datos}: El autor principal de este estudio.
+\item \textbf{Compensación}: Como agradecimiento por su tiempo, los participantes recibieron
+una compensación simbólica en forma de un caramelo al finalizar la sesión. Esta
+compensación no condicionó la participación ni sus respuestas.
+\end{itemize}
+
+Antes de empezar, todos los participantes leyeron y firmaron un
+\textbf{Consentimiento Informado} (plantilla en Anexo~\ref{Appenddix3}) en el cual el equipo investigador se comprometió a
+cumplir los puntos anteriores.
+
+\subsection{Reclutamiento de participantes}
+
+El reclutamiento se realizó mediante visitas a las aulas de estudiantes de quinto año. El investigador presentó el estudio e invitó a participar de forma voluntaria. Los investigadores no tenían relación docente ni de autoridad con los participantes. La participación o no participación no afectó las calificaciones, evaluaciones, situación académica, relación con docentes ni el acceso a servicios o beneficios institucionales.
+
+\subsection{Codificación de participantes}
+
+A cada participante se le asignó un código con el formato \texttt{PXX} (por ejemplo, P01, P02 o P03), el cual fue utilizado para identificar toda la información recolectada durante el estudio. Se mantuvo una tabla de correspondencia entre los códigos y la identidad de los participantes, accesible únicamente al investigador, la cual sería eliminada de forma permanente una vez finalizada la recolección de datos de la Fase 3.
+
+\subsection{Almacenamiento y eliminación de datos}
+
+Toda la información recopilada durante este estudio fue tratada de forma confidencial. Los datos fueron inicialmente identificados mediante un código asignado a cada participante en una tabla de correspondencia con su identidad y \textbf{se almacenaron en una computadora protegida por contraseña, con acceso restringido al investigador; la tabla sería eliminada al finalizar la recolección de datos en la fase 3}.
+
+En la fase 1, las grabaciones de voz, pantalla y sus transcripciones fueron almacenadas en la computadora mencionada. En la fase 2, las respuestas de los cuestionarios fueron almacenadas temporalmente en un servidor de Amazon Web Services (AWS) y posteriormente transferidas a la computadora del investigador. Dado que los cuestionarios no recopilaban información que permitiera identificar a los participantes, el almacenamiento temporal de las respuestas no representó un riesgo significativo para su privacidad. Una vez finalizada la recolección de datos se eliminaría la tabla de correspondencia y la información utilizada para el análisis y la presentación de resultados sería anonimizada.
+
+Todas las grabaciones, independientemente de la fase del estudio o de la plataforma en la que se almacenaron, se conservarían durante un máximo de \textbf{cuatro semanas} después de finalizada la recolección de datos y serían eliminadas al concluir ese período. La información anonimizada, incluidas las transcripciones y los datos derivados del proceso de recolección, se conservaría durante \textbf{16 semanas} para su análisis. La eliminación de todos los archivos quedó a cargo del investigador al finalizar los períodos de conservación correspondientes.
+
+\subsection{Medidas de privacidad durante las grabaciones}
+
+Durante la fase 1 de investigación, se grabaron la pantalla y las voces de los participantes durante la actividad. Para evitar la captura accidental de información personal, los participantes trabajaron en una computadora entregada por el investigador con las aplicaciones necesarias para el ejercicio, y solo podían acceder a internet desde sesiones en modo incógnito y sin permiso para acceder a cuentas personales.
+
+En la fase 2, los participantes accedieron al cuestionario web mediante un usuario y contraseña asignados por el investigador.
+
+\section{Fase 1: Investigación preliminar}\label{phase1}
+
+El propósito de la primera fase fue identificar los puntos de dolor que tiene Nixlang, como base para construir una solución que los redujera, a través de un estudio cualitativo exploratorio.
+
+\subsection{Población y muestra}
+
+Se seleccionaron estudiantes de Ciencias de la Computación de entre 18 y 24 años con experiencia limitada o nula en Nix y en el empaquetado de aplicaciones. Esta población fue elegida porque, según la encuesta más reciente de la comunidad Nix, representa el segundo grupo de usuarios más numeroso por edad (29.8\%)~\cite{NixCommunitySurvey2024}. Además, su perfil principiante permitió evaluar las barreras de aprendizaje y los desafíos de usabilidad de Nixlang durante las etapas iniciales de adopción.
+
+Se usó una muestra de N=10 participantes, fundamentada en dos precedentes: un estudio pensar-en-alto sobre la experiencia de incorporación en Nix~\cite{fricklerhandwerk2022}, que empleó la misma metodología con usuarios principiantes y produjo hallazgos relevantes sobre usabilidad de documentación, y un estudio de programación natural~\cite{paneStudyingLanguageStructure2001} que utilizó N = 14 para examinar cómo usuarios sin experiencia previa abordan tareas de programación; otro metaestudio sugiere N=10 para investigaciones de este tipo (saturación de relevancia en evaluaciones de usabilidad)~\cite{wutichSampleSizes102024}. Dado el carácter exploratorio y cualitativo de esta fase, dicho tamaño muestral se consideró apropiado, sin pretensiones de generalización estadística.
+
+\subsection{Instrumentos}
+
+Durante esta fase se usaron tres instrumentos para recopilar cuál es la intuición natural de cómo un lenguaje para manejo de paquetes debería ser, seguido de su experiencia con Nixlang:
+
+\begin{itemize}
+\item \textbf{Formulario de perfil}: Recogió datos sobre la experiencia previa del
+participante con herramientas de gestión de paquetes y lenguajes de
+programación, así como su edad y semestre cursado.
+\item \textbf{Formulario de programación natural}: Disponible en la Anexo~\ref{Appenddix3}, presentó al participante una serie de
+problemas relacionados con el dominio del empaquetado de aplicaciones,
+solicitándole que describiera con sus propias palabras un algoritmo para
+resolverlos. Se basó en la técnica de Programación Natural
+\cite{panePDFMoreNatural2006}, y se entregó de forma impresa junto con hojas en
+blanco para que el participante respondiera libremente.
+\item \textbf{Guía de actividades de pensar en alto}: Disponible en la Anexo~\ref{Appenddix3}, conjunto de tareas a resolver con
+Nixlang, siguiendo el protocolo de pensar en alto~\cite{PDFThinkAloud}.
+\end{itemize}
+
+\subsection{Procedimiento}
+
+Antes de iniciar la sesión, el participante leyó y firmó el consentimiento
+informado y completó el formulario de perfil.
+
+A continuación, se entregó el formulario de programación natural de forma
+impresa. Esta actividad se realizó antes de presentar cualquier material sobre
+Nixlang, con el propósito de capturar la intuición natural del participante sin
+sesgo previo de exposición al lenguaje.
+
+Por último, se inició la sesión de pensar en alto utilizando una computadora
+provista por el investigador. El participante verbalizó su proceso de
+pensamiento mientras resolvía las tareas propuestas en Nixlang. Durante esta
+sesión se grabaron la pantalla y el audio, previa autorización explícita en el
+consentimiento informado. Si el usuario necesitaba información de Nix, podía buscarla en internet, siempre que no utilizara asistentes de Inteligencia Artificial.
+
+\subsection{Análisis de datos}
+
+Los datos recolectados se analizaron con los siguientes objetivos: caracterizar el
+perfil de los participantes, identificar patrones en sus respuestas de
+programación natural, y categorizar los puntos de dolor cognitivos observados
+durante las sesiones de pensar en alto.
+
+Las respuestas dadas para la encuesta de programación natural fueron procesadas para crear archivos de código ficticio que contuvieran las características compartidas por cada participante; esto homogeneizaba las respuestas y facilitaba la comparación de características entre participantes.
+
+Para las entrevistas de los usuarios, se analizaron las grabaciones y se anotaron los puntos de dolor mencionados. Los fragmentos verbales más representativos fueron citados de forma textual en el análisis, con previa
+anonimización. Los hallazgos de esta fase orientaron el diseño del eDSL en la
+Fase 2.
+
+\section{Fase 2: Desarrollo del eDSL}
+
+Antes de definir el enfoque, se revisaron los proyectos con los que la comunidad ha buscado mejorar la usabilidad de Nixlang (véase Anexo~\ref{Appendix1}). La revisión mostró que estas soluciones tienden a introducir nuevas fuentes de complejidad o a depender de factores externos, sin atender las causas estructurales de la fricción del lenguaje. Por ello, se optó por interactuar con Nix desde un lenguaje tipado y ampliamente conocido: TypeScript. Se eligió por su popularidad~\cite{stackoverflowMostPopularTechnologies} y por su cercanía sintáctica con Nixlang, al que la documentación oficial describe como ``JSON con funciones''~\cite{NixdevDocumentation}.
+
+El resultado fue \textbf{Nixty}~\cite{rayoNixtyGenerateNix2026}, un eDSL cuya interfaz se diseñó para atender directamente los puntos de dolor identificados en la Fase 1 y que cubre la gran mayoría de las funcionalidades de la biblioteca estándar de Nix (\emph{builtins}, por su nombre en inglés), junto con una batería de pruebas. Para facilitar su instalación durante la Fase 3, Nixty se publicó en el registro de \texttt{npm} bajo la licencia MIT~\cite{MITLicense}. Esta fase no involucró participantes humanos.
+
+\section{Fase 3: Evaluación comparativa}
+
+La Fase 3 adoptó un estudio cuantitativo basado en la ingeniería de \emph{software} empírica
+propuesto por~\cite{mernikPDFComparisonXAML2009}, adaptado al contexto de
+comparación entre un DSL (Nixlang) y un eDSL (Nixty) en TypeScript. La fase se estructuró en dos partes: una evaluación de comprensión cognitiva mediante un cuestionario estructurado, y una evaluación de experiencia de desarrollo mediante instrumentos de Experiencia de Usuario.
+
+\subsection{Población y muestra}
+
+Se reclutaron participantes con el mismo perfil que la Fase 1 (Sección~\ref{phase1}): estudiantes de Ciencias de la Computación con escasa o nula experiencia en Nix. Se permitió la participación de sujetos que hubiesen tomado parte en la Fase 1, considerando que el diseño de la solución se basó en sus respuestas. Ambas fases fueron separadas por un período de 3 meses y las fueron fueron diseñadas de forma independiente, minimizando así posibles efectos de aprendizaje directo de Nix.
+
+Se usó una muestra de N = 20, obtenida mediante un análisis de potencia realizado en G*Power~\cite{GPower} para diseños intra-sujetos comparando medias, asumiendo un tamaño de efecto grande (dz = 0.8, $\alpha$ = 0.05, potencia = 0.90), el cual arrojó un mínimo de 19 participantes, redondeado a 20. Los resultados deben interpretarse en consecuencia y replicarse en trabajos futuros con muestras de mayor tamaño.
+
+\subsection{Instrumentos}
+
+Se usaron 4 instrumentos combinados para recopilar información sobre los participantes, exponerlos a Nixlang y Nixty (el eDSL desarrollado) y saber su experiencia de uso con ambas herramientas.
+
+\begin{itemize}
+\item \textbf{Formulario de perfil}: Incluyó una autoevaluación del nivel general de programación, experiencia en TypeScript y
+familiaridad previa con DSLs.
+\item \textbf{Manuales de Nixlang y eDSL}: Presentó el contexto general
+(empaquetado de aplicaciones y Nix), seguido de la sintaxis de Nixlang y Nixty, con ejemplos
+representativos, una copia se puede encontrar en~\cite{rayoNixEveryoneRepository} en \texttt{survey\textunderscore{}\allowbreak{}phase3/\allowbreak{}manuals}.
+\item \textbf{Cuestionarios de comprensión cognitiva}: Disponible en la Anexo~\ref{Appendix4}, fue un instrumento estructurado con
+19 preguntas por lenguaje: 16 de selección múltiple y 3 de programación libre, que evaluaron el uso de Nixlang y Nixty en tres categorías de entendimiento de programación~\cite{mernikPDFComparisonXAML2009}:
+
+\begin{itemize}
+\item \textbf{Aprendizaje (6 preguntas)}: Selección de declaraciones sintácticamente correctas y
+programas válidos para un resultado dado.
+\item \textbf{Percepción (10 preguntas)}: Identificación de constructos del lenguaje y
+significados correctos de programas.
+\item \textbf{Evolución (3 preguntas)}: Preguntas de tipo ensayo donde se solicitó al
+participante expandir, eliminar o modificar la funcionalidad de código
+existente.
+\end{itemize}
+
+A su vez, en la sección de \textbf{Aprendizaje} y \textbf{Percepción} las preguntas se presentaron en pares de dificultad, que evaluaban el mismo concepto pero en dificultad fácil y difícil, dando origen a la notación \texttt{PP5-1} (fácil) y \texttt{PP5-2} (difícil), donde el último número representaba su dificultad.
+\item \textbf{Encuesta de satisfacción}: Disponible en la Anexo~\ref{Appendix4}, instrumento para medir la experiencia de los usuarios que fusionó 3 pruebas estandarizadas: OUX (Evaluación general de experiencia de usuario)~\cite{Kuusinen2016}, AttrakDiff-2 corto~\cite{PDFNeedsAffect} y DEXI (Índice de Experiencia de Desarrollo)~\cite{Kuusinen2016}.
+\end{itemize}
+
+\subsection{Diseño experimental}
+
+Se empleó un diseño intra-sujetos en el que cada participante interactuó con ambas herramientas: Nixlang y el eDSL desarrollado. El orden de presentación fue contrabalanceado, de modo que la mitad de los participantes comenzó con Nixlang y la otra mitad con el eDSL, con el fin de controlar posibles efectos de orden. Cada herramienta fue evaluada en una sesión independiente a través de una versión web de los formularios (código fuente en~\cite{rayoNixEveryoneRepository}), pudiendo realizarse en días distintos, con el fin de adaptarse a la disponibilidad de los participantes. Se les permitió a los participantes saltar las preguntas difíciles.
+
+\subsection{Procedimiento}
+
+Al inicio de cada sesión, el participante firmó el consentimiento informado si era su primera sesión, o confirmó su continuidad si era la segunda, y completó el formulario de perfil correspondiente. A continuación, se le presentó el tutorial de la herramienta asignada para esa sesión. Una vez revisado el material, el participante respondió el cuestionario de comprensión cognitiva. Inmediatamente al finalizar, completó la encuesta de satisfacción evaluando su experiencia con dicha herramienta. Este procedimiento se repitió de forma idéntica en la sesión correspondiente a la segunda herramienta, que el participante podía iniciar inmediatamente.
+
+\subsection{Métricas y análisis de datos}
+
+De esta tercera fase se buscó recopilar 2 categorías de métricas: de rendimiento de los usuarios en cada herramienta (obtenido con el cuestionario de Comprensión Cognitiva), y su experiencia de desarrollo (obtenido de la encuesta de satisfacción).
+
+\subsubsection{Rendimiento}
+
+Las preguntas de selección múltiple se calificaron como correctas o incorrectas con 1 y 0, respectivamente. Los ejercicios de programación libre de Evolución fueron calificados por el investigador con el mismo criterio binario. Con ello se calculó la tasa de éxito de cada participante en cada categoría: Aprendizaje ($P_1$--$P_3$), Percepción ($P_4$--$P_8$) y Evolución ($P_9$--$P_{11}$)~\cite{mernikPDFComparisonXAML2009}.
+
+Además, cada pregunta se relacionó con 13 de las Dimensiones Cognitivas de las Notaciones~\cite{PDFCognitiveDimensions}:
+
+\begin{itemize}
+\item \textbf{Cercanía de mapeo}: los lenguajes deben ser específicos para la tarea.
+\item \textbf{Viscosidad}: las revisiones deben ser sencillas.
+\item \textbf{Dependencias ocultas}: las consecuencias de los cambios deben ser claras.
+\item \textbf{Operaciones mentales difíciles}: no se permite nada enigmático.
+\item \textbf{Anticipación impuesta}: sin compromisos prematuros.
+\item \textbf{Notación secundaria}: permitir incluir información adicional.
+\item \textbf{Visibilidad}: los recorridos de búsqueda deben ser cortos.
+\item \textbf{Consistencia}: no se deben romper las expectativas del usuario.
+\item \textbf{Difusión}: el lenguaje no debe ser demasiado verboso.
+\item \textbf{Propensión a errores}: la notación debe detectar las equivocaciones para evitar errores.
+\item \textbf{Evaluación progresiva}: obtener retroalimentación inmediata.
+\item \textbf{Expresividad de rol}: ver claramente las relaciones entre los componentes.
+\item \textbf{Gradiente de abstracción}: los lenguajes deben permitir distintos niveles de abstracción.
+\end{itemize}
+
+Las relaciones entre preguntas y dimensiones (Cuadro~\ref{cuadro1}) son las mismas que usaron Mernik et al.~\cite{mernikPDFComparisonXAML2009}, ya que el cuestionario tiene los mismos tipos de preguntas, en el mismo orden, pero adaptadas al campo de Nixlang y Nixty.
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Dimensión} & \textbf{P1} & \textbf{P2} & \textbf{P3} & \textbf{P4} & \textbf{P5} & \textbf{P6} & \textbf{P7} & \textbf{P8} & \textbf{P9} & \textbf{P10} & \textbf{P11} \\
+\hline
+Cercanía de mapeo & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+Viscosidad & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 \\
+\hline
+Dependencias ocultas & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 0 \\
+\hline
+Operaciones mentales difíciles & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+\hline
+Anticipación impuesta & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 \\
+\hline
+Notación secundaria & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+\hline
+Visibilidad & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+\hline
+Consistencia & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
+\hline
+Difusión & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+Propensión a errores & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+Evaluación progresiva & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+Expresividad de rol & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+Gradiente de abstracción & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+\hline
+\end{tabular}
+\caption[Dimensiones Cognitivas de las Notaciones relacionadas a cada pregunta. \texttt{1} indica que están relacionadas y \texttt{0} que no.]{Dimensiones Cognitivas de las Notaciones relacionadas a cada pregunta~\cite{mernikPDFComparisonXAML2009}. \texttt{1} indica que están relacionadas y \texttt{0} que no.}
+\label{cuadro1}
+\end{table}
+
+El puntaje de cada dimensión $i$ ($D_i$) se calculó con la fórmula de Mernik et al.~\cite{mernikPDFComparisonXAML2009}:
+
+\[ D_i = \sum_{j=1}^{11} Q_{ij} \cdot \frac{S_j}{C_j} \]
+
+Donde $Q_{ij}$ indica si la dimensión $i$ está relacionada con la pregunta $j$ (Cuadro~\ref{cuadro1}), $C_j$ es el número de dimensiones relacionadas con la pregunta $j$ y $S_j$ es 1 si el participante respondió correctamente la pregunta $j$ y 0 si no. A diferencia de Mernik et al., que usaron como $S_j$ la tasa de éxito de todo el grupo, $D_i$ se calculó para cada participante y sesión, para poder compararlo estadísticamente entre herramientas. Cada $D_i$ se expresó como porcentaje de su máximo, $\sum_j Q_{ij} / C_j$.
+
+\subsubsection{Experiencia de desarrollo}
+
+La encuesta de satisfacción se compuso de tres preguntas: la evaluación general de la experiencia de usuario (OUX), qué tan bien la herramienta respondió a las necesidades del participante (NFS)~\cite{Kuusinen2016}, y de 22 pares de palabras antónimas: 10 de la versión corta de AttrakDiff 2 (SAD-2)~\cite{PDFNeedsAffect} y 12 de DEXI~\cite{Kuusinen2016}. Todos los ítems usaron una escala de 7 puntos, y cada par pertenece a una categoría General, Pragmática o Hedónica según el modelo hedónico-pragmático de la experiencia de usuario~\cite{hassenzahlPDFInterplayBeauty2026} (Cuadro~\ref{cuadro2}). El puntaje de cada categoría es el promedio de sus ítems.
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\begin{tabularx}{\textwidth}{|l|l|L|L|}
+\hline
+\textbf{Instrumento} & \textbf{Categoría} & \textbf{Ítem (izquierda -- derecha)} & \textbf{Original} \\
+\hline
+OUX & --- & Bueno -- Malo & \emph{Bad -- Good} \\
+\hline
+NFS & --- & Para nada -- Completamente & \emph{Not at all -- Completely} \\
+\hline
+\multirow{10}{*}{SAD-2} & \multirow{2}{*}{General} & Malo -- Bueno & \emph{Bad -- Good} \\
+\cline{3-4}
+ &  & Feo -- Bonito & \emph{Ugly -- Beautiful} \\
+\cline{2-4}
+ & \multirow{4}{*}{Pragmática} & Confuso -- Estructurado & \emph{Confusing -- Structured} \\
+\cline{3-4}
+ &  & Práctico -- Impráctico & \emph{Practical -- Impractical} \\
+\cline{3-4}
+ &  & Impredecible -- Predecible & \emph{Unpredictable -- Predictable} \\
+\cline{3-4}
+ &  & Simple -- Complicado & \emph{Simple -- Complicated} \\
+\cline{2-4}
+ & \multirow{4}{*}{Hedónica} & Antipático -- Cautivador & \emph{Dull -- Captivating} \\
+\cline{3-4}
+ &  & Elegante -- Tosco & \emph{Stylish -- Tacky} \\
+\cline{3-4}
+ &  & Barato -- Prémium & \emph{Cheap -- Premium} \\
+\cline{3-4}
+ &  & Creativo -- No imaginativo & \emph{Creative -- Unimaginative} \\
+\hline
+\multirow{12}{*}{DEXI} & General & Recomendable -- No recomendable & \emph{Recommendable -- Not recommendable} \\
+\cline{2-4}
+ & \multirow{5}{*}{Pragmática} & Eficiente -- Ineficiente & \emph{Efficient -- Inefficient} \\
+\cline{3-4}
+ &  & Flexible -- Rígido & \emph{Flexible -- Inflexible} \\
+\cline{3-4}
+ &  & Fácil de aprender -- Difícil de aprender & \emph{Easy to learn -- Difficult to learn} \\
+\cline{3-4}
+ &  & Limitado -- Extensivo & \emph{Limited -- Extensive} \\
+\cline{3-4}
+ &  & Desinformativo -- Informativo & \emph{Uninformative -- Informative} \\
+\cline{2-4}
+ & \multirow{6}{*}{Hedónica} & Motivador -- Desmotivador & \emph{Motivating -- Discouraging} \\
+\cline{3-4}
+ &  & Genera respeto -- Genera desconfianza & \emph{Increases respect -- Decreases respect} \\
+\cline{3-4}
+ &  & Agradable -- Desagradable & \emph{Enjoyable -- Unenjoyable} \\
+\cline{3-4}
+ &  & Promueve la creatividad -- Suprime la creatividad & \emph{Promotes creativity -- Suppresses creativity} \\
+\cline{3-4}
+ &  & Envolvente -- Aburrido & \emph{Engaging -- Uninvolving} \\
+\cline{3-4}
+ &  & Me acerca a otros -- Me aleja de otros & \emph{Brings me closer to others -- Separates me from others} \\
+\hline
+\end{tabularx}
+\caption[Ítems de la encuesta de satisfacción en el orden en que se presentaron, con su par original]{Ítems de la encuesta de satisfacción en el orden en que se presentaron, con su par original~\cite{Kuusinen2016}}
+\label{cuadro2}
+\end{table}
+
+\subsubsection{Análisis estadístico}
+
+Como cada participante usó ambas herramientas en una de dos secuencias (Nixlang $\rightarrow$ Nixty o Nixty $\rightarrow$ Nixlang), las métricas se compararon con la prueba de Mann-Whitney-Wilcoxon para diseños cruzados 2 $\times$ 2~\cite{koch328NoteUse1972} con el fin de eliminar efectos de orden o de habilidad. El puntaje de un participante en la primera sesión $Y_1$ se compone de su habilidad $h$, del efecto $T$ de la herramienta usada en esa sesión y, en la segunda sesión $Y_2$, se agrega el efecto de orden $o$ (mejores resultados en el segundo intento por práctica, o peores por cansancio):
+
+\[ Y_1 = h + T_1, \quad Y_2 = h + T_2 + o \]
+
+Para remover la habilidad de cada participante se calculó la diferencia entre su primera y su segunda sesión:
+
+\[ d = Y_1 - Y_2 = T_1 - T_2 - o \]
+
+Siendo $\Delta = T_{\text{Nixty}} - T_{\text{Nixlang}}$ la ventaja de Nixty sobre Nixlang, $d$ toma un valor distinto en cada secuencia:
+
+\[ d_{\text{Nixty $\rightarrow$ Nixlang}} = \Delta - o, \quad d_{\text{Nixlang $\rightarrow$ Nixty}} = -\Delta - o \]
+
+Suponiendo que el efecto del orden es el mismo en ambas secuencias, al restarlas este se elimina y queda solo la diferencia entre herramientas:
+
+\[ d_{\text{Nixty $\rightarrow$ Nixlang}} - d_{\text{Nixlang $\rightarrow$ Nixty}} = (\Delta - o) - (-\Delta - o) = 2 \Delta \]
+
+Si ambas herramientas rinden igual ($\Delta = 0$), $d$ solo refleja el orden y se distribuye igual en las dos secuencias. Por ello, la prueba compara la distribución de $d$ entre las dos secuencias y, a diferencia de Kuusinen~\cite{Kuusinen2016}, que comparó a los participantes que calificaron OUX como bueno o malo, los grupos comparados fueron las secuencias.
+
+Para cada métrica se probó la hipótesis nula de que la distribución de $d$ es la misma en ambas secuencias, de forma bilateral y con $\alpha$ = 0.05. Se compararon la tasa de éxito de cada categoría, el puntaje de cada dimensión cognitiva, OUX, NFS y el puntaje de cada calidad de SAD-2 y DEXI; los pares de palabras se compararon individualmente como análisis exploratorio. Para pruebas de hipótesis que verificaban variables relacionadas (entendimiento de programación, dimensiones cognitivas, categorías de SAD-2 y DEXI), los valores \emph{p} se ajustaron con la corrección de Holm.
+
+Junto al valor \emph{p} se reportó el tamaño de efecto. El factor 2 de la diferencia entre secuencias no afecta la prueba ni el tamaño de efecto, porque ambos dependen solo del orden de los $d$. El tamaño de efecto fue la correlación biserial de rangos:
+
+\[ r_g = \frac{2U}{n_1 n_2} - 1 \]
+
+donde $U$ es el estadístico de Mann-Whitney de la secuencia Nixty $\rightarrow$ Nixlang, es decir, el número de pares en que su $d$ supera al de Nixlang $\rightarrow$ Nixty (en caso de empate, se suma la mitad del puntaje a cada $U$). $r_g$ va de $-$1 a 1, donde 0 indica que no hay diferencia entre las secuencias, y es positivo cuando Nixty obtuvo mejores resultados. Su magnitud se interpretó con los rangos de~\cite{fielperesEffectSizesNonparametric}: pequeño si $|r_g| \geq 0.11$, mediano si $|r_g| \geq 0.28$ y grande si $|r_g| \geq 0.43$.
+
+\chapter{Resultados}
+
+Por facilidad de lectura, los resultados están divididos por cada fase de la metodología.
+
+\section{Fase 1}
+
+Se cuenta con las respuestas de 10 participantes, 10 de ellos responden el cuestionario de Programación Natural; y solo 2 de ellos la prueba de pensar-en-alto. Sobre sus perfiles, el 100\% indican tener experiencia en manejadores de paquetes, mas solo el 60\% mencionan tener experiencia empaquetando una aplicación para su consumo por otros usuarios; sobre lenguajes, la gran mayoría muestra comodidad en el uso de lenguajes de alto nivel imperativos interpretados y no tipados como Python y JavaScript, seguido de lenguajes de alto nivel tipados y compilados, y terminando con lenguajes de bajo nivel (Cuadro~\ref{cuadro3}).
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Lenguajes} & \textbf{Porcentaje (\%)} \\
+\hline
+Python & 90.0 \\
+\hline
+JavaScript & 60.0 \\
+\hline
+Java & 40.0 \\
+\hline
+TypeScript & 40.0 \\
+\hline
+Bash & 20.0 \\
+\hline
+C & 10.0 \\
+\hline
+Sin respuesta & 10.0 \\
+\hline
+\end{tabular}
+\caption{Lenguajes de programación con los que los participantes indican estar cómodos para realizar un proyecto.}
+\label{cuadro3}
+\end{table}
+
+En el cuestionario de programación natural se observan las siguientes tendencias:
+
+\begin{itemize}
+\item \textbf{Fuentes como variables o módulos}: la mitad de los participantes declara las fuentes (los registros de donde se descargan los paquetes) como variables, \texttt{fuente = "https:/\allowbreak{}/\allowbreak{}github.\allowbreak{}com/\allowbreak{}nixos/\allowbreak{}nixpkgs"}; la otra mitad, como módulos importados, \texttt{import "https:/\allowbreak{}/\allowbreak{}github.\allowbreak{}com/\allowbreak{}nixos/\allowbreak{}nixpkgs"}.
+\item \textbf{Verbos como palabras clave}: todos los participantes usan verbos como \texttt{install}, \texttt{update} o \texttt{delete} como palabras clave para dar instrucciones al manejador de paquetes, por ejemplo \texttt{install(fuente, ["A", "B"])}.
+\item \textbf{JSON para definir paquetes}: 9 de los 10 participantes definen los paquetes con objetos JSON:
+\end{itemize}
+
+\begin{bloquecodigo}
+\begin{lstlisting}[language=TypeScript]
+{name : "hello", version: 3, dependencies : ["A", "B"]}
+\end{lstlisting}
+\end{bloquecodigo}
+
+El participante restante propone definir el paquete mediante una función para permitir cambios con parámetros.
+
+\begin{itemize}
+\item \textbf{Perfiles con condicionales}: la mitad de los participantes usa condicionales (\texttt{if}, \texttt{switch}) o etiquetas (\texttt{section}) para dar a cada perfil, como desarrollador o control de calidad, su propio entorno de desarrollo:
+\end{itemize}
+
+\begin{bloquecodigo}
+\begin{lstlisting}[language=nix]
+if ( args.user = "colaborador" ) then [ fuente.node ]
+else (fuente1.node@1.03)
+\end{lstlisting}
+\end{bloquecodigo}
+
+Otros tres participantes proponen un archivo de configuración distinto para cada perfil.
+
+\begin{itemize}
+\item \textbf{Paquetes y entornos de desarrollo como entidades distintas}: todos los participantes tratan los paquetes y los entornos de desarrollo como entidades diferentes, cada una con sus propios atributos. Lo que discrepa con la realidad de Nix, donde ambas son derivaciones.
+\end{itemize}
+
+En las sesiones de pensar en alto, los dos participantes, sin experiencia previa con Nix, deben crear un \emph{flake} desde cero. Tras 1 hora y 30 minutos, solo llegan a la actividad 3 de la guía (de 7), y se identifican tres puntos de dolor:
+
+\begin{itemize}
+\item \textbf{Relación entre \texttt{inputs} y \texttt{outputs}}: no comprenden que lo declarado en \texttt{inputs} se recibe como parámetros de la función \texttt{outputs}.
+\item \textbf{Sintaxis de funciones}: confunden la definición de una función con un objeto; les toma 30 minutos entender que \texttt{outputs} es una función.
+\item \textbf{Parámetro \texttt{self}}: no comprenden su propósito dentro de \texttt{outputs}.
+\item \textbf{Mensajes de error}: los participantes no logran comprender los mensajes de error por compilación.
+\end{itemize}
+
+\section{Fase 2}
+
+A partir de las observaciones de la Fase 1 se desarrolla Nixty~\cite{rayoNixtyGenerateNix2026}, un eDSL en TypeScript que traduce las definiciones del usuario a Flakes de Nix~\cite{NixdevDocumentation}. Esta sección describe primero el diseño de su interfaz y después su implementación, que se verifica con 97 pruebas automatizadas, 8 de ellas siendo de integración.
+
+\subsection{Diseño}
+
+La preferencia de los participantes por lenguajes de alto nivel interpretados (Cuadro~\ref{cuadro3}) refuerza la elección de TypeScript como lenguaje anfitrión. Esta elección evita, además, reimplementar buena parte de la biblioteca estándar de Nix, cuyas funciones son en su mayoría utilidades para manipular cadenas, listas y conjuntos de atributos que TypeScript ya ofrece de forma nativa.
+
+Los hallazgos de la Fase 1 se traducen en una interfaz de pocos bloques que se componen entre sí (Figura~\ref{figura9}). Todo parte de un \texttt{Path}, que indica dónde vive un recurso: en el proyecto, en la computadora o en internet. Si el recurso es código por construir, se envuelve en un \texttt{Source}; si representa código Nix ya escrito, en una \texttt{Expresion}. Con ellos se crean los tres tipos de derivación que escribe el usuario ---\texttt{Package}, \texttt{DevShell} y \texttt{Command}---, y una \texttt{Definition} final agrupa lo que ofrece el proyecto; es este último objeto el que Nixty interpreta. Limitar la interfaz a pocos bloques reduce los conceptos por aprender, sin perder la versatilidad necesaria para cubrir la mayoría de las expresiones de un Flake.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{Figure9}
+\caption{Bloques de la interfaz de Nixty y cómo se componen hasta formar una \texttt{Definition}.}
+\label{figura9}
+\end{figure}
+
+A continuación se resumen las principales decisiones de diseño y la ventaja de cada una.
+
+\textbf{Fuentes como variables}
+
+En un Flake, las fuentes se declaran en \texttt{inputs} y llegan como parámetros de la función \texttt{outputs}, junto con \texttt{self}: justo la relación que los participantes de la Fase 1 no logran comprender. En Nixty, una fuente es una variable más ---tal como la declara la mitad de los participantes--- y se usa directamente donde se necesita. El compilador deduce las entradas del Flake a partir de las variables que efectivamente se usan, por lo que el usuario no escribe la función \texttt{outputs} ni necesita \texttt{self}.
+
+\begin{bloquecodigo}
+\begin{lstlisting}[language=nix]
+# Nixlang: la fuente llega como parámetro de outputs
+inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+outputs = { self, nixpkgs }: { ... };
+\end{lstlisting}
+\par\bigskip
+\begin{lstlisting}[language=TypeScript]
+// Nixty: la fuente es una variable
+const NIX_PKGS = new Nixpkgs({ tag: "nixos-25.05" })
+\end{lstlisting}
+\end{bloquecodigo}
+
+\textbf{Sistemas como una lista de constantes}
+
+En Nixlang, el sistema es una cadena dentro de la ruta de cada salida (\texttt{packages.\allowbreak{}x86\textunderscore{}\allowbreak{}64-\allowbreak{}linux.\allowbreak{}hello}), y soportar varios sistemas obliga a repetir la definición o a recurrir a funciones auxiliares. Nixty expone los sistemas como constantes de \texttt{System}: cada salida declara la lista de sistemas que soporta y describe su contenido una sola vez, en una función que recibe el sistema y que el compilador llama una vez por cada uno. Así, el editor autocompleta los sistemas válidos y un nombre mal escrito se detecta antes de generar el Flake.
+
+\begin{bloquecodigo}
+\begin{lstlisting}[language=TypeScript]
+import { System } from "nixty-lib"
+const SYSTEMS = [System.x86_64Linux, System.aarch64Darwin]
+\end{lstlisting}
+\end{bloquecodigo}
+
+\textbf{Paquetes y entornos de desarrollo son objetos separados}
+
+Aunque en Nix ambos son derivaciones, todos los participantes los conciben como entidades distintas. Nixty respeta esa intuición con un objeto para cada caso ---\texttt{Package}, \texttt{DevShell} y \texttt{Command}---, cada uno con solo las opciones que le corresponden y escrito como un objeto similar a JSON, la notación que usan 9 de los 10 participantes. Las dependencias se agrupan según el momento en que se usan (\texttt{atBuild}, \texttt{atRuntime}, \texttt{atTest}) en lugar de los nombres internos de Nix, como \texttt{nativeBuildInputs}. Además, un entorno puede extender a otro con \texttt{extends}, lo que permite reutilizar expresiones.
+
+\begin{bloquecodigo}
+\begin{lstlisting}[language=TypeScript]
+// Paquete
+const hello = new Package({
+    name: "hello",
+    systems: SYSTEMS,
+    definition: (system) => ({
+        version: "1.0.0",
+        src: SRC,
+        deps: { atRuntime: NIX_PKGS.getPackages(["figlet"], system) },
+        phases: (out) => ({ install: nix`npm install` }),
+    }),
+})
+
+// Entorno de desarrollo
+const dev = new DevShell({
+    name: "dev",
+    systems: SYSTEMS,
+    packages: (system) => [hello.getDerivation(system), ...NIX_PKGS.getPackages(["shellcheck"], system)],
+    onEnter: `echo "Try: hello Ana"`,
+})
+
+// Perfil de control de calidad: una copia de `dev` con una variable más
+const qa = new DevShell({ name: "qa", extends: dev, env: { CI: "true" } })
+\end{lstlisting}
+\end{bloquecodigo}
+
+\textbf{Sistema de tipos previniendo errores tempranos}
+
+Ante la dificultad para interpretar los mensajes de error de Nix, Nixty traslada la mayor parte de la validación a TypeScript. Cada concepto tiene su propio tipo, de modo que usar uno en lugar de otro es un error que el editor señala mientras se escribe y que \texttt{nixty generate} vuelve a verificar antes de generar el Flake. Los errores aparecen así antes de que Nix evalúe el código, junto a la línea que los causa y con los mensajes de TypeScript. Lo que los tipos no alcanzan a expresar se verifica al ejecutar el evaluar el Flake.
+
+\textbf{Las expresiones como método de compatibilidad con código Nixlang}
+
+Ninguna interfaz puede cubrir todo lo que ofrece Nix, por lo que \texttt{Expresion} sirve de puente: importa código Nix desde un \texttt{Path} ---un archivo \texttt{.nix}, otro Flake o Nixpkgs--- y permite usarlo como un valor, ya sea accediendo a sus atributos (\texttt{expr.name}), a los elementos de una lista (\texttt{expr[0]}) o llamándolo como función (\texttt{expr(a, b)}). \texttt{Nixpkgs} y \texttt{Flake} son expresiones con métodos para los usos más comunes, como \texttt{getPackages}. Así, el usuario reutiliza el ecosistema existente en lugar de reescribirlo, a cambio de que TypeScript no pueda verificar su contenido.
+
+\begin{bloquecodigo}
+\begin{lstlisting}[language=nix]
+# nix/saludo.nix
+nombre: "Hola, ${nombre}!"
+\end{lstlisting}
+\par\bigskip
+\begin{lstlisting}[language=TypeScript]
+const saludo = new Expresion(Path.fetchInternalPath("nix/saludo.nix"))
+const dev = new DevShell({
+    // ...
+    env: { SALUDO: nix`${saludo("Ana")}` },  // "Hola, Ana!"
+})
+\end{lstlisting}
+\end{bloquecodigo}
+
+\textbf{Diseño reminiscente de un Flake}
+
+La \texttt{Definition} conserva la estructura de un Flake para reducir la fricción de quienes ya los utilizan. La correspondencia también puede funcionar en sentido inverso, pues quien aprende Nixty puede traducir sus conocimientos a la sintaxis de los Flakes.
+
+\begin{bloquecodigo}
+\begin{lstlisting}[language=TypeScript]
+export default new Definition({
+    description: "Mi proyecto",  // description
+    nixpkgs: NIX_PKGS,           // inputs.nixpkgs
+    packages: [hello],           // packages.<sistema>.hello
+    devShells: [dev, qa],        // devShells.<sistema>.dev y .qa
+    commands: [lint],            // apps.<sistema>.lint
+})
+\end{lstlisting}
+\end{bloquecodigo}
+
+\subsection{Implementación}
+
+En la práctica, Nixty se sitúa como una nueva capa de abstracción en la cadena de Nix (Figura~\ref{figura8}): el usuario describe su proyecto con la interfaz de Nixty, que genera de forma implícita un Flake en Nixlang, y luego usa la interfaz de comandos de Nixty para solicitar al Nix Daemon que construya e instale lo descrito.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{Figure8}
+\caption{Nixty como capa de abstracción sobre Nix: genera el código Nixlang que el Nix Daemon evalúa para guardar los paquetes en la Nix Store.}
+\label{figura8}
+\end{figure}
+
+Nixty se distribuye como un único paquete que contiene tanto la biblioteca que importa el usuario como la interfaz de comandos que la interpreta. El usuario escribe un archivo \texttt{nixty.ts} que exporta una \texttt{Definition}, y el comando \texttt{nixty generate} lo traduce a un \texttt{flake.nix}. Los objetos de la Figura~\ref{figura9} se traducen a nodos que representan constructos de Nixlang, formando un grafo sintáctico\footnote{La traducción de estos nodos a sintaxis de Nix fue implementada con ayuda de Inteligencia Artificial.}. A partir de ese grafo, la transpilación ocurre en cuatro fases:
+
+\begin{enumerate}
+\item \textbf{Expansión}: Expande los objetos de Nixty en un grafo sintáctico equivalente para cada sistema declarado, por ejemplo Linux y macOS.
+\item \textbf{Recorrido}: Revisa el grafo sintáctico en busca de errores y averigua qué fuentes se usan realmente; las que no se usan se descartan.
+\item \textbf{Nombramiento}: Da un nombre único a cada fuente y a cada elemento que se usa más de una vez, para que Nix lo prepare una sola vez y lo reutilice.
+\item \textbf{Emisión}: Traduce todo a Nixlang y lo guarda en el archivo \texttt{flake.nix}.
+\end{enumerate}
+
+El resultado es un \texttt{flake.nix} convencional, que puede leerse, versionarse y usarse con Nix aun sin tener Nixty instalado. Para el resto del ciclo, la interfaz de comandos ofrece verbos que regeneran el Flake y delegan cada tarea al comando de Nix equivalente (Cuadro~\ref{cuadro-cli}). Esto retoma la preferencia de los participantes de la Fase 1 por expresar las acciones como verbos.
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Nixty} & \textbf{Nix} \\
+\hline
+\texttt{nixty develop dev} & \texttt{nix develop .\allowbreak{}\#devShells.\allowbreak{}<sistema>.\allowbreak{}dev} \\
+\hline
+\texttt{nixty build hello} & \texttt{nix build .\allowbreak{}\#packages.\allowbreak{}<sistema>.\allowbreak{}hello} \\
+\hline
+\texttt{nixty run hello} & \texttt{nix run .\allowbreak{}\#packages.\allowbreak{}<sistema>.\allowbreak{}hello} \\
+\hline
+\texttt{nixty command lint} & \texttt{nix run .\allowbreak{}\#apps.\allowbreak{}<sistema>.\allowbreak{}lint} \\
+\hline
+\texttt{nixty update} & \texttt{nix flake update} \\
+\hline
+\end{tabular}
+\caption{Comandos de Nixty y el comando de Nix que ejecutan}
+\label{cuadro-cli}
+\end{table}
+
+\section{Fase 3}
+
+Se cuenta con las respuestas de 20 participantes, 6 de ellos asistieron también a la Fase 1. Sus perfiles revelan ser usuarios familiarizados con el manejo de paquetes, experiencia media-avanzada en TypeScript (Cuadro~\ref{cuadro-experiencia}), y poca experiencia en Nixlang; sus respuestas no mostraron una clara tendencia en su conocimiento de lenguajes funcionales.
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|l|r|r|r|r|r|}
+\hline
+\textbf{Experiencia en} & \makecell[r]{\textbf{1} \\ \textbf{(Muy poca)}} & \textbf{2} & \textbf{3} & \textbf{4} & \makecell[r]{\textbf{5} \\ \textbf{(Muy avanzada)}} \\
+\hline
+Manejo de paquetes & 0.0 & 15.0 & 25.0 & 45.0 & 15.0 \\
+\hline
+TypeScript & 5.0 & 5.0 & 35.0 & 40.0 & 15.0 \\
+\hline
+Nixlang & 65.0 & 20.0 & 15.0 & 0.0 & 0.0 \\
+\hline
+Lenguajes funcionales & 30.0 & 10.0 & 25.0 & 30.0 & 5.0 \\
+\hline
+\end{tabular}
+\caption{Nivel de experiencia autorreportado por los participantes de la Fase 3, como porcentaje de participantes (escala 1--5)}
+\label{cuadro-experiencia}
+\end{table}
+
+Los participantes tomaron más tiempo en promedio en completar el cuestionario de Nixty (41.7 minutos) que el de Nixlang (34.4 minutos), y sus índices de acierto, mostrados en el Cuadro~\ref{cuadro-preguntas}, no distan mucho entre herramientas, pero eso se determina con las pruebas estadísticas.
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|l|c|l|r|r|r|}
+\hline
+\textbf{Categoría} & \textbf{Pregunta} & \textbf{ID} & \makecell[r]{\textbf{Nixlang} \\ \textbf{(\%)}} & \makecell[r]{\textbf{Nixty} \\ \textbf{(\%)}} & \makecell[r]{\textbf{Nixty $-$} \\ \textbf{Nixlang (pp)}} \\
+\hline
+\multirow{3}{*}{Aprendizaje} & $P_1$ & PA1-1 & 70.0 & 60.0 & $-$10.0 \\
+\cline{2-6}
+ & $P_2$ & PA2-1 & 55.0 & 60.0 & 5.0 \\
+\cline{2-6}
+ & $P_3$ & PA3-1 & 90.0 & 95.0 & 5.0 \\
+\hline
+\multirow{5}{*}{Percepción} & $P_4$ & PP4-1 & 55.0 & 60.0 & 5.0 \\
+\cline{2-6}
+ & $P_5$ & PP5-1 & 35.0 & 60.0 & 25.0 \\
+\cline{2-6}
+ & $P_6$ & PP6-1 & 45.0 & 35.0 & $-$10.0 \\
+\cline{2-6}
+ & $P_7$ & PP7-1 & 75.0 & 70.0 & $-$5.0 \\
+\cline{2-6}
+ & $P_8$ & PP8-1 & 70.0 & 90.0 & 20.0 \\
+\hline
+\multirow{3}{*}{Evolución} & $P_9$ & PE9-1 & 75.0 & 100.0 & 25.0 \\
+\cline{2-6}
+ & $P_{10}$ & PE10-1 & 90.0 & 95.0 & 5.0 \\
+\cline{2-6}
+ & $P_{11}$ & PE11-1 & 75.0 & 70.0 & $-$5.0 \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Total}} & \textbf{66.8} & \textbf{72.3} & \textbf{5.5} \\
+\hline
+\end{tabular}
+\caption{Tasa de éxito por pregunta con cada herramienta; la diferencia se expresa en puntos porcentuales (pp)}
+\label{cuadro-preguntas}
+\end{table}
+
+Las siguientes secciones comparten los resultados obtenidos. Los cálculos, mas no los datos, se encuentran en~\cite{rayoNixEveryoneRepository} en \texttt{analysis/}.
+
+\subsection{Rendimiento}
+
+Las variantes difíciles de $P_1$--$P_8$ son opcionales; de las 320 presentadas (8 por herramienta a cada participante), se responde el 28.8 \%: el 27.5 \% con Nixlang y el 30.0 \% con Nixty. Por ello se excluyen del análisis, y con cada herramienta se usan 11 preguntas: la variante fácil de $P_1$--$P_8$ y $P_9$--$P_{11}$. Se trabaja haciendo pruebas estadísticas con Mann-Whitney-Wilcoxon~\cite{koch328NoteUse1972} (prueba bilateral, $\alpha$ = 0.05) usando las siguientes hipótesis:
+
+\textbf{$H_0$} = La distribución de la diferencia entre las secuencias $d_{\text{Nixlang $\rightarrow$ Nixty}}$ y $d_{\text{Nixty $\rightarrow$ Nixlang}}$ para la variable $X$, \textbf{es la misma}. (El rendimiento en ambas herramientas es el mismo).
+
+\textbf{$H_a$} = La distribución de la diferencia entre las secuencias $d_{\text{Nixlang $\rightarrow$ Nixty}}$ y $d_{\text{Nixty $\rightarrow$ Nixlang}}$ para la variable $X$, \textbf{es diferente} (El rendimiento en ambas herramientas es el mismo).
+
+Donde $X$ es la variable evaluada. Cuando se aplica la corrección de Holm, la decisión se toma con \emph{p} Holm. Las columnas Nixlang y Nixty son el promedio de los 20 participantes con cada herramienta.
+
+Nixty no muestra ninguna diferencia estadística contra Nixlang en ninguna de las categorías de entendimiento de programación (Cuadro~\ref{cuadro4}), mas sí un tamaño de efecto medio ($r_g \geq 0.28$) en Aprendizaje y Evolución, indicando que la tasa de éxito fue medianamente mayor en Nixty.
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\begin{tabularx}{\textwidth}{|L|r|r|r|r|r|c|}
+\hline
+\textbf{Categoría} & \makecell[r]{\textbf{Nixlang} \\ \textbf{(\%)}} & \makecell[r]{\textbf{Nixty} \\ \textbf{(\%)}} & \textbf{$r_g$} & \textbf{\emph{p}} & \makecell[r]{\textbf{\emph{p}} \\ \textbf{Holm}} & \makecell[c]{\textbf{Se rechaza} \\ \textbf{H$_0$}} \\
+\hline
+Aprendizaje & 71.7 & 71.7 & 0.10 & 0.719 & 0.721 & No \\
+\hline
+Percepción & 56.0 & 63.0 & 0.31 & 0.240 & 0.721 & No \\
+\hline
+Evolución & 80.0 & 88.3 & 0.30 & 0.247 & 0.721 & No \\
+\hline
+\end{tabularx}
+\caption{Prueba de Mann-Whitney-Wilcoxon de la tasa de éxito por categoría de entendimiento de programación}
+\label{cuadro4}
+\end{table}
+
+Tampoco se encuentra una diferencia estadística entre ninguna de las dimensiones cognitivas (Cuadro~\ref{cuadro5}). Pero se observa un tamaño de efecto grande ($r_g \geq 0.28$) en Dependencias ocultas, y medio en otras 6 dimensiones, indicando que los participantes tuvieron un mejor rendimiento en esas dimensiones con Nixty; por otro lado, se muestra un efecto pequeño negativo en la Consistencia de Nixty. Evaluación progresiva no se incluye por no relacionarse con ninguna pregunta, y las dimensiones relacionadas con las mismas preguntas, que obtienen el mismo puntaje, se agrupan en una fila en el Cuadro~\ref{cuadro5}.
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\begin{tabularx}{\textwidth}{|L|r|r|r|r|r|c|}
+\hline
+\textbf{Dimensión} & \makecell[r]{\textbf{Nixlang} \\ \textbf{(\%)}} & \makecell[r]{\textbf{Nixty} \\ \textbf{(\%)}} & \textbf{$r_g$} & \textbf{\emph{p}} & \makecell[r]{\textbf{\emph{p}} \\ \textbf{Holm}} & \makecell[c]{\textbf{Se rechaza} \\ \textbf{H$_0$}} \\
+\hline
+Cercanía de mapeo / Difusión / Propensión a errores & 67.8 & 71.6 & 0.14 - pequeño & 0.623 & 1.000 & No \\
+\hline
+Viscosidad & 80.0 & 88.3 & 0.30 - medio & 0.247 & 1.000 & No \\
+\hline
+Dependencias ocultas & 65.8 & 74.1 & 0.43 - grande & 0.111 & 0.997 & No \\
+\hline
+Operaciones mentales difíciles & 60.3 & 66.7 & 0.20 - pequeño & 0.470 & 1.000 & No \\
+\hline
+Anticipación impuesta & 75.0 & 85.0 & 0.30 - medio & 0.232 & 1.000 & No \\
+\hline
+Notación secundaria & 70.0 & 90.0 & 0.32 - medio & 0.182 & 1.000 & No \\
+\hline
+Visibilidad / Gradiente de abstracción & 61.8 & 68.6 & 0.40 - medio & 0.137 & 1.000 & No \\
+\hline
+Consistencia & 60.9 & 53.5 & $-$0.14 - pequeño & 0.605 & 1.000 & No \\
+\hline
+Expresividad de rol & 67.3 & 74.3 & 0.39 - medio & 0.150 & 1.000 & No \\
+\hline
+\end{tabularx}
+\caption{Prueba de Mann-Whitney-Wilcoxon del puntaje de cada dimensión cognitiva, como porcentaje de su máximo}
+\label{cuadro5}
+\end{table}
+
+\subsection{Experiencia de desarrollo}
+
+El Cuadro~\ref{cuadro-oux-nfs} muestra que la Experiencia de Usuario General (OUX, por sus siglas en inglés) difiere significativamente entre herramientas, con $r_g$ = 0.65 y \emph{p} = 0.014, mientras que en el Puntaje de Cumplimiento de Necesidades (NFS, por sus siglas en inglés) la diferencia no es significativa. En el análisis por cualidad del Cuadro~\ref{cuadro-calidades} se rechaza H$_0$ en dos casos: la cualidad General de SAD-2, con $r_g$ = 0.75 y \emph{p} Holm = 0.014, y la Pragmática de DEXI, con $r_g$ = 0.75 y \emph{p} Holm = 0.015.
+
+Enfocándose en el tamaño de efecto, Nixty presenta un tamaño grande en todas las cualidades de ambos cuestionarios, excepto en el aspecto Hedónico de SAD-2, significando que los usuarios puntuaron la mayoría de estos aspectos de Nixty de forma considerablemente superior a Nixlang. Un comportamiento parecido se puede ver en los puntajes de palabras por separado en el Cuadro~\ref{cuadro-pares-sad2} y el Cuadro~\ref{cuadro-pares-dexi}.
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\begin{tabularx}{\textwidth}{|L|r|r|r|r|c|}
+\hline
+\textbf{Instrumento} & \textbf{Nixlang} & \textbf{Nixty} & \textbf{$r_g$} & \textbf{\emph{p}} & \makecell[c]{\textbf{Se rechaza} \\ \textbf{H$_0$}} \\
+\hline
+OUX & 4.45 & 5.85 & 0.65 & 0.014 & Sí \\
+\hline
+NFS & 4.85 & 5.10 & 0.12 & 0.667 & No \\
+\hline
+\end{tabularx}
+\caption{Prueba de Mann-Whitney-Wilcoxon de OUX y NFS (escala 1--7), sin corrección de Holm por ser una prueba por instrumento}
+\label{cuadro-oux-nfs}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\begin{tabularx}{\textwidth}{|L|r|r|r|r|r|c|}
+\hline
+\textbf{Cualidad} & \textbf{Nixlang} & \textbf{Nixty} & \textbf{$r_g$} & \textbf{\emph{p}} & \makecell[r]{\textbf{\emph{p}} \\ \textbf{Holm}} & \makecell[c]{\textbf{Se rechaza} \\ \textbf{H$_0$}} \\
+\hline
+\multicolumn{7}{|l|}{\textbf{SAD-2}} \\
+\hline
+General & 4.70 & 5.90 & 0.75 & 0.005 & 0.014 & Sí \\
+\hline
+Pragmática & 4.28 & 5.18 & 0.55 & 0.041 & 0.081 & No \\
+\hline
+Hedónica & 4.39 & 4.81 & 0.38 & 0.160 & 0.160 & No \\
+\hline
+\multicolumn{7}{|l|}{\textbf{DEXI}} \\
+\hline
+General & 4.55 & 6.00 & 0.57 & 0.031 & 0.062 & No \\
+\hline
+Pragmática & 4.52 & 5.28 & 0.75 & 0.005 & 0.015 & Sí \\
+\hline
+Hedónica & 4.70 & 5.24 & 0.51 & 0.058 & 0.062 & No \\
+\hline
+\end{tabularx}
+\caption{Prueba de Mann-Whitney-Wilcoxon del puntaje de cada cualidad de SAD-2 y DEXI (escala 1--7), con corrección de Holm sobre las tres calidades de cada instrumento}
+\label{cuadro-calidades}
+\end{table}
+
+Por pares de palabras, seis pares de SAD-2 pasan la prueba $p$ sin corregir, pero ninguno sobrevive después de la corrección de Holm (Cuadro~\ref{cuadro-pares-sad2}). En DEXI, solo el par Difícil de aprender -- Fácil de aprender rechaza H$_0$ ($r_g$ = 0.86, \emph{p} Holm = 0.014) (Cuadro~\ref{cuadro-pares-dexi}).
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\begin{tabularx}{\textwidth}{|l|L|r|r|r|r|r|}
+\hline
+\textbf{Cualidad} & \textbf{Par (negativo -- positivo)} & \textbf{Nixlang} & \textbf{Nixty} & \textbf{$r_g$} & \textbf{\emph{p}} & \makecell[r]{\textbf{\emph{p}} \\ \textbf{Holm}} \\
+\hline
+\multirow{2}{*}{General} & Malo -- Bueno & 5.00 & 5.95 & 0.72 & 0.006 & 0.058 \\
+\cline{2-7}
+ & Feo -- Bonito & 4.40 & 5.85 & 0.66 & 0.013 & 0.120 \\
+\hline
+\multirow{4}{*}{Pragmática} & Confuso -- Estructurado & 4.35 & 5.60 & 0.64 & 0.016 & 0.125 \\
+\cline{2-7}
+ & Impráctico -- Práctico & 4.20 & 4.50 & 0.10 & 0.731 & 1.000 \\
+\cline{2-7}
+ & Impredecible -- Predecible & 4.85 & 5.85 & 0.63 & 0.017 & 0.125 \\
+\cline{2-7}
+ & Complicado -- Simple & 3.70 & 4.75 & 0.53 & 0.048 & 0.240 \\
+\hline
+\multirow{4}{*}{Hedónica} & Antipático -- Cautivador & 4.10 & 4.95 & 0.61 & 0.020 & 0.125 \\
+\cline{2-7}
+ & Tosco -- Elegante & 4.60 & 5.25 & 0.37 & 0.157 & 0.629 \\
+\cline{2-7}
+ & Barato -- Prémium & 4.35 & 4.40 & $-$0.10 & 0.700 & 1.000 \\
+\cline{2-7}
+ & No imaginativo -- Creativo & 4.50 & 4.65 & 0.04 & 0.908 & 1.000 \\
+\hline
+\end{tabularx}
+\caption{Puntaje promedio por par de palabras de SAD-2 (escala 1--7, 7 es el polo positivo) y prueba de Mann-Whitney-Wilcoxon por par, con corrección de Holm sobre los 10 pares.}
+\label{cuadro-pares-sad2}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\begin{tabularx}{\textwidth}{|l|L|r|r|r|r|r|}
+\hline
+\textbf{Calidad} & \textbf{Par (negativo -- positivo)} & \textbf{Nixlang} & \textbf{Nixty} & \textbf{$r_g$} & \textbf{\emph{p}} & \makecell[r]{\textbf{\emph{p}} \\ \textbf{Holm}} \\
+\hline
+General & No recomendable -- Recomendable & 4.55 & 6.00 & 0.57 & 0.031 & 0.343 \\
+\hline
+\multirow{5}{*}{Pragmática} & Ineficiente -- Eficiente & 5.55 & 5.55 & $-$0.10 & 0.714 & 1.000 \\
+\cline{2-7}
+ & Rígido -- Flexible & 4.55 & 5.15 & 0.24 & 0.366 & 1.000 \\
+\cline{2-7}
+ & Difícil de aprender -- Fácil de aprender & 3.25 & 5.40 & 0.86 & 0.001 & 0.014 \\
+\cline{2-7}
+ & Limitado -- Extensivo & 4.60 & 5.15 & 0.48 & 0.066 & 0.661 \\
+\cline{2-7}
+ & Desinformativo -- Informativo & 4.65 & 5.15 & 0.37 & 0.152 & 0.913 \\
+\hline
+\multirow{6}{*}{Hedónica} & Desmotivador -- Motivador & 4.00 & 5.30 & 0.44 & 0.095 & 0.762 \\
+\cline{2-7}
+ & Genera desconfianza -- Genera respeto & 5.50 & 5.15 & $-$0.22 & 0.403 & 1.000 \\
+\cline{2-7}
+ & Desagradable -- Agradable & 4.75 & 5.60 & 0.42 & 0.114 & 0.797 \\
+\cline{2-7}
+ & Suprime la creatividad -- Promueve la creatividad & 4.90 & 5.30 & 0.36 & 0.172 & 0.913 \\
+\cline{2-7}
+ & Aburrido -- Envolvente & 4.10 & 4.90 & 0.46 & 0.081 & 0.729 \\
+\cline{2-7}
+ & Me aleja de otros -- Me acerca a otros & 4.95 & 5.20 & 0.22 & 0.351 & 1.000 \\
+\hline
+\end{tabularx}
+\caption{Puntaje promedio por par de palabras de DEXI (escala 1--7, 7 es el polo positivo) y prueba de Mann-Whitney-Wilcoxon por par, con corrección de Holm sobre los 12 pares.}
+\label{cuadro-pares-dexi}
+\end{table}
+
+\chapter{Discusión}
+
+Este trabajo evalúa si un eDSL en TypeScript reduce la barrera de entrada a Nix, cuya usabilidad ha sido señalada como punto de mejora tanto por las encuestas de la comunidad~\cite{2022NixSurvey2022,2025CommunitySurvey,NixCommunitySurvey2023,NixCommunitySurvey2024} como por su creador~\cite{Dolstra2018}. Las alternativas propuestas, como extensiones tipadas del lenguaje~\cite{caddetNixNickel,hufschmittCurrentStatePtyx}, asistentes de inteligencia artificial~\cite{Schwaighofer2026} o eDSL como Guix~\cite{Courts2013} y NiJS~\cite{burgNiJSInternalDSL2026}, con las que no se encuentran evaluaciones de usabilidad con usuarios (Anexo~\ref{Appendix1}), por lo que este estudio aporta una comparación empírica entre Nixlang y un eDSL.
+
+Los participantes de la Fase~1 conciben el manejo de paquetes como una serie de acciones sobre el sistema: todos expresan las instrucciones con verbos como \texttt{install}, \texttt{update} o \texttt{delete}, y 9 de 10 describen los paquetes con objetos JSON. Esta concepción coincide con los lenguajes que dominan (Cuadro~\ref{cuadro3}): Python, JavaScript y Java, imperativos o multiparadigma y predominantes también entre los desarrolladores en general~\cite{stackoverflowMostPopularTechnologies}. A diferencia de Pane et al.~\cite{paneStudyingLanguageStructure2001}, que estudian a no programadores, aquí los participantes son estudiantes de Computación, por lo que sus soluciones reflejan menos una intuición ``natural'' que la transferencia de los lenguajes que ya conocen; para diseñar un eDSL dirigido a ese público, es precisamente esa transferencia la que interesa capturar.
+
+Nixlang, que su documentación describe como ``JSON con funciones''~\cite{NixdevDocumentation}, no se aleja de los participantes en la notación de datos, sino en las funciones: tres de los cuatro puntos de dolor observados al pensar en alto giran en torno a la función \texttt{outputs}, que a los participantes les tomó 30 minutos reconocer como tal. Las sesiones de Gagarin con principiantes en Nix~\cite{fricklerhandwerk2022} muestran un patrón compatible: un participante sin formación funcional se declara inseguro al escribir funciones, mientras que otro con experiencia en Haskell no encuentra intimidante leer expresiones de Nix. Con todo, solo 2 de los 10 participantes completan la sesión de pensar en alto, por lo que estos puntos de dolor son indicativos y no alcanzan la saturación que justifica una muestra de 10.
+
+Nixty traduce estos hallazgos en su interfaz: las fuentes se tratan como variables, los paquetes y los entornos son objetos distintos con una notación similar a JSON, y las acciones se expresan como verbos en la interfaz de comandos (Cuadro~\ref{cuadro-cli}). Así, la intuición imperativa se atiende en los comandos sin abandonar la descripción declarativa de la que depende la reproducibilidad de Nix~\cite{Dolstra2006}, siguiendo el principio de acercar el lenguaje a la forma en que sus usuarios ya expresan las soluciones~\cite{panePDFMoreNatural2006}.
+
+En la Fase~3, Nixty no mejora significativamente el rendimiento en ninguna categoría (Cuadro~\ref{cuadro4}) ni dimensión cognitiva (Cuadro~\ref{cuadro5}). Este resultado no demuestra que ambas herramientas rindan igual: la muestra se dimensionó para detectar efectos grandes ($d_z$ = 0.8) y los observados en las categorías son pequeños o medianos ($r_g$ de 0.10 a 0.31). A ello se suma un posible efecto techo: al solo evaluarse las preguntas fáciles, pudo ser más fácil que ambos participantes llegaran a puntajes superiores; algunas, como P3 y P10, alcanzan al menos el 90~\% de aciertos con ambas herramientas. El tiempo promedio, mayor con Nixty (41.7 frente a 34.4~min), tampoco apunta a una reducción de la barrera objetiva, aunque no se somete a prueba estadística.
+
+Aun así, los tamaños de efecto positivos se pueden relacionar con las decisiones de diseño hechas en Nixty, pues las mayores diferencias por pregunta (+25~pp, Cuadro~\ref{cuadro-preguntas}) aparecen justo donde este interviene. La primera corresponde al manejo de sistemas: para soportar uno nuevo (P9), en Nixty basta con ampliar una lista de constantes, mientras que en Nixlang hay que repetir la definición o escribir funciones auxiliares. La segunda corresponde al tratamiento de las fuentes como variables, que elimina la dependencia oculta evaluada en P5, donde Nixlang exige reconocer \texttt{self}, \texttt{nixpkgs} y \texttt{myconfigs} como parámetros de \texttt{outputs}, lo que concuerda con que Dependencias ocultas sea la dimensión con mayor efecto ($r_g$ = 0.43). En menor medida, también parece favorecer a Nixty delegar la biblioteca estándar en TypeScript, ya que en P8, sobre utilidades como \texttt{map}, alcanza 90~\% frente a 70~\%. Las excepciones no contradicen esta lectura, porque surgen donde el diseño no interviene. Consistencia, la única dimensión con efecto negativo ($r_g$ = $-$0.14), depende de P6 y P7, que en Nixty no evalúan su interfaz sino rasgos propios de TypeScript, como la desestructuración y el orden de evaluación; que P6 registre la tasa más baja con Nixty (35~\%) puede indicar que la familiaridad con el anfitrión no garantiza el dominio de todos sus rasgos.
+
+La experiencia percibida, en cambio, sí favorece a Nixty. OUX alcanza 5.85 frente a 4.45 (Cuadro~\ref{cuadro-oux-nfs}), y el ítem con mayor efecto del estudio, Fácil de aprender (5.40 frente a 3.25; $r_g$ = 0.86, Cuadro~\ref{cuadro-pares-dexi}), es también el más cercano a la barrera de entrada que motiva este trabajo. Dentro de la calidad pragmática mejoran los ítems ligados a comprender la notación, como Estructurado, Predecible y Simple ($r_g$ de 0.53 a 0.64, Cuadro~\ref{cuadro-pares-sad2}), y no los ligados al resultado, como Práctico ($r_g$ = 0.10) o Eficiente ($r_g$ = $-$0.10); tampoco cambia NFS (5.10 frente a 4.85). Como Nixty genera el mismo Flake, modifica la forma de expresar la configuración, no lo que se consigue con ella. La calidad hedónica muestra el menor efecto en ambos instrumentos (Cuadro~\ref{cuadro-calidades}), en línea con Hassenzahl~\cite{hassenzahlPDFInterplayBeauty2026}, quien observa que la experiencia de uso modifica la usabilidad percibida y la valoración general de un producto, pero no sus atributos hedónicos. Por último, SAD-2 Pragmática y DEXI General son significativas solo sin corregir (\emph{p} = 0.041 y 0.031; \emph{p} Holm = 0.081 y 0.062), al igual que seis pares de SAD-2 ($r_g$ de 0.53 a 0.72): no confirman una diferencia, pero sus efectos grandes sugieren que la ventaja percibida no se limita a las métricas significativas.
+
+Que la experiencia percibida mejore sin que lo haga el rendimiento es frecuente en interacción humano-computadora: en un metaanálisis de 73 estudios, Hornbæk y Law~\cite{hornbaekMetaanalysisCorrelationsUsability2007} encuentran que la satisfacción apenas se correlaciona con la efectividad ($r$ = 0.16) y que las percepciones de los usuarios no suelen correlacionarse con las medidas objetivas del mismo fenómeno. En este caso, una explicación plausible es la familiaridad: el 55~\% de los participantes se ubica en los niveles 4 o 5 de experiencia en TypeScript (Cuadro~\ref{cuadro-experiencia}), lo que puede hacer que la notación se perciba más fácil aunque los conceptos de Nix ---derivaciones, sistemas, fuentes--- sean los mismos.
+
+Aun si parte de la mejora percibida obedece a la familiaridad con el anfitrión, la percepción es relevante para el problema que motiva este trabajo. La barrera que reportan las encuestas de la comunidad es, por naturaleza, una percepción: una curva de aprendizaje que los usuarios juzgan pronunciada~\cite{NixCommunitySurvey2024}. A su vez, la facilidad de uso percibida es uno de los determinantes de la aceptación de una tecnología~\cite{davisPerceivedUsefulnessPerceived1989a}. Un eDSL que reduce la dificultad percibida sin reducir la tasa de éxito es, por tanto, una vía plausible para facilitar la adopción de Nix, aunque su efecto sobre el rendimiento queda por confirmar con muestras mayores.

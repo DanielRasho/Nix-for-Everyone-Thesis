@@ -1,0 +1,3495 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{mantylaSoftwareDeploymentActivities2011}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=066074a6c08721748caa849dddd96986}{%
+           family={Mäntylä},
+           familyi={M\bibinitperiod},
+           given={Mika\bibnamedelima V.},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=bdae763666618ff0fe362958437a3c2c}{%
+           family={Vanhanen},
+           familyi={V\bibinitperiod},
+           given={Jari},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c98057f1c34abdc282b5501fcf6049e9}
+      \strng{fullhash}{c98057f1c34abdc282b5501fcf6049e9}
+      \strng{fullhashraw}{c98057f1c34abdc282b5501fcf6049e9}
+      \strng{bibnamehash}{c98057f1c34abdc282b5501fcf6049e9}
+      \strng{authorbibnamehash}{c98057f1c34abdc282b5501fcf6049e9}
+      \strng{authornamehash}{c98057f1c34abdc282b5501fcf6049e9}
+      \strng{authorfullhash}{c98057f1c34abdc282b5501fcf6049e9}
+      \strng{authorfullhashraw}{c98057f1c34abdc282b5501fcf6049e9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Software deployment, including both clean installs and updates, is a crucial activity for all software vendors. It starts with a customer's order of a new release and incorporates all steps taken until the customer is satisfied with the deployed product. Using interviews as the main data collection method, we conducted a case study of four companies to discover their software deployment activities and challenges. The studied products were more complicated than pure COTS products. We noticed three product characteristics that make deployment more challenging: 1) the product is tightly integrated to other customer systems, 2) the product offers various configuration options to support different ways of working, and 3) the product requires a pre-created, complex, real-world data model to be usable. We also noticed that software deployment is multifaceted, involving activities related to customer interaction, making integrations, and configuring, installing and testing the products.}
+      \field{booktitle}{2011 15th {{European Conference}} on {{Software Maintenance}} and {{Reengineering}}}
+      \field{eventtitle}{2011 15th {{European Conference}} on {{Software Maintenance}} and {{Reengineering}}}
+      \field{issn}{1534-5351}
+      \field{month}{3}
+      \field{title}{Software {{Deployment Activities}} and {{Challenges}} - {{A Case Study}} of {{Four Software Product Companies}}}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{131\bibrangedash 140}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/CSMR.2011.19
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/5741269
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/5741269
+      \endverb
+      \keyw{Companies,deployment activities,industrial case study,installablity,Interviews,Personnel,Software,software deployment process,Testing,Training}
+    \endentry
+    \entry{Dolstra2006}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=a3e96caa8e2128d249c9bae69079bc78}{%
+           family={Dolstra},
+           familyi={D\bibinitperiod},
+           given={Eelco},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universidad de Ultretch}%
+      }
+      \strng{namehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{fullhash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{fullhashraw}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{bibnamehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authorbibnamehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authornamehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authorfullhash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authorfullhashraw}{a3e96caa8e2128d249c9bae69079bc78}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Purely Functional Deployment Model}
+      \field{type}{phdthesis}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 281}
+      \range{pages}{281}
+      \verb{urlraw}
+      \verb https://edolstra.github.io/pubs/phd-thesis.pdf
+      \endverb
+      \verb{url}
+      \verb https://edolstra.github.io/pubs/phd-thesis.pdf
+      \endverb
+    \endentry
+    \entry{Gibb2026}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=f2dbdac8f13b11cad5c2959630c9c1c7}{%
+           family={Gibb},
+           familyi={G\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ddca9cfa02516cbde586e72b9a6ed392}{%
+           family={Ferris},
+           familyi={F\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=de5040c56ad57c836894474ab3e3f508}{%
+           family={Allsopp},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c5eee52dbd3403caed67792dd622983e}{%
+           family={Gazagnaire},
+           familyi={G\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a17d161e41f9dbfd5c8cd4c63a4df246}{%
+           family={Madhavapeddy},
+           familyi={M\bibinitperiod},
+           given={Anil},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f41678d1ef4b8f49e8b88b20b335189b}
+      \strng{fullhash}{ac895cecd9477297673966379734fb61}
+      \strng{fullhashraw}{ac895cecd9477297673966379734fb61}
+      \strng{bibnamehash}{ac895cecd9477297673966379734fb61}
+      \strng{authorbibnamehash}{ac895cecd9477297673966379734fb61}
+      \strng{authornamehash}{f41678d1ef4b8f49e8b88b20b335189b}
+      \strng{authorfullhash}{ac895cecd9477297673966379734fb61}
+      \strng{authorfullhashraw}{ac895cecd9477297673966379734fb61}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Package managers are legion. Every programming language and operating system has its own solution, each with subtly different semantics for dependency resolution. This fragmentation prevents multilingual projects from expressing precise dependencies across language ecosystems; it leaves external system and hardware dependencies implicit and unversioned; it obscures security vulnerabilities that lie in the full dependency graph. We present the \{Package Calculus\}, a formalism for dependency resolution that unifies the core semantics of diverse package managers. Through a series of formal reductions, we show how this core is expressive enough to model the diversity that real-world package managers employ in their dependency expression languages. By using the Package Calculus as the intermediate representation of dependencies, we enable translation between distinct package managers and resolution across ecosystems.}
+      \field{journaltitle}{Proceedings of the ACM on Programming Languages}
+      \field{month}{2}
+      \field{title}{Package Managers à La Carte: A Formal Model of Dependency Resolution}
+      \field{volume}{-}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2602.18602v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2602.18602v1
+      \endverb
+      \keyw{cs.PL,cs.SE}
+    \endentry
+    \entry{PDFInfrastructureCode}{article}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{PDF | Infrastructure as Code (IaC) revolutionizes IT infrastructure management by automating provisioning and configuration through machine-readable... | Find, read and cite all the research you need on ResearchGate}
+      \field{journaltitle}{ResearchGate}
+      \field{langid}{english}
+      \field{shorttitle}{({{PDF}}) {{Infrastructure}} as {{Code}}}
+      \field{title}{({{PDF}}) {{Infrastructure}} as {{Code}}: {{Historical Insights}} and {{Future Directions}}}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.21275/SR24820064820
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/384362763_Infrastructure_as_Code_Historical_Insights_and_Future_Directions
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/384362763_Infrastructure_as_Code_Historical_Insights_and_Future_Directions
+      \endverb
+    \endentry
+    \entry{Zwinger2026}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f1c71403e5c3594f27beb7196b9458c}{%
+           family={Zwinger},
+           familyi={Z\bibinitperiod},
+           given={Matias},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f1c71403e5c3594f27beb7196b9458c}
+      \strng{fullhash}{9f1c71403e5c3594f27beb7196b9458c}
+      \strng{fullhashraw}{9f1c71403e5c3594f27beb7196b9458c}
+      \strng{bibnamehash}{9f1c71403e5c3594f27beb7196b9458c}
+      \strng{authorbibnamehash}{9f1c71403e5c3594f27beb7196b9458c}
+      \strng{authornamehash}{9f1c71403e5c3594f27beb7196b9458c}
+      \strng{authorfullhash}{9f1c71403e5c3594f27beb7196b9458c}
+      \strng{authorfullhashraw}{9f1c71403e5c3594f27beb7196b9458c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Software deployment suffers from numerous problems pertaining, for example, to reproducibility and dependency resolution. Many of these problems have been successfully solved by the purely functional approach to package management implemented in the Nix project. However, Nix does not solve all issues, and it does introduces some novel problems of its own. Therefore, the aim of this thesis is to conduct a literature review on the current state of research on Nix and to determine the direction of future research. The first part of this paper explores the problems historically faced in different areas of software deployment, e.g., irreproducibility and dependency resolution issues. The main four categories of software deployment tools analyzed are build systems, package managers, configuration management, and development environments. Popular software from each category serve as case studies to illustrate the problems. The second part introduces Nix and explains the methods utilized to solve some of the problems introduced in the earlier part. Because Nix is the first large project to utilize the purely functional approach, it is far from a perfect solution. Thus, the third part is dedicated to analyzing the new problems that Nix introduces, as well as old problems, which Nix has been unable to solve, such as trust and granular incremental builds. Furthermore, some proposed state of the art solutions put forth by the Nix community are discussed.}
+      \field{month}{4}
+      \field{title}{Nix: A Solution with Problems}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2604.11398v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2604.11398v1
+      \endverb
+    \endentry
+    \entry{zhaoEndtoendHighperformanceDeduplication2024a}{article}{}{}
+      \name{author}{11}{}{%
+        {{hash=505088ee71e59224ce25126718709281}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Nannan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=08cbde42f22a5891bb60523b047ad96c}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Muhui},
+           giveni={M\bibinitperiod}}}%
+        {{hash=45eab438336216b3af1690b1e2cd9356}{%
+           family={Albahar},
+           familyi={A\bibinitperiod},
+           given={Hadeel},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c8368b9cef9babb7c590539a0e26e659}{%
+           family={Paul},
+           familyi={P\bibinitperiod},
+           given={Arnab\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=cb0b5dd328ee264b5c008f7b93db9477}{%
+           family={Huan},
+           familyi={H\bibinitperiod},
+           given={Zhijie},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cab253c0eb5c12dd1c882f5700b9d634}{%
+           family={Abraham},
+           familyi={A\bibinitperiod},
+           given={Subil},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b19c3964c971711c3475992c1c6c87ee}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Keren},
+           giveni={K\bibinitperiod}}}%
+        {{hash=03365d21086007f0156622817e220d74}{%
+           family={Tarasov},
+           familyi={T\bibinitperiod},
+           given={Vasily},
+           giveni={V\bibinitperiod}}}%
+        {{hash=8405a5d32c4ba41e598a93e36611156f}{%
+           family={Skourtis},
+           familyi={S\bibinitperiod},
+           given={Dimitrios},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1561231dbb1c9c0c1363f2d317baeef5}{%
+           family={Anwar},
+           familyi={A\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=434f2d7db17e0f44c4f0414e6cdb5ccc}{%
+           family={Butt},
+           familyi={B\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6a4cf92e518bab0562838a22a9eebdd8}
+      \strng{fullhash}{23acc83b661aedaa09f15be502ee5abb}
+      \strng{fullhashraw}{23acc83b661aedaa09f15be502ee5abb}
+      \strng{bibnamehash}{6a4cf92e518bab0562838a22a9eebdd8}
+      \strng{authorbibnamehash}{6a4cf92e518bab0562838a22a9eebdd8}
+      \strng{authornamehash}{6a4cf92e518bab0562838a22a9eebdd8}
+      \strng{authorfullhash}{23acc83b661aedaa09f15be502ee5abb}
+      \strng{authorfullhashraw}{23acc83b661aedaa09f15be502ee5abb}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The wide adoption of Docker containers for supporting agile and elastic enterprise applications has led to a broad proliferation of container images. The associated storage performance and capacity requirements place a high pressure on the infrastructure of container registries that store and distribute images and container storage systems on the Docker client side that manage image layers and store ephemeral data generated at container runtime. The storage demand is worsened by the large amount of duplicate data in images. Moreover, container storage systems that use Copy-on-Write (CoW) file systems as storage drivers exacerbate the redundancy. Exploiting the high file redundancy in real-world images is a promising approach to drastically reduce the growing storage requirements of container registries and improve the space efficiency of container storage systems. However, existing deduplication techniques significantly degrade the performance of both registries and container storage systems because of data reconstruction overhead as well as the deduplication cost.We propose DupHunter, an end-to-end deduplication scheme that deduplicates layers for both Docker registries and container storage systems while maintaining a high image distribution speed and container I/O performance. DupHunter is divided into three tiers: registry tier, middle tier, and client tier. Specifically, we first build a high-performance deduplication engine at the registry tier that not only natively deduplicates layers for space savings but also reduces layer restore overhead. Then, we use deduplication offloading at the middle tier to eliminate the redundant files from the client tier and avoid bringing deduplication overhead to the clients. To further reduce the data duplicates caused by CoWs and improve the container I/O performance, we utilize a container-aware storage system at the client tier that reserves space for each container and arranges the placement of files and their modifications on the disk to preserve locality. Under real workloads, DupHunter reduces storage space by up to 6.9× and reduces the GET layer latency up to 2.8× compared to the state-of-the-art. Moreover, DupHunter can improve the container I/O performance by up to 93\% for reads and 64\% for writes.}
+      \field{day}{6}
+      \field{issn}{1553-3077}
+      \field{journaltitle}{ACM Trans. Storage}
+      \field{month}{6}
+      \field{number}{3}
+      \field{title}{An {{End}}-to-End {{High}}-Performance {{Deduplication Scheme}} for {{Docker Registries}} and {{Docker Container Storage Systems}}}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{20}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{18:1\bibrangedash 18:35}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/3643819
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3643819
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3643819
+      \endverb
+    \endentry
+    \entry{marakasovRepositoryStatistics}{dataset}{}{}
+      \name{author}{1}{}{%
+        {{hash=1a12b40cf70088675c89e756322c9b3a}{%
+           family={Marakasov},
+           familyi={M\bibinitperiod},
+           given={Demitry},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{1a12b40cf70088675c89e756322c9b3a}
+      \strng{fullhash}{1a12b40cf70088675c89e756322c9b3a}
+      \strng{fullhashraw}{1a12b40cf70088675c89e756322c9b3a}
+      \strng{bibnamehash}{1a12b40cf70088675c89e756322c9b3a}
+      \strng{authorbibnamehash}{1a12b40cf70088675c89e756322c9b3a}
+      \strng{authornamehash}{1a12b40cf70088675c89e756322c9b3a}
+      \strng{authorfullhash}{1a12b40cf70088675c89e756322c9b3a}
+      \strng{authorfullhashraw}{1a12b40cf70088675c89e756322c9b3a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Repository {{Statistics}}}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://repology.org/repositories/statistics/total
+      \endverb
+      \verb{url}
+      \verb https://repology.org/repositories/statistics/total
+      \endverb
+    \endentry
+    \entry{Malka2025}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5a9c844a3c0b8a664572d10834136144}{%
+           family={Malka},
+           familyi={M\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+        {{hash=37793c8bd46d30533470b220704d85b1}{%
+           family={Zacchiroli},
+           familyi={Z\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ecd698cef8cd7c40d4eaad07be4b4df5}{%
+           family={Zimmermann},
+           familyi={Z\bibinitperiod},
+           given={Théo},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Electrical and Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{f65f272e537d8f5a4039431ae72017f5}
+      \strng{fullhash}{b536eed3208f2e709609f0ea6ec932ef}
+      \strng{fullhashraw}{b536eed3208f2e709609f0ea6ec932ef}
+      \strng{bibnamehash}{b536eed3208f2e709609f0ea6ec932ef}
+      \strng{authorbibnamehash}{b536eed3208f2e709609f0ea6ec932ef}
+      \strng{authornamehash}{f65f272e537d8f5a4039431ae72017f5}
+      \strng{authorfullhash}{b536eed3208f2e709609f0ea6ec932ef}
+      \strng{authorfullhashraw}{b536eed3208f2e709609f0ea6ec932ef}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Reproducible Builds (R-B) guarantee that rebuilding a software package from source leads to bitwise identical artifacts. R-B is a promising approach to increase the integrity of the software supply chain, when installing open source software built by third parties. Unfortunately, despite success stories like high build reproducibility levels in Debian packages, uncertainty remains among field experts on the scalability of R-B to very large package repositories. In this work, we perform the first large-scale study of bitwise reproducibility, in the context of the Nix functional package manager, rebuilding 709 816 packages from historical snapshots of the nixpkgs repository, the largest cross-ecosystem open source software distribution, sampled in the period 2017-2023. We obtain very high bitwise reproducibility rates, between 69 and 91}
+      \field{journaltitle}{Proceedings - 2025 IEEE/ACM 22nd International Conference on Mining Software Repositories, MSR 2025}
+      \field{month}{5}
+      \field{title}{Does Functional Package Management Enable Reproducible Builds at Scale? {{Yes}}}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{pages}{775\bibrangedash 787}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/MSR66628.2025.00115
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2501.15919 http://dx.doi.org/10.1109/MSR66628.2025.00115
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2501.15919%20http://dx.doi.org/10.1109/MSR66628.2025.00115
+      \endverb
+      \keyw{functional package management,reproducibility,reproducible builds,security,software supply chain}
+    \endentry
+    \entry{Dolstra2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a3e96caa8e2128d249c9bae69079bc78}{%
+           family={Dolstra},
+           familyi={D\bibinitperiod},
+           given={Eelco},
+           giveni={E\bibinitperiod}}}%
+        {{hash=dea227d45d0919684686f3671a2987f6}{%
+           family={Löh},
+           familyi={L\bibinitperiod},
+           given={Andres},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{fbc46e2cece7a33a31cddb617af05dab}
+      \strng{fullhash}{fbc46e2cece7a33a31cddb617af05dab}
+      \strng{fullhashraw}{fbc46e2cece7a33a31cddb617af05dab}
+      \strng{bibnamehash}{fbc46e2cece7a33a31cddb617af05dab}
+      \strng{authorbibnamehash}{fbc46e2cece7a33a31cddb617af05dab}
+      \strng{authornamehash}{fbc46e2cece7a33a31cddb617af05dab}
+      \strng{authorfullhash}{fbc46e2cece7a33a31cddb617af05dab}
+      \strng{authorfullhashraw}{fbc46e2cece7a33a31cddb617af05dab}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Existing package and system configuration management tools suffer from an imperative model, where system administration actions such as upgrading packages or changes to system configuration files are stateful: they destructively update the state of the system. This leads to many problems, such as the inability to roll back changes easily, to run multiple versions of a package side-by-side, to reproduce a configuration deterministically on another machine, or to reliably upgrade a system. In this paper we show that we can overcome these problems by moving to \& purely functional system configuration model. This means that all static parts of a system (such as software packages, configuration files and system startup scripts) are built by pure functions and are immutable, stored in a way analogously to a heap in a purely function language. We have implemented this model in NixOS, a non-trivial Linux distribution that uses the Nix package manager to build the entire system configuration from a purely functional specification. Copyright © 2008 ACM.}
+      \field{isbn}{9781595939197}
+      \field{journaltitle}{Proceedings of the ACM SIGPLAN International Conference on Functional Programming, ICFP}
+      \field{month}{9}
+      \field{title}{{{NixOS}}: {{A}} Purely Functional {{Linux}} Distribution}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{pages}{367\bibrangedash 378}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/1411204.1411255/SUPPL_FILE/P367-SLIDES.ZIP
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/1411204.1411255
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/1411204.1411255
+      \endverb
+      \keyw{General terms experimentation,Languages,Reliability}
+    \endentry
+    \entry{stackoverflowMostPopularTechnologies}{dataset}{}{}
+      \name{author}{1}{}{%
+        {{hash=928a3e3d99440ed892dda5028159a3aa}{%
+           family={Overflow},
+           familyi={O\bibinitperiod},
+           given={Stack},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{928a3e3d99440ed892dda5028159a3aa}
+      \strng{fullhash}{928a3e3d99440ed892dda5028159a3aa}
+      \strng{fullhashraw}{928a3e3d99440ed892dda5028159a3aa}
+      \strng{bibnamehash}{928a3e3d99440ed892dda5028159a3aa}
+      \strng{authorbibnamehash}{928a3e3d99440ed892dda5028159a3aa}
+      \strng{authornamehash}{928a3e3d99440ed892dda5028159a3aa}
+      \strng{authorfullhash}{928a3e3d99440ed892dda5028159a3aa}
+      \strng{authorfullhashraw}{928a3e3d99440ed892dda5028159a3aa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Most {{Popular Technologies}}}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://survey.stackoverflow.co/2024/technology
+      \endverb
+      \verb{url}
+      \verb https://survey.stackoverflow.co/2024/technology
+      \endverb
+    \endentry
+    \entry{2022NixSurvey2022}{online}{}{}
+      \list{organization}{1}{%
+        {NixOS Discourse}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Background A quote from our survey post - “Since the Nix community has been growing faster and larger every month, it’s gotten harder to understand who makes up the community and what everyone cares about.” So we’re conducting this survey to improve our understanding of those questions. We hope to use your responses to develop Nix, NixOS, and Nixpkgs to match your needs and come up with new ideas for growing and serving the community. Conducting this survey on a recurring basis will enable u...}
+      \field{day}{4}
+      \field{hour}{14}
+      \field{langid}{english}
+      \field{minute}{41}
+      \field{month}{5}
+      \field{second}{38}
+      \field{timezone}{Z}
+      \field{title}{2022 {{Nix Survey Results}} - {{Announcements}}}
+      \field{urlday}{1}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://discourse.nixos.org/t/2022-nix-survey-results/18983
+      \endverb
+      \verb{url}
+      \verb https://discourse.nixos.org/t/2022-nix-survey-results/18983
+      \endverb
+    \endentry
+    \entry{2025CommunitySurvey}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{2025 {{Community Survey Results}}}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nixos.org/surveys/community/2025/
+      \endverb
+      \verb{url}
+      \verb https://nixos.org/surveys/community/2025/
+      \endverb
+    \endentry
+    \entry{NixCommunitySurvey2023}{online}{}{}
+      \list{organization}{1}{%
+        {NixOS Discourse}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{2023 Nix Survey Results The Nix community is growing at an exciting pace, which makes it harder and more important to understand who comprises our community, what people use and care about, and the main pain points that frustrate users or impede progress and adoption. Therefore, the Nix Marketing Team conducts a yearly survey to better undestand these issues. Your feedback helps develop Nix, Nixpkgs, and NixOS to match your needs and come up with new ideas for better serving and growing the c...}
+      \field{day}{17}
+      \field{hour}{14}
+      \field{langid}{english}
+      \field{minute}{41}
+      \field{month}{9}
+      \field{second}{1}
+      \field{timezone}{Z}
+      \field{title}{Nix {{Community Survey}} 2023 {{Results}} - {{Announcements}}}
+      \field{urlday}{1}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://discourse.nixos.org/t/nix-community-survey-2023-results/33124
+      \endverb
+      \verb{url}
+      \verb https://discourse.nixos.org/t/nix-community-survey-2023-results/33124
+      \endverb
+    \endentry
+    \entry{NixCommunitySurvey2024}{online}{}{}
+      \list{organization}{1}{%
+        {NixOS Discourse}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{2023 Nix Survey Results The Nix community is growing at an exciting pace, which makes it harder and more important to understand who comprises our community, what people use and care about, and the main pain points that frustrate users or impede progress and adoption. Therefore, the Nix Marketing Team conducts a yearly survey to better undestand these issues. Your feedback helps develop Nix, Nixpkgs, and NixOS to match your needs and come up with new ideas for better serving and growing the c...}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{title}{Nix {{Community Survey}} 2024 {{Results}} - {{Announcements}}}
+      \field{urlday}{1}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://discourse.nixos.org/t/nix-community-survey-2024-results/55403
+      \endverb
+      \verb{url}
+      \verb https://discourse.nixos.org/t/nix-community-survey-2024-results/55403
+      \endverb
+    \endentry
+    \entry{goodwinFunctionalityUsability1987}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=dae970efe5488b9187ac8993fcd9cad3}{%
+           family={Goodwin},
+           familyi={G\bibinitperiod},
+           given={Nancy\bibnamedelima C.},
+           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{dae970efe5488b9187ac8993fcd9cad3}
+      \strng{fullhash}{dae970efe5488b9187ac8993fcd9cad3}
+      \strng{fullhashraw}{dae970efe5488b9187ac8993fcd9cad3}
+      \strng{bibnamehash}{dae970efe5488b9187ac8993fcd9cad3}
+      \strng{authorbibnamehash}{dae970efe5488b9187ac8993fcd9cad3}
+      \strng{authornamehash}{dae970efe5488b9187ac8993fcd9cad3}
+      \strng{authorfullhash}{dae970efe5488b9187ac8993fcd9cad3}
+      \strng{authorfullhashraw}{dae970efe5488b9187ac8993fcd9cad3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Instead of limiting functionality, usability complements functionality. It affects how and with what effectiveness a system is used, and even whether or not it is used at all.}
+      \field{day}{1}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{3}
+      \field{number}{3}
+      \field{title}{Functionality and Usability}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{30}
+      \field{year}{1987}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{229\bibrangedash 233}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1145/214748.214758
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/214748.214758
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/214748.214758
+      \endverb
+    \endentry
+    \entry{Razzaq2024}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=fcea2b233861063ac0d7c272960f67da}{%
+           family={Razzaq},
+           familyi={R\bibinitperiod},
+           given={Abdul},
+           giveni={A\bibinitperiod}}}%
+        {{hash=536089c5d40be2dedfe72c59cb4860d5}{%
+           family={Buckley},
+           familyi={B\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e3ea5b6b0eb0b677f7a531e5bfd5e444}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Qin},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=f553765f8ef1b9fba5bd30d20069dbcb}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Tingting},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f6e1a766fab82469c98bca1fc3dfecb0}{%
+           family={Botterweck},
+           familyi={B\bibinitperiod},
+           given={Goetz},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{57b50b48d8cc0b895b072a52a602cab8}
+      \strng{fullhash}{291aaa230435d1701827c1f6a02b87b7}
+      \strng{fullhashraw}{291aaa230435d1701827c1f6a02b87b7}
+      \strng{bibnamehash}{291aaa230435d1701827c1f6a02b87b7}
+      \strng{authorbibnamehash}{291aaa230435d1701827c1f6a02b87b7}
+      \strng{authornamehash}{57b50b48d8cc0b895b072a52a602cab8}
+      \strng{authorfullhash}{291aaa230435d1701827c1f6a02b87b7}
+      \strng{authorfullhashraw}{291aaa230435d1701827c1f6a02b87b7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Context and Motivation-Developer eXperience (Dev-X) is a recent research area that focuses on developers perceptions, feelings, and values with respect to software development and software quality. Research suggests that factors and practices related to Dev-X can have a substantial impact on developer productivity (Dev-P). However, despite a large and diverse body of literature on factors that can impact Dev-P in general, there is no coherent and comprehensive characterization of how Dev-X-specific insights can influence developer productivity.Aims-In the presented research, we aim to provide a coherent, comprehensive characterization of factors and practices related to Dev-X, with a particular focus on those factors and practices that potentially affect Dev-P.Method-To this end, we performed a systematic literature review and identified 218 relevant papers in this area. We characterize the papers based on the related frameworks and concepts common to Dev-X and Dev-P as presented in the existing literature. Dev-X factors such as "work fragmentation"and practices such as "collaboration with owner-developer"are identified using a grounded-in-The-literature, content-Analysis method, guided by the theory. For each Dev-X factor, we identify attributes that might be used to assess/ measure the current status (of an organization or project) regarding that factor and how that factor and its effects on productivity have been evidenced in the literature (mentioned vs. considered in questionnaires vs. substantiated with a more positivist evaluation).Results-We identify 33 Dev-X-related factors and 41 Dev-X-related practices, which are organized into 10 themes to summarize their influence. The results suggest that the availability of required resources, relevant expertise re the allocated tasks, and fewer interruptions are among the top positively impacting factors. Conversely, factors such as code complexity, heterogeneous contexts of tasks, and non-Adherence to standardization harm Dev-X and Dev-P. Top industrial practices employed to mitigate the negative influence of factors include characterization-based task assignments, mental model support, and the timely evolution of technologies.Conclusions-Overall, this research suggests that organizations can influence Dev-P through improved Dev-X, incorporating suitable practices to mediate relevant factors in their context. Important in this regard are practices such as fragmenting large tasks, highlighting the utility of proposed tasks/changes to the developers, and promoting (developer) ownership of artefacts. Finally, our results point to areas where further research seems appropriate, i.e., where Dev-X factors/practices have been proposed as being impactful on Dev-P but not yet fully substantiated or explored as such (factors like "Nature of Activity"and practices like choosing practices/protocols appropriately).}
+      \field{issn}{15577341}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{month}{10}
+      \field{number}{1}
+      \field{title}{A Systematic Literature Review on the Influence of Enhanced Developer Experience on Developers' Productivity: {{Factors}}, Practices, and Recommendations}
+      \field{volume}{57}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{46}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1145/3687299/ASSET/0A1CD69B-DCF1-402A-884C-31D996FEA61F/ASSETS/IMAGES/LARGE/CSUR-2022-0089-F06.JPG
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3687299
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3687299
+      \endverb
+      \keyw{Developer Emotions,Developer Experience,Developer Perceptions,Developer Productivity,Developer Values,Human Factors in Software Engineering}
+    \endentry
+    \entry{Kuusinen2016}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=43a229109fe222eb3b0f7cf1449abbcd}{%
+           family={Kuusinen},
+           familyi={K\bibinitperiod},
+           given={Kati},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{43a229109fe222eb3b0f7cf1449abbcd}
+      \strng{fullhash}{43a229109fe222eb3b0f7cf1449abbcd}
+      \strng{fullhashraw}{43a229109fe222eb3b0f7cf1449abbcd}
+      \strng{bibnamehash}{43a229109fe222eb3b0f7cf1449abbcd}
+      \strng{authorbibnamehash}{43a229109fe222eb3b0f7cf1449abbcd}
+      \strng{authornamehash}{43a229109fe222eb3b0f7cf1449abbcd}
+      \strng{authorfullhash}{43a229109fe222eb3b0f7cf1449abbcd}
+      \strng{authorfullhashraw}{43a229109fe222eb3b0f7cf1449abbcd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Software developers use software products to design and develop new software products for others to use. Research has introduced a concept of developer experience inspired by the concept of user experience but appreciating also the special characteristics of software development context. It is unclear what the experiential components of developer experience are and how it can be measured. In this paper we address developer experience of Vaadin Designer, a graphical user interface designer tool in terms of user experience, intrinsic motivation, and flow state experience. We surveyed 18 developers using AttrakDiff, flow state scale, intrinsic motivation inventory and our own DEXI scale and compare those responses to developers’ overall user experience assessment using Mann-Whitney U test. We found significant differences in motivational and flow state factors between groups who assessed the overall user experience either bad or good. Based on our results we discuss the factors that construe developer experience.}
+      \field{isbn}{9783319449012}
+      \field{issn}{16113349}
+      \field{journaltitle}{Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)}
+      \field{month}{8}
+      \field{title}{Are Software Developers Just Users of Development Tools? {{Assessing}} Developer Experience of a Graphical User Interface Designer}
+      \field{volume}{LNCS-9856}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{215\bibrangedash 233}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/978-3-319-44902-9_14
+      \endverb
+      \verb{urlraw}
+      \verb https://inria.hal.science/hal-01647699 https://inria.hal.science/hal-01647699/document
+      \endverb
+      \verb{url}
+      \verb https://inria.hal.science/hal-01647699%20https://inria.hal.science/hal-01647699/document
+      \endverb
+    \endentry
+    \entry{caddetNixNickel}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=14088777c72526ddf5cf161615e02587}{%
+           family={Caddet},
+           familyi={C\bibinitperiod},
+           given={François},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{14088777c72526ddf5cf161615e02587}
+      \strng{fullhash}{14088777c72526ddf5cf161615e02587}
+      \strng{fullhashraw}{14088777c72526ddf5cf161615e02587}
+      \strng{bibnamehash}{14088777c72526ddf5cf161615e02587}
+      \strng{authorbibnamehash}{14088777c72526ddf5cf161615e02587}
+      \strng{authornamehash}{14088777c72526ddf5cf161615e02587}
+      \strng{authorfullhash}{14088777c72526ddf5cf161615e02587}
+      \strng{authorfullhashraw}{14088777c72526ddf5cf161615e02587}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Nix `with` keyword is challenging, but we transpiled it to Nickel anyway.}
+      \field{langid}{english}
+      \field{title}{Nix with; with {{Nickel}}}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tweag.io/blog/2023-01-24-nix-with-with-nickel/
+      \endverb
+      \verb{url}
+      \verb https://tweag.io/blog/2023-01-24-nix-with-with-nickel/
+      \endverb
+    \endentry
+    \entry{gagarinFourMonthsNix}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=24e5938f333cbf75bb0d9fedbc5397c8}{%
+           family={Gagarin},
+           familyi={G\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{24e5938f333cbf75bb0d9fedbc5397c8}
+      \strng{fullhash}{24e5938f333cbf75bb0d9fedbc5397c8}
+      \strng{fullhashraw}{24e5938f333cbf75bb0d9fedbc5397c8}
+      \strng{bibnamehash}{24e5938f333cbf75bb0d9fedbc5397c8}
+      \strng{authorbibnamehash}{24e5938f333cbf75bb0d9fedbc5397c8}
+      \strng{authornamehash}{24e5938f333cbf75bb0d9fedbc5397c8}
+      \strng{authorfullhash}{24e5938f333cbf75bb0d9fedbc5397c8}
+      \strng{authorfullhashraw}{24e5938f333cbf75bb0d9fedbc5397c8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A comprehensive report on what happened in four months of dedicated work on Nix documentation, and what I learned from it.}
+      \field{langid}{english}
+      \field{title}{Four Months into {{The Nix Book}}}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tweag.io/blog/2022-09-29-the-nix-book-report/
+      \endverb
+      \verb{url}
+      \verb https://tweag.io/blog/2022-09-29-the-nix-book-report/
+      \endverb
+    \endentry
+    \entry{hufschmittCurrentStatePtyx}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=371d7f2777aa95f3aab9cd009f065a8a}{%
+           family={Hufschmitt},
+           familyi={H\bibinitperiod},
+           given={Théophane},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{371d7f2777aa95f3aab9cd009f065a8a}
+      \strng{fullhash}{371d7f2777aa95f3aab9cd009f065a8a}
+      \strng{fullhashraw}{371d7f2777aa95f3aab9cd009f065a8a}
+      \strng{bibnamehash}{371d7f2777aa95f3aab9cd009f065a8a}
+      \strng{authorbibnamehash}{371d7f2777aa95f3aab9cd009f065a8a}
+      \strng{authornamehash}{371d7f2777aa95f3aab9cd009f065a8a}
+      \strng{authorfullhash}{371d7f2777aa95f3aab9cd009f065a8a}
+      \strng{authorfullhashraw}{371d7f2777aa95f3aab9cd009f065a8a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hi, is the project alive? Do you plan on continuing to work on it? Thanks}
+      \field{langid}{english}
+      \field{title}{Current State of Ptyx}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/thufschmitt/ptyx/issues/8
+      \endverb
+      \verb{url}
+      \verb https://github.com/thufschmitt/ptyx/issues/8
+      \endverb
+    \endentry
+    \entry{fricklerhandwerk2022}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=00dbd6550855ceefd78024d6a2cca019}{%
+           family={{Valentin Gagarin}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{00dbd6550855ceefd78024d6a2cca019}
+      \strng{fullhash}{00dbd6550855ceefd78024d6a2cca019}
+      \strng{fullhashraw}{00dbd6550855ceefd78024d6a2cca019}
+      \strng{bibnamehash}{00dbd6550855ceefd78024d6a2cca019}
+      \strng{authorbibnamehash}{00dbd6550855ceefd78024d6a2cca019}
+      \strng{authornamehash}{00dbd6550855ceefd78024d6a2cca019}
+      \strng{authorfullhash}{00dbd6550855ceefd78024d6a2cca019}
+      \strng{authorfullhashraw}{00dbd6550855ceefd78024d6a2cca019}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Usability Studies - Development / Documentation - {{NixOS}} Discourse}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://discourse.nixos.org/t/usability-studies/21404
+      \endverb
+      \verb{url}
+      \verb https://discourse.nixos.org/t/usability-studies/21404
+      \endverb
+    \endentry
+    \entry{Typescript}{online}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{TypeScript extends JavaScript by adding types to the language. TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.}
+      \field{langid}{english}
+      \field{title}{Typescript}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.typescriptlang.org/
+      \endverb
+      \verb{url}
+      \verb https://www.typescriptlang.org/
+      \endverb
+    \endentry
+    \entry{grandviewresearchInfrastructureCodeMarket}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b969eb2b40666d51b62eb8e1f6416c21}{%
+           family={Research},
+           familyi={R\bibinitperiod},
+           given={Grand\bibnamedelima View},
+           giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{b969eb2b40666d51b62eb8e1f6416c21}
+      \strng{fullhash}{b969eb2b40666d51b62eb8e1f6416c21}
+      \strng{fullhashraw}{b969eb2b40666d51b62eb8e1f6416c21}
+      \strng{bibnamehash}{b969eb2b40666d51b62eb8e1f6416c21}
+      \strng{authorbibnamehash}{b969eb2b40666d51b62eb8e1f6416c21}
+      \strng{authornamehash}{b969eb2b40666d51b62eb8e1f6416c21}
+      \strng{authorfullhash}{b969eb2b40666d51b62eb8e1f6416c21}
+      \strng{authorfullhashraw}{b969eb2b40666d51b62eb8e1f6416c21}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The global infrastructure as code market size was \$1.02 billion in 2024 and is projected to reach \$6.14 billion by 2033, at a CAGR of 22.3\% from 2025 to 2033}
+      \field{langid}{english}
+      \field{title}{Infrastructure {{As Code Market Size}} | {{Industry Report}}, 2033}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.grandviewresearch.com/industry-analysis/infrastructure-as-code-market-report
+      \endverb
+      \verb{url}
+      \verb https://www.grandviewresearch.com/industry-analysis/infrastructure-as-code-market-report
+      \endverb
+    \endentry
+    \entry{pandyaIntroductionInfrastructureCode2022}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=c56a13a65369a713dc67d598bce98722}{%
+           family={Pandya},
+           familyi={P\bibinitperiod},
+           given={Sneh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5fafdeff499bcd8351814e36d90f667c}{%
+           family={Guha\bibnamedelima Thakurta},
+           familyi={G\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Riya},
+           giveni={R\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=c56a13a65369a713dc67d598bce98722}{%
+           family={Pandya},
+           familyi={P\bibinitperiod},
+           given={Sneh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5fafdeff499bcd8351814e36d90f667c}{%
+           family={Guha\bibnamedelima Thakurta},
+           familyi={G\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Riya},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berkeley, CA}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{fullhash}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{fullhashraw}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{bibnamehash}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{authorbibnamehash}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{authornamehash}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{authorfullhash}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{authorfullhashraw}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{editorbibnamehash}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{editornamehash}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{editorfullhash}{fa9ded0bf84f8dc6a004198a11c49645}
+      \strng{editorfullhashraw}{fa9ded0bf84f8dc6a004198a11c49645}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As a consequence of the incredible advancement of new technology, both large and small companies are more reliant on the digital world for survival and success in the global market. Businesses that are not online are unable to reap the many advantages of the digital world, and as a result, they are losing out on a plethora of possibilities. In today’s fast-paced and competitive corporate environment, there is an extraordinary demand for a quick development process, rapid deployment and delivery, bug fixes with little downtime, and prompt release of new features.}
+      \field{booktitle}{Introduction to {{Infrastructure}} as {{Code}}: {{A Brief Guide}} to the {{Future}} of {{DevOps}}}
+      \field{isbn}{978-1-4842-8689-0}
+      \field{langid}{english}
+      \field{title}{Introduction to {{Infrastructure}} as {{Code}}}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{3\bibrangedash 17}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1007/978-1-4842-8689-0_1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-4842-8689-0_1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-4842-8689-0_1
+      \endverb
+    \endentry
+    \entry{ghanbariUsingDevelopmentEnvironment2026}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=85e2524e43341f28b7053dda8ee51bd2}{%
+           family={Ghanbari},
+           familyi={G\bibinitperiod},
+           given={Hadi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4dc469ce411b3d3d6b3554e146e87bcf}{%
+           family={Terimaa},
+           familyi={T\bibinitperiod},
+           given={Tarmo},
+           giveni={T\bibinitperiod}}}%
+        {{hash=635814be38361ddf3d5b5f4b78ac113d}{%
+           family={Koskinen},
+           familyi={K\bibinitperiod},
+           given={Kari},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea69325e30f7058f90afe2431b4025c8}
+      \strng{fullhash}{296f73647d01dd2a43f8ed323c3fcdb0}
+      \strng{fullhashraw}{296f73647d01dd2a43f8ed323c3fcdb0}
+      \strng{bibnamehash}{296f73647d01dd2a43f8ed323c3fcdb0}
+      \strng{authorbibnamehash}{296f73647d01dd2a43f8ed323c3fcdb0}
+      \strng{authornamehash}{ea69325e30f7058f90afe2431b4025c8}
+      \strng{authorfullhash}{296f73647d01dd2a43f8ed323c3fcdb0}
+      \strng{authorfullhashraw}{296f73647d01dd2a43f8ed323c3fcdb0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Setting up and configuring local development environments is often laborious, time-consuming, and error-prone, which can negatively impact developer experience (DX). Despite a growing body of literature on DX, the existing studies remain silent about the impact of setting up and configuring local development tools and environments on DX. Against this backdrop, we conducted an Action Design Research (ADR) study in a Finnish software company to examine this impact and propose a solution for enhancing the experience. In addition to explaining how DX is shaped when setting up and configuring development environments, we propose the concept of Development Environment as Code (DEaC) as a solution for mitigating some of the issues associated with the process. Based on the lessons learned from the project, we offer four theoretically informed and empirically grounded design principles (DPs) for creating other instances of the artefact with the specific goal of improving DX related to managing their development environments. The paper concludes with recommendations for organisations to consider when adopting DEaC.}
+      \field{day}{1}
+      \field{issn}{0164-1212}
+      \field{journaltitle}{Journal of Systems and Software}
+      \field{month}{6}
+      \field{shortjournal}{Journal of Systems and Software}
+      \field{shorttitle}{Using Development Environment as Code for Enhancing Developer Experience}
+      \field{title}{Using Development Environment as Code for Enhancing Developer Experience: {{An}} Action Design Research Study}
+      \field{urlday}{7}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{236}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{112803}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jss.2026.112803
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0164121226000373
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0164121226000373
+      \endverb
+      \keyw{Action design research,Automation,Containerization,Developer experience,Development environment,Development environment as code,Software development}
+    \endentry
+    \entry{wesselGitHubActionsImpact2023}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=27c451a78eadc23faa01c436cbab9735}{%
+           family={Wessel},
+           familyi={W\bibinitperiod},
+           given={Mairieli},
+           giveni={M\bibinitperiod}}}%
+        {{hash=814c42d35ccde542c0212b6c2090f748}{%
+           family={Vargovich},
+           familyi={V\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3f624dab3ce6fb524198cd273a0807af}{%
+           family={Gerosa},
+           familyi={G\bibinitperiod},
+           given={Marco\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=fc21c10b2d386c8460fa30c762643c06}{%
+           family={Treude},
+           familyi={T\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf0dea67c9ff10752fd844b6130105fa}
+      \strng{fullhash}{22a839de8e195fa07379a81516b5f395}
+      \strng{fullhashraw}{22a839de8e195fa07379a81516b5f395}
+      \strng{bibnamehash}{22a839de8e195fa07379a81516b5f395}
+      \strng{authorbibnamehash}{22a839de8e195fa07379a81516b5f395}
+      \strng{authornamehash}{cf0dea67c9ff10752fd844b6130105fa}
+      \strng{authorfullhash}{22a839de8e195fa07379a81516b5f395}
+      \strng{authorfullhashraw}{22a839de8e195fa07379a81516b5f395}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Software projects frequently use automation tools to perform repetitive activities in the distributed software development process. Recently, GitHub introduced GitHub Actions, a feature providing automated workflows for software projects. Understanding and anticipating the effects of adopting such technology is important for planning and management. Our research investigates how projects use GitHub Actions, what the developers discuss about them, and how project activity indicators change after their adoption. Our results indicate that 1,489 out of 5,000 most popular repositories (almost 30\% of our sample) adopt GitHub Actions and that developers frequently ask for help implementing them. Our findings also suggest that the adoption of GitHub Actions leads to more rejections of pull requests (PRs), more communication in accepted PRs and less communication in rejected PRs, fewer commits in accepted PRs and more commits in rejected PRs, and more time to accept a PR. We found similar results when segmenting our results by categories of GitHub Actions. We suggest practitioners consider these effects when adopting GitHub Actions on their projects.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1382-3256, 1573-7616}
+      \field{journaltitle}{Empirical Software Engineering}
+      \field{month}{11}
+      \field{number}{6}
+      \field{shortjournal}{Empir Software Eng}
+      \field{shorttitle}{{{GitHub Actions}}}
+      \field{title}{{{GitHub Actions}}: {{The Impact}} on the {{Pull Request Process}}}
+      \field{urlday}{7}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{28}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{131}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/s10664-023-10369-w
+      \endverb
+      \verb{eprint}
+      \verb 2206.14118
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2206.14118
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2206.14118
+      \endverb
+      \keyw{Computer Science - Software Engineering}
+    \endentry
+    \entry{gg-solutionsLinuxSilentTech2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{useprefix=true,hash=fe875599f93d3a10a41283ff68c96974}{%
+           family={solutions},
+           familyi={s\bibinitperiod},
+           prefix={gg-},
+           prefixi={g\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {GG-Solutions}%
+      }
+      \strng{namehash}{fe875599f93d3a10a41283ff68c96974}
+      \strng{fullhash}{fe875599f93d3a10a41283ff68c96974}
+      \strng{fullhashraw}{fe875599f93d3a10a41283ff68c96974}
+      \strng{bibnamehash}{fe875599f93d3a10a41283ff68c96974}
+      \strng{authorbibnamehash}{fe875599f93d3a10a41283ff68c96974}
+      \strng{authornamehash}{fe875599f93d3a10a41283ff68c96974}
+      \strng{authorfullhash}{fe875599f93d3a10a41283ff68c96974}
+      \strng{authorfullhashraw}{fe875599f93d3a10a41283ff68c96974}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Explore Linux's growth and future in software development through data-driven package maintenance analysis}
+      \field{day}{2}
+      \field{hour}{20}
+      \field{langid}{english}
+      \field{minute}{55}
+      \field{month}{1}
+      \field{second}{59}
+      \field{shorttitle}{Linux}
+      \field{title}{Linux: {{The Silent Tech Revolution}}}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gg-solutions.hashnode.dev/linux-the-silent-revolution
+      \endverb
+      \verb{url}
+      \verb https://gg-solutions.hashnode.dev/linux-the-silent-revolution
+      \endverb
+    \endentry
+    \entry{guilloteauPainlessTranspositionReproducible2022}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=aabe103fef99ef665e70e17c60ca4dca}{%
+           family={Guilloteau},
+           familyi={G\bibinitperiod},
+           given={Quentin},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=9b5796f3d6b6536144795537778558c4}{%
+           family={Bleuzen},
+           familyi={B\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3aca0b2d07b8b4b05781fa17914775b4}{%
+           family={Poquet},
+           familyi={P\bibinitperiod},
+           given={Millian},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2152192a057d0150252171c09d5c6bbf}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Heidelberg, Germany}%
+      }
+      \strng{namehash}{52f6ad732527dcf2ef836b05dfa0cfbf}
+      \strng{fullhash}{f6ea34c7f0a6c6b00f488880928973ad}
+      \strng{fullhashraw}{f6ea34c7f0a6c6b00f488880928973ad}
+      \strng{bibnamehash}{f6ea34c7f0a6c6b00f488880928973ad}
+      \strng{authorbibnamehash}{f6ea34c7f0a6c6b00f488880928973ad}
+      \strng{authornamehash}{52f6ad732527dcf2ef836b05dfa0cfbf}
+      \strng{authorfullhash}{f6ea34c7f0a6c6b00f488880928973ad}
+      \strng{authorfullhashraw}{f6ea34c7f0a6c6b00f488880928973ad}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Development of environments for distributed systems is a tedious and time-consuming iterative process. The reproducibility of such environments is a crucial factor for rigorous scientific contributions. We think that being able to smoothly test environments both locally and on a target distributed platform makes development cycles faster and reduces the friction to adopt better experimental practices. To address this issue, this paper introduces the notion of environment transposition and implements it in NixOS Compose, a tool that generates reproducible distributed environments. It enables users to deploy their environments on virtualized (docker, QEMU) or physical (Grid'5000) platforms with the same unique description of the environment. We show that NixOS Compose enables to build reproducible environments without overhead by comparing it to state-of-the-art solutions for the generation of distributed environments (EnOSlib and Kameleon). NixOS Compose actually enables substantial performance improvements on image building time over Kameleon (up to 11x faster for initial builds and up to 19x faster when building a variation of an existing environment).}
+      \field{booktitle}{{{CLUSTER}} 2022 - {{IEEE International Conference}} on {{Cluster Computing}}}
+      \field{month}{9}
+      \field{title}{Painless {{Transposition}} of {{Reproducible Distributed Environments}} with {{NixOS Compose}}}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{CLUSTER 2022 - IEEE International Conference on Cluster Computing}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+      \verb{urlraw}
+      \verb https://hal.science/hal-03723771
+      \endverb
+      \verb{url}
+      \verb https://hal.science/hal-03723771
+      \endverb
+      \keyw{Deployment,Distributed Systems,Nix,Reproducibility,System Image}
+    \endentry
+    \entry{Gomez2020}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=7a9759d7c904a16071eac9cf2c0cf8b3}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Carlos\bibnamedelima Eduardo},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=5daad5b0cb204d96ad0f59dcb16546b1}{%
+           family={H.},
+           familyi={H\bibinitperiod},
+           given={Carlos\bibnamedelimb J.\bibnamedelimi Barrios},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2152192a057d0150252171c09d5c6bbf}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Electrical and Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{9eef82179feb20bf352199e631528dbc}
+      \strng{fullhash}{c421adf1f8ac502760b23127e8c071df}
+      \strng{fullhashraw}{c421adf1f8ac502760b23127e8c071df}
+      \strng{bibnamehash}{c421adf1f8ac502760b23127e8c071df}
+      \strng{authorbibnamehash}{c421adf1f8ac502760b23127e8c071df}
+      \strng{authornamehash}{9eef82179feb20bf352199e631528dbc}
+      \strng{authorfullhash}{c421adf1f8ac502760b23127e8c071df}
+      \strng{authorfullhashraw}{c421adf1f8ac502760b23127e8c071df}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Nowadays, practitioners in both industrial and academic circles are using embedded systems that interact with each other to tackle high performance computing workloads, but with individually less capable devices. Smart cities, autonomous machines and agriculture applications are some examples of these systems working in different fields. These systems run several applications that we want to handle in a simple way. There are several approaches for application management and deployment: Containers, virtualization and package manager are some examples. In order to monitor the performance of these systems, we evaluated the impact of the package manager method in an embedded systems test bench. We presented an experiment using an 8 NVIDIA Jetson TX1 cluster with Nix package manager and Jacobi Benchmark, showing that this method has a negligible impact performance on execution time against its native version.}
+      \field{isbn}{9781728187150}
+      \field{journaltitle}{2020 IEEE Colombian Conference on Communications and Computing, COLCOM 2020 - Proceedings}
+      \field{month}{8}
+      \field{title}{Impact of Functional Package Manager over a Non-Traditional High Performance Computing System}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1109/COLCOM50121.2020.9219768
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/347484292_Impact_of_Functional_Package_Manager_Over_a_Non-Traditional_High_Performance_Computing_System
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/347484292_Impact_of_Functional_Package_Manager_Over_a_Non-Traditional_High_Performance_Computing_System
+      \endverb
+      \keyw{Embedded Systems,Functional Package Manager,High Performance Computing}
+    \endentry
+    \entry{Thiberg2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=4b1b2cbcb0055ccb8e9aac10868e1601}{%
+           family={Thiberg},
+           familyi={T\bibinitperiod},
+           given={Björn},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b1b2cbcb0055ccb8e9aac10868e1601}
+      \strng{fullhash}{4b1b2cbcb0055ccb8e9aac10868e1601}
+      \strng{fullhashraw}{4b1b2cbcb0055ccb8e9aac10868e1601}
+      \strng{bibnamehash}{4b1b2cbcb0055ccb8e9aac10868e1601}
+      \strng{authorbibnamehash}{4b1b2cbcb0055ccb8e9aac10868e1601}
+      \strng{authornamehash}{4b1b2cbcb0055ccb8e9aac10868e1601}
+      \strng{authorfullhash}{4b1b2cbcb0055ccb8e9aac10868e1601}
+      \strng{authorfullhashraw}{4b1b2cbcb0055ccb8e9aac10868e1601}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{There Are Many like It, but This One Is Mine: {{Approaches}} to Personalization of Non-Persistent Development Environments Using Nix}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \keyw{master thesis,Nix,Non-persistence,Software Engineering}
+    \endentry
+    \entry{VanDerBurg2014}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=eb42a3875c9518c591ecd6ee34a24da5}{%
+           family={Burg},
+           familyi={B\bibinitperiod},
+           given={Sander\bibnamedelimb Van\bibnamedelima Der},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a3e96caa8e2128d249c9bae69079bc78}{%
+           family={Dolstra},
+           familyi={D\bibinitperiod},
+           given={Eelco},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c5f810142ba5f191c3b1d4792a9efb23}
+      \strng{fullhash}{c5f810142ba5f191c3b1d4792a9efb23}
+      \strng{fullhashraw}{c5f810142ba5f191c3b1d4792a9efb23}
+      \strng{bibnamehash}{c5f810142ba5f191c3b1d4792a9efb23}
+      \strng{authorbibnamehash}{c5f810142ba5f191c3b1d4792a9efb23}
+      \strng{authornamehash}{c5f810142ba5f191c3b1d4792a9efb23}
+      \strng{authorfullhash}{c5f810142ba5f191c3b1d4792a9efb23}
+      \strng{authorfullhashraw}{c5f810142ba5f191c3b1d4792a9efb23}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The process of deploying a distributed system in a network of machines is often very complex, laborious and time-consuming, while it is hard to guarantee that the system will work as expected and that specific non-functional deployment requirements from the domain are supported. In this paper we describe the Disnix toolset, which provides system administrators or developers with automatic deployment of a distributed system in a network of machines from declarative specifications and offers properties such as complete dependencies, atomic upgrades and rollbacks to make this process efficient and reliable. Disnix has an extensible architecture, allowing the integration of custom modules to make the deployment more convenient and suitable for the domain in which the system is to be used. Disnix has been under development for almost four years and has been applied to several types of distributed systems, including an industrial case study. © 2011 Elsevier B.V. All rights reserved.}
+      \field{issn}{0167-6423}
+      \field{journaltitle}{Science of Computer Programming}
+      \field{month}{1}
+      \field{title}{Disnix: {{A}} Toolset for Distributed Deployment}
+      \field{volume}{79}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{52\bibrangedash 69}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1016/J.SCICO.2012.03.006
+      \endverb
+      \keyw{Distributed systems,Service-oriented systems,Software deployment}
+    \endentry
+    \entry{FloxKubernetesUncontained}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Run reproducible, immutable environments in Kubernetes without container images. Faster deploys, SBOMs-by-default, and zero drift with Flox.}
+      \field{langid}{english}
+      \field{title}{Flox | {{Kubernetes}}, {{Uncontained}}}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://flox.dev/kubernetes/
+      \endverb
+      \verb{url}
+      \verb https://flox.dev/kubernetes/
+      \endverb
+    \endentry
+    \entry{replitReplitHowWe2021}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=79c09f7283031b42516025f4cc3cb783}{%
+           family={Replit},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Replit Blog}%
+      }
+      \strng{namehash}{79c09f7283031b42516025f4cc3cb783}
+      \strng{fullhash}{79c09f7283031b42516025f4cc3cb783}
+      \strng{fullhashraw}{79c09f7283031b42516025f4cc3cb783}
+      \strng{bibnamehash}{79c09f7283031b42516025f4cc3cb783}
+      \strng{authorbibnamehash}{79c09f7283031b42516025f4cc3cb783}
+      \strng{authornamehash}{79c09f7283031b42516025f4cc3cb783}
+      \strng{authorfullhash}{79c09f7283031b42516025f4cc3cb783}
+      \strng{authorfullhashraw}{79c09f7283031b42516025f4cc3cb783}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{At Replit, we want to give our users the most powerful, flexible, and easy-to-get-started coding environment. However, it has been limiting because we only support a fixed set of languages and OS packages, some of which are outdated. Ideally, users should be able to use any language and install any package with minimal fuss. That's why today, we're announcing that we've incorporated Nix in our infrastructure to give users access to over 30,000 OS packages instantly. The environment repls run in has long been a static world. We build a pre-baked OS image to fit all our languages. This gives us a lot of leeway to make repls super fast, but the underlying operating system repls run in is completely immutable. To remedy the situation we've been maintaining an ever growing OS image, if users can't install any packages we'll just install every package! As awesome as this sounds it has become a huge burden to maintain. Every new package creates a new exciting way things can break. Over time, it became clear that maintaining a single, massive docker image was not sustainable. We came across Nix which is a declarative, reproducable OS package manager. Due to Nix's design its package store is highly cacheable and allows for building environments in a composable way. Using the Nix programming language you can specify the dependencies for your development environment and Nix will build the environment for you. We believe this is a great fit for Replit as it allows our users to build endless combinations of development environments without us having to maintain a monolithic docker image. With Nix on Replit, see how easily you can create a Zig environment in a few seconds. We create a replit.nix file to tell the repl which Nix packages should be available when we run. Then we use .replit to control what the run button does. And voila we have a new language: How it works}
+      \field{day}{24}
+      \field{month}{5}
+      \field{title}{Replit — {{How}} We Went from Supporting 50 Languages to All of Them}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://blog.replit.com/nix
+      \endverb
+      \verb{url}
+      \verb https://blog.replit.com/nix
+      \endverb
+    \endentry
+    \entry{Dolstra2018}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=a3e96caa8e2128d249c9bae69079bc78}{%
+           family={Dolstra},
+           familyi={D\bibinitperiod},
+           given={Eelco},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{fullhash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{fullhashraw}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{bibnamehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authorbibnamehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authornamehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authorfullhash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authorfullhashraw}{a3e96caa8e2128d249c9bae69079bc78}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Future of Nix}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb edolstra.github.io/talks/guix-feb-2018.pdf
+      \endverb
+      \verb{url}
+      \verb edolstra.github.io/talks/guix-feb-2018.pdf
+      \endverb
+    \endentry
+    \entry{NixdevDocumentation}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Official documentation for getting things done with Nix.}
+      \field{langid}{english}
+      \field{title}{Nix.Dev Documentation}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nix.dev/tutorials/nix-language
+      \endverb
+      \verb{url}
+      \verb https://nix.dev/tutorials/nix-language
+      \endverb
+    \endentry
+    \entry{Schwaighofer2026}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=d5e849767d0b3a9c42812752827bd95b}{%
+           family={Schwaighofer},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ae925213d64ecf45ef993ffdfba9f761}{%
+           family={Monis},
+           familyi={M\bibinitperiod},
+           given={Martim},
+           giveni={M\bibinitperiod}}}%
+        {{hash=be2af98f31f7ada2ef925b7d12c07dda}{%
+           family={Saavedra},
+           familyi={S\bibinitperiod},
+           given={Nuno},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e880fecc4920adbdc8870a067ee5fefa}{%
+           family={Ferreira},
+           familyi={F\bibinitperiod},
+           given={Joao\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=ab6e7af8b7659ab978ee451dd40d023d}{%
+           family={Mayrhofer},
+           familyi={M\bibinitperiod},
+           given={Rene},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{6449bf865aa9e8dc81cdd0edede36390}
+      \strng{fullhash}{4d631b66993dfc200e2841f2e4a17580}
+      \strng{fullhashraw}{4d631b66993dfc200e2841f2e4a17580}
+      \strng{bibnamehash}{4d631b66993dfc200e2841f2e4a17580}
+      \strng{authorbibnamehash}{4d631b66993dfc200e2841f2e4a17580}
+      \strng{authornamehash}{6449bf865aa9e8dc81cdd0edede36390}
+      \strng{authorfullhash}{4d631b66993dfc200e2841f2e4a17580}
+      \strng{authorfullhashraw}{4d631b66993dfc200e2841f2e4a17580}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Vibenix: {{An AI}} Assistant for Software Packaging with Nix}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ndss-symposium.org/wp-content/uploads/lastx2026-35.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ndss-symposium.org/wp-content/uploads/lastx2026-35.pdf
+      \endverb
+    \endentry
+    \entry{Courts2013}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=5aaa688392b76c06143bec95a3a653ad}{%
+           family={Courtès},
+           familyi={C\bibinitperiod},
+           given={Ludovic},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5aaa688392b76c06143bec95a3a653ad}
+      \strng{fullhash}{5aaa688392b76c06143bec95a3a653ad}
+      \strng{fullhashraw}{5aaa688392b76c06143bec95a3a653ad}
+      \strng{bibnamehash}{5aaa688392b76c06143bec95a3a653ad}
+      \strng{authorbibnamehash}{5aaa688392b76c06143bec95a3a653ad}
+      \strng{authornamehash}{5aaa688392b76c06143bec95a3a653ad}
+      \strng{authorfullhash}{5aaa688392b76c06143bec95a3a653ad}
+      \strng{authorfullhashraw}{5aaa688392b76c06143bec95a3a653ad}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We describe the design and implementation of GNU Guix, a purely functional package manager designed to support a complete GNU/Linux distribution. Guix supports transactional upgrades and roll-backs, unprivileged package management, per-user profiles, and garbage collection. It builds upon the low-level build and deployment layer of the Nix package manager. Guix uses Scheme as its programming interface. In particular, we devise an embedded domain-specific language (EDSL) to describe and compose packages. We demonstrate how it allows us to benefit from the host general-purpose programming language while not compromising on expressiveness. Second, we show the use of Scheme to write build programs, leading to "two-tier" programming system.}
+      \field{month}{5}
+      \field{title}{Functional Package Management with Guix}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1305.4584v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1305.4584v1
+      \endverb
+      \keyw{D11 [Software]: Applicative (Functional) Programming General Terms Languages,D45 [Operating Systems]: Reliability,D45 [Operating Systems]: System Programs and Utilities,Embedded domain-specific language,Management,Reliability Keywords Functional package management,Scheme}
+    \endentry
+    \entry{IntroductionGuileReference}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction ({{Guile Reference Manual}})}
+      \field{urlday}{8}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gnu.org/software/guile/manual/html_node/Introduction.html
+      \endverb
+      \verb{url}
+      \verb https://www.gnu.org/software/guile/manual/html_node/Introduction.html
+      \endverb
+    \endentry
+    \entry{vandeursenDomainspecificLanguagesAnnotated2000}{article}{}{}
+      \name{author}{3}{}{%
+        {{useprefix=true,hash=65e990ff404c92f18a3795137504d7d1}{%
+           family={Deursen},
+           familyi={D\bibinitperiod},
+           given={Arie},
+           giveni={A\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=0ed67bd3f5d2cb711e86d750cb0d3bec}{%
+           family={Klint},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=911dc764b805261ce617fe06d80754e3}{%
+           family={Visser},
+           familyi={V\bibinitperiod},
+           given={Joost},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0fbbeb58c9fb028b35799896123b34c}
+      \strng{fullhash}{41935fa83c5277bec8a5d397b4e46dfc}
+      \strng{fullhashraw}{41935fa83c5277bec8a5d397b4e46dfc}
+      \strng{bibnamehash}{41935fa83c5277bec8a5d397b4e46dfc}
+      \strng{authorbibnamehash}{41935fa83c5277bec8a5d397b4e46dfc}
+      \strng{authornamehash}{b0fbbeb58c9fb028b35799896123b34c}
+      \strng{authorfullhash}{41935fa83c5277bec8a5d397b4e46dfc}
+      \strng{authorfullhashraw}{41935fa83c5277bec8a5d397b4e46dfc}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We survey the literature available on the topic of domain-specific languages as used for the construction and maintenance of software systems. We list a selection of 75 key publications in the area, and provide a summary for each of the papers. Moreover, we discuss terminology, risks and benefits, example domain-specific languages, design methodologies, and implementation techniques.}
+      \field{day}{1}
+      \field{issn}{0362-1340}
+      \field{journaltitle}{SIGPLAN Not.}
+      \field{month}{6}
+      \field{number}{6}
+      \field{shorttitle}{Domain-Specific Languages}
+      \field{title}{Domain-Specific Languages: An Annotated Bibliography}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{35}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{26\bibrangedash 36}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/352029.352035
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/352029.352035
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/352029.352035
+      \endverb
+    \endentry
+    \entry{NeovimNews112021}{online}{}{}
+      \list{organization}{1}{%
+        {Neovim}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{hyperextensible Vim-based text editor}
+      \field{day}{12}
+      \field{hour}{0}
+      \field{langid}{english}
+      \field{minute}{0}
+      \field{month}{7}
+      \field{second}{0}
+      \field{timezone}{Z}
+      \field{title}{Neovim {{News}} \#11 - {{Lua}} Everywhere!}
+      \field{urlday}{7}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://neovim.io/news/2021/07/
+      \endverb
+      \verb{url}
+      \verb https://neovim.io/news/2021/07/
+      \endverb
+    \endentry
+    \entry{burgNiJSInternalDSL2026}{software}{}{}
+      \name{author}{1}{}{%
+        {{useprefix=false,hash=c4f37b199c66c33cf623be8d21e97c5f}{%
+           family={Burg},
+           familyi={B\bibinitperiod},
+           given={Sander},
+           giveni={S\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4f37b199c66c33cf623be8d21e97c5f}
+      \strng{fullhash}{c4f37b199c66c33cf623be8d21e97c5f}
+      \strng{fullhashraw}{c4f37b199c66c33cf623be8d21e97c5f}
+      \strng{bibnamehash}{c4f37b199c66c33cf623be8d21e97c5f}
+      \strng{authorbibnamehash}{c4f37b199c66c33cf623be8d21e97c5f}
+      \strng{authornamehash}{c4f37b199c66c33cf623be8d21e97c5f}
+      \strng{authorfullhash}{c4f37b199c66c33cf623be8d21e97c5f}
+      \strng{authorfullhashraw}{c4f37b199c66c33cf623be8d21e97c5f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{NiJS: An internal DSL for Nix in JavaScript}
+      \field{day}{1}
+      \field{hour}{16}
+      \field{minute}{47}
+      \field{month}{4}
+      \field{origday}{25}
+      \field{orighour}{20}
+      \field{origminute}{44}
+      \field{origmonth}{1}
+      \field{origsecond}{29}
+      \field{origtimezone}{Z}
+      \field{origyear}{2013}
+      \field{second}{29}
+      \field{timezone}{Z}
+      \field{title}{{{NiJS An}} Internal {{DSL}} for {{Nix}} in {{Javascript}}}
+      \field{urlday}{7}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{origdateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/svanderburg/nijs
+      \endverb
+      \verb{url}
+      \verb https://github.com/svanderburg/nijs
+      \endverb
+    \endentry
+    \entry{bersoffSoftwareConfigurationManagement1978}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=8599bbbb30a97e422f61f92945060869}{%
+           family={Bersoff},
+           familyi={B\bibinitperiod},
+           given={Edward\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=6f144d1720564ca4320f470da3b7f80b}{%
+           family={Henderson},
+           familyi={H\bibinitperiod},
+           given={Vilas\bibnamedelima D.},
+           giveni={V\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=87e50d864ef4f3b6525ba753b9a88881}{%
+           family={Siegel},
+           familyi={S\bibinitperiod},
+           given={Stan\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0589a2e5c1c556d60f866bc5bc735b5}
+      \strng{fullhash}{1bd5948ce33f2001c597d38dca03c0cb}
+      \strng{fullhashraw}{1bd5948ce33f2001c597d38dca03c0cb}
+      \strng{bibnamehash}{1bd5948ce33f2001c597d38dca03c0cb}
+      \strng{authorbibnamehash}{1bd5948ce33f2001c597d38dca03c0cb}
+      \strng{authornamehash}{a0589a2e5c1c556d60f866bc5bc735b5}
+      \strng{authorfullhash}{1bd5948ce33f2001c597d38dca03c0cb}
+      \strng{authorfullhashraw}{1bd5948ce33f2001c597d38dca03c0cb}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper is about discipline. It is about discipline that managers should apply to software development. Why is such discipline needed? Quite simply because the software industry has traditionally behaved in an undisciplined manner—doing its own thing. The products that the industry has turned out have typicallyContained other than what was expected (usually less, rather than more);Been delivered much later than scheduled;Cost more than anticipated;Been poorly documented; andIf you have been involved in any of the situations quoted above, then this paper may be of some help. In short, if you are now, or intend to be, a software seller or buyer, then you should benefit from an understanding of Software Configuration Management. Lest you think that you are not now, or ever will be, a software seller or buyer—keep in mind that the recent technology explosion in electronic component miniaturization has placed the era of personalized computing at hand. In that context, nearly everyone may be considered a potential seller or buyer of software.This paper is about the discipline called Software Configuration Management (SCM). The objective of SCM is to assist the software seller in achieving product integrity and to assist the software buyer in obtaining a product that has integrity.}
+      \field{day}{1}
+      \field{issn}{0163-5948}
+      \field{journaltitle}{SIGSOFT Softw. Eng. Notes}
+      \field{month}{1}
+      \field{number}{5}
+      \field{title}{Software {{Configuration Management}}}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{3}
+      \field{year}{1978}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{9\bibrangedash 17}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/953579.811093
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/953579.811093
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/953579.811093
+      \endverb
+    \endentry
+    \entry{Sobieraj2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=639b2a515675be13fd743e69892c4643}{%
+           family={Sobieraj},
+           familyi={S\bibinitperiod},
+           given={Maciej},
+           giveni={M\bibinitperiod}}}%
+        {{hash=06ca7f1a3c124c7f47e016785dbda773}{%
+           family={Kotyński},
+           familyi={K\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{def53a9dcfe9496f06669ac9c46d05ba}
+      \strng{fullhash}{def53a9dcfe9496f06669ac9c46d05ba}
+      \strng{fullhashraw}{def53a9dcfe9496f06669ac9c46d05ba}
+      \strng{bibnamehash}{def53a9dcfe9496f06669ac9c46d05ba}
+      \strng{authorbibnamehash}{def53a9dcfe9496f06669ac9c46d05ba}
+      \strng{authornamehash}{def53a9dcfe9496f06669ac9c46d05ba}
+      \strng{authorfullhash}{def53a9dcfe9496f06669ac9c46d05ba}
+      \strng{authorfullhashraw}{def53a9dcfe9496f06669ac9c46d05ba}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Docker has gained significant popularity in recent years. With the introduction of Docker Desktop for Windows and macOS, there is a need to determine the impact of the operating system on the performance of the Docker platform. This paper aims to investigate the performance of Docker containers based on the operating system. One of the fundamental goals of this study is to conduct a comprehensive analysis of the Docker architecture. This technology utilizes Linux kernel virtualization mechanisms such as namespaces and cgroups. Upon analyzing the distribution of Docker Desktop for Windows and Docker Desktop for macOS, it was discovered that running the Docker environment on these requires a lightweight virtual machine that emulates the Linux system. This information suggests that the additional virtualization layer may hinder the performance of non-Linux operating systems hosting Docker containers. The paper presents a performance test of the Docker runtime on Linux, Microsoft Windows, and macOS. The test evaluated specific aspects of operating system performance on a MacBook computer with an ×86/64 processor architecture. The experiment carried out examined the performance in terms of CPU speed, I/O speed, and network throughput. This test measured the efficiency of software that utilizes various system resources.}
+      \field{issn}{2076-3417}
+      \field{journaltitle}{Applied Sciences 2024, Vol. 14, Page 6672}
+      \field{month}{7}
+      \field{number}{15}
+      \field{title}{Docker Performance Evaluation across Operating Systems}
+      \field{volume}{14}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{6672}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/APP14156672
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2076-3417/14/15/6672/htm https://www.mdpi.com/2076-3417/14/15/6672
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2076-3417/14/15/6672/htm%20https://www.mdpi.com/2076-3417/14/15/6672
+      \endverb
+      \keyw{Docker,operating system,performance tests,virtualization}
+    \endentry
+    \entry{Lingayat2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9b114ed598eecdfc67789d5b989bd065}{%
+           family={Lingayat},
+           familyi={L\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7c858ac10ebd289a5ad0014663a5e0cf}{%
+           family={Badre},
+           familyi={B\bibinitperiod},
+           given={Ranjana\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=5e6deef9b07ab7e14b20c011f6bcbc39}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Anil\bibnamedelima Kumar},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Electrical and Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{3e1ec5d74c7a19cb36c01380b182e012}
+      \strng{fullhash}{554910e5b5e81270134d8497547117d4}
+      \strng{fullhashraw}{554910e5b5e81270134d8497547117d4}
+      \strng{bibnamehash}{554910e5b5e81270134d8497547117d4}
+      \strng{authorbibnamehash}{554910e5b5e81270134d8497547117d4}
+      \strng{authornamehash}{3e1ec5d74c7a19cb36c01380b182e012}
+      \strng{authorfullhash}{554910e5b5e81270134d8497547117d4}
+      \strng{authorfullhashraw}{554910e5b5e81270134d8497547117d4}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The current virtualization technology induces an overhead in their performance. The benefits of Linux containers led to their development and increasing its usage among administrators and developers. Docker container offers an isolated space for running the application in the containerized environment. Containers are known for starting applications in quicker time as compared to those running on baremetal or virtualized environment. For calculating the startup time of containerized applications, we are using a benchmark based on Docker containers. This benchmark is capable of calculating the startup time of Docker application running services. The services can be Apache web server, Redis, PostgreSQL, and many others. The proposed system calculates the startup time for Docker containers running the Apache web server in baremetal, and virtual machine (KVM). The test will let the users know about the performance of Docker applications in both the environments. The analysis will help them in deciding the environment for working with Docker application to obtain maximum performance. The experimental setup of the proposed system shows that running containerized application on baremetal will improve the startup time than a virtual machine. The performance on baremetal is enhanced by about 50}
+      \field{isbn}{9781538647653}
+      \field{journaltitle}{Proceedings of the 3rd International Conference on Communication and Electronics Systems, ICCES 2018}
+      \field{month}{10}
+      \field{title}{Performance Evaluation for Deploying Docker Containers on Baremetal and Virtual Machine}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{1019\bibrangedash 1023}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/CESYS.2018.8723998
+      \endverb
+      \keyw{Benchmark,Docker,Linux containers,virtualization}
+    \endentry
+    \entry{jaimeAnalysisEvolutionDependencies}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=5a4bff2de2a6964a0629c206355b26a9}{%
+           family={Jaime},
+           familyi={J\bibinitperiod},
+           given={Damien},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a4bff2de2a6964a0629c206355b26a9}
+      \strng{fullhash}{5a4bff2de2a6964a0629c206355b26a9}
+      \strng{fullhashraw}{5a4bff2de2a6964a0629c206355b26a9}
+      \strng{bibnamehash}{5a4bff2de2a6964a0629c206355b26a9}
+      \strng{authorbibnamehash}{5a4bff2de2a6964a0629c206355b26a9}
+      \strng{authornamehash}{5a4bff2de2a6964a0629c206355b26a9}
+      \strng{authorfullhash}{5a4bff2de2a6964a0629c206355b26a9}
+      \strng{authorfullhashraw}{5a4bff2de2a6964a0629c206355b26a9}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Analysis and Evolution of Dependencies in Software Ecosystems}
+    \endentry
+    \entry{goldstainPlanningCodingProblems1947}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=fe3f3af074c4060028ffd4c85aa8385c}{%
+           family={Goldstain},
+           familyi={G\bibinitperiod},
+           given={H.\bibnamedelimi Hermand},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{useprefix=true,hash=f8744afb2b8eb53c5804cbac615dbad1}{%
+           family={Neumann},
+           familyi={N\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Princeton, N.J.).}%
+      }
+      \list{organization}{1}{%
+        {Internet Archive}%
+      }
+      \list{publisher}{1}{%
+        {Institute for Advanced Study}%
+      }
+      \strng{namehash}{e5fb680a6fe8795c3a39425f546cf8d3}
+      \strng{fullhash}{e5fb680a6fe8795c3a39425f546cf8d3}
+      \strng{fullhashraw}{e5fb680a6fe8795c3a39425f546cf8d3}
+      \strng{bibnamehash}{e5fb680a6fe8795c3a39425f546cf8d3}
+      \strng{authorbibnamehash}{e5fb680a6fe8795c3a39425f546cf8d3}
+      \strng{authornamehash}{e5fb680a6fe8795c3a39425f546cf8d3}
+      \strng{authorfullhash}{e5fb680a6fe8795c3a39425f546cf8d3}
+      \strng{authorfullhashraw}{e5fb680a6fe8795c3a39425f546cf8d3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{langid}{english}
+      \field{shorttitle}{Planning and Coding of Problems for an Electronic Computing Instrument ... Report on the Mathematical and Logical Aspects of an Electronic Computing Instrument, {{Part II}}.}
+      \field{title}{Planning and Coding of Problems for an Electronic Computing Instrument ... Report on the Mathematical and Logical Aspects of an Electronic Computing Instrument, {{Part II}}.}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{year}{1947}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://archive.org/details/planningcodingof0103inst
+      \endverb
+      \verb{url}
+      \verb https://archive.org/details/planningcodingof0103inst
+      \endverb
+    \endentry
+    \entry{mensSoftwareEcosystemsTooling2023}{book}{}{}
+      \name{editor}{3}{}{%
+        {{hash=07e3dab71ff2bac06cd1ecf5b69ae028}{%
+           family={Mens},
+           familyi={M\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c62795ac5e70e018c7539210431f4835}{%
+           family={De\bibnamedelima Roover},
+           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Coen},
+           giveni={C\bibinitperiod}}}%
+        {{hash=635857c064b24373f2ae5629ed10d630}{%
+           family={Cleve},
+           familyi={C\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{c98d3f2182252875a678e08bb95f89d9}
+      \strng{fullhash}{d5edd8e58aaec3539d00a00272331d11}
+      \strng{fullhashraw}{d5edd8e58aaec3539d00a00272331d11}
+      \strng{bibnamehash}{d5edd8e58aaec3539d00a00272331d11}
+      \strng{editorbibnamehash}{d5edd8e58aaec3539d00a00272331d11}
+      \strng{editornamehash}{c98d3f2182252875a678e08bb95f89d9}
+      \strng{editorfullhash}{d5edd8e58aaec3539d00a00272331d11}
+      \strng{editorfullhashraw}{d5edd8e58aaec3539d00a00272331d11}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-3-031-36059-6 978-3-031-36060-2}
+      \field{langid}{english}
+      \field{shorttitle}{Software {{Ecosystems}}}
+      \field{title}{Software {{Ecosystems}}: {{Tooling}} and {{Analytics}}}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-031-36060-2
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-031-36060-2
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-031-36060-2
+      \endverb
+      \keyw{Data Analytics,Empirical Software Engineering,Model-Driven Systems Engineering,Software Engineering,Software Maintenance,Software Repository Mining}
+    \endentry
+    \entry{societyGuideSoftwareEngineering2026}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=d7e516380100beea42ad1ab83a405b1e}{%
+           family={Society},
+           familyi={S\bibinitperiod},
+           given={IEEE\bibnamedelima Computer},
+           giveni={I\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Computer Society Press}%
+      }
+      \strng{namehash}{d7e516380100beea42ad1ab83a405b1e}
+      \strng{fullhash}{d7e516380100beea42ad1ab83a405b1e}
+      \strng{fullhashraw}{d7e516380100beea42ad1ab83a405b1e}
+      \strng{bibnamehash}{d7e516380100beea42ad1ab83a405b1e}
+      \strng{authorbibnamehash}{d7e516380100beea42ad1ab83a405b1e}
+      \strng{authornamehash}{d7e516380100beea42ad1ab83a405b1e}
+      \strng{authorfullhash}{d7e516380100beea42ad1ab83a405b1e}
+      \strng{authorfullhashraw}{d7e516380100beea42ad1ab83a405b1e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{eprinttype}{googlebooks}
+      \field{isbn}{978-0-7695-0000-3}
+      \field{langid}{english}
+      \field{pagetotal}{1020}
+      \field{shorttitle}{Guide to the {{Software Engineering Body}} of {{Knowledge}}}
+      \field{title}{Guide to the {{Software Engineering Body}} of {{Knowledge}}: {{Version}} 4.0}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb p1zX0QEACAAJ
+      \endverb
+      \keyw{Education / General}
+    \endentry
+    \entry{blackduck2026OSSRAReport}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=09f164da2c3581577252946b817f7767}{%
+           family={Duck},
+           familyi={D\bibinitperiod},
+           given={Black},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{09f164da2c3581577252946b817f7767}
+      \strng{fullhash}{09f164da2c3581577252946b817f7767}
+      \strng{fullhashraw}{09f164da2c3581577252946b817f7767}
+      \strng{bibnamehash}{09f164da2c3581577252946b817f7767}
+      \strng{authorbibnamehash}{09f164da2c3581577252946b817f7767}
+      \strng{authornamehash}{09f164da2c3581577252946b817f7767}
+      \strng{authorfullhash}{09f164da2c3581577252946b817f7767}
+      \strng{authorfullhashraw}{09f164da2c3581577252946b817f7767}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{2026 OSSRA: 107\% rise in open source vulnerabilities. Discover AI development risks, licensing conflicts, and supply chain security guidance for your organization.}
+      \field{langid}{english}
+      \field{shorttitle}{2026 {{OSSRA Report}}}
+      \field{title}{2026 {{OSSRA Report}}: {{Open Source Security}} \& {{Risk Analysis}}}
+      \field{urlday}{6}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.blackduck.com/resources/analyst-reports/open-source-security-risk-analysis.html
+      \endverb
+      \verb{url}
+      \verb https://www.blackduck.com/resources/analyst-reports/open-source-security-risk-analysis.html
+      \endverb
+    \endentry
+    \entry{kikasStructureEvolutionPackage2017}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=ec65eebc22980657ce064d05f13b5909}{%
+           family={Kikas},
+           familyi={K\bibinitperiod},
+           given={Riivo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=fcc9dbe734c8098eb1c90c3388e4f354}{%
+           family={Gousios},
+           familyi={G\bibinitperiod},
+           given={Georgios},
+           giveni={G\bibinitperiod}}}%
+        {{hash=3608d06b171d40c433341a0cb7bf8a3b}{%
+           family={Dumas},
+           familyi={D\bibinitperiod},
+           given={Marlon},
+           giveni={M\bibinitperiod}}}%
+        {{hash=461b55d62275a35340d9ea5908ba9e01}{%
+           family={Pfahl},
+           familyi={P\bibinitperiod},
+           given={Dietmar},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{cdff1ebee298ba5713b52af557c244f1}
+      \strng{fullhash}{6eabef99fa3ededf2e78cede44f9f91e}
+      \strng{fullhashraw}{6eabef99fa3ededf2e78cede44f9f91e}
+      \strng{bibnamehash}{6eabef99fa3ededf2e78cede44f9f91e}
+      \strng{authorbibnamehash}{6eabef99fa3ededf2e78cede44f9f91e}
+      \strng{authornamehash}{cdff1ebee298ba5713b52af557c244f1}
+      \strng{authorfullhash}{6eabef99fa3ededf2e78cede44f9f91e}
+      \strng{authorfullhashraw}{6eabef99fa3ededf2e78cede44f9f91e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Software developers often include available open-source software packages into their projects to minimize redundant effort. However, adding a package to a project can also introduce risks, which can propagate through multiple levels of dependencies. Currently, not much is known about the structure of open-source package ecosystems of popular programming languages and the extent to which transitive bug propagation is possible. This paper analyzes the dependency network structure and evolution of the JavaScript, Ruby, and Rust ecosystems. The reported results reveal significant differences across language ecosystems. The results indicate that the number of transitive dependencies for JavaScript has grown 60\% over the last year, suggesting that developers should look more carefully into their dependencies to understand what exactly is included. The study also reveals that vulnerability to a removal of the most popular package is increasing, yet most other packages have a decreasing impact on vulnerability. The findings of this study can inform the development of dependency management tools.}
+      \field{booktitle}{2017 {{IEEE}}/{{ACM}} 14th {{International Conference}} on {{Mining Software Repositories}} ({{MSR}})}
+      \field{eventtitle}{2017 {{IEEE}}/{{ACM}} 14th {{International Conference}} on {{Mining Software Repositories}} ({{MSR}})}
+      \field{month}{5}
+      \field{title}{Structure and {{Evolution}} of {{Package Dependency Networks}}}
+      \field{urlday}{7}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{102\bibrangedash 112}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/MSR.2017.55
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/7962360
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/7962360
+      \endverb
+      \keyw{Computer bugs,Computer languages,dependency management,Ecosystems,Libraries,mining software repositories,software ecosystems,software evolution,Software packages,Tools}
+    \endentry
+    \entry{beazleyStorySharedLibraries2001}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=46072c4a78f6e34e9d2022cee2adb6f6}{%
+           family={Beazley},
+           familyi={B\bibinitperiod},
+           given={David\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a82259f73a88c6b26c13d719d816ebba}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={Brian\bibnamedelima D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=c7e4f3e6a20bcd2fbe74ef641bd4a7dd}{%
+           family={Cooke},
+           familyi={C\bibinitperiod},
+           given={Ian\bibnamedelima R.},
+           giveni={I\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{5149d14716f2306ef71b0c164752ab85}
+      \strng{fullhash}{34f19ca2f24f040a3adbfe632527be62}
+      \strng{fullhashraw}{34f19ca2f24f040a3adbfe632527be62}
+      \strng{bibnamehash}{34f19ca2f24f040a3adbfe632527be62}
+      \strng{authorbibnamehash}{34f19ca2f24f040a3adbfe632527be62}
+      \strng{authornamehash}{5149d14716f2306ef71b0c164752ab85}
+      \strng{authorfullhash}{34f19ca2f24f040a3adbfe632527be62}
+      \strng{authorfullhashraw}{34f19ca2f24f040a3adbfe632527be62}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Traditionally, developers have built software as stand-alone applications written in a single language such as Fortran, C, or C++. However, many scientists are starting to build their applications as extensions to scripting language interpreters or component frameworks. This often involves shared libraries and dynamically loadable modules. However, the inner workings of shared libraries and dynamic loading are some of the least understood and most mysterious areas of software development. We tour the inner workings of linkers, shared libraries, and dynamically loadable extension modules. Rather than simply providing a tutorial on creating shared libraries on different platforms, we want to provide an overview of how shared libraries work and how to use them to build extensible systems. For illustration, we use a few examples in C/C++ using the gcc compiler on GNU-Linux-i386. However, the concepts generally apply to other programming languages and operating systems.}
+      \field{day}{15}
+      \field{issn}{1521-9615}
+      \field{journaltitle}{Computing in Science and Engineering}
+      \field{month}{9}
+      \field{number}{5}
+      \field{shortjournal}{Computing in Science and Engg.}
+      \field{title}{The inside Story on Shared Libraries and Dynamic Loading}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{3}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{90\bibrangedash 97}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/5992.947112
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/5992.947112
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/5992.947112
+      \endverb
+    \endentry
+    \entry{roucariesStaticLinkingPitfalls2025}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=b13cae168565a5fe820e16f152527dab}{%
+           family={Roucariès},
+           familyi={R\bibinitperiod},
+           given={Bastien},
+           giveni={B\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=d7ea3c0db993f81cef566143a9adf529}{%
+           family={Barais},
+           familyi={B\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=b13cae168565a5fe820e16f152527dab}{%
+           family={Roucariès},
+           familyi={R\bibinitperiod},
+           given={Bastien},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Brest, France}%
+      }
+      \list{publisher}{1}{%
+        {IRISA}%
+      }
+      \strng{namehash}{b13cae168565a5fe820e16f152527dab}
+      \strng{fullhash}{b13cae168565a5fe820e16f152527dab}
+      \strng{fullhashraw}{b13cae168565a5fe820e16f152527dab}
+      \strng{bibnamehash}{b13cae168565a5fe820e16f152527dab}
+      \strng{authorbibnamehash}{b13cae168565a5fe820e16f152527dab}
+      \strng{authornamehash}{b13cae168565a5fe820e16f152527dab}
+      \strng{authorfullhash}{b13cae168565a5fe820e16f152527dab}
+      \strng{authorfullhashraw}{b13cae168565a5fe820e16f152527dab}
+      \strng{editorbibnamehash}{1185d32acc12c0d2dd68b681c2cdd059}
+      \strng{editornamehash}{1185d32acc12c0d2dd68b681c2cdd059}
+      \strng{editorfullhash}{1185d32acc12c0d2dd68b681c2cdd059}
+      \strng{editorfullhashraw}{1185d32acc12c0d2dd68b681c2cdd059}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{A static library or a statically linked library contains functions and data that can be included in a computer program at build-time such that the library does not need to be accessible in a separate file at run-time. Static linking is an old concept that, during the 2000s, was considered a legacy approach and was gradually phased out in favor of dynamic libraries. Dynamic libraries offer significant advantages in code reusability, security, and memory efficiency. In contrast, static libraries provide potential speed optimization by reducing dead code and enabling seamless code integration without relying on API or ABI stability, including the application of custom patches to upstream code.In the 2010s, this seamless code integration became known by various terms, such as vendoring (Go terminology), packing, bundling, browserifying (JavaScript terminology), and uber-jar (Java terminology). At its essence, it represents a form of static linking, even within interpreted languages. The widespread use of static linking presents significant challenges for release managers and security managers. While some workarounds, such as Static-Built-Using package metadata, binNMU, or mass rebuilds, exist, they are often insufficient or overly cumbersome in practice.Moreover, following a Thompson-like argument, a Reflections on Static Trusting Trust approach should be undertaken from a security perspective to ensure the removal of insecure code. Practical assistance could be obtained from reproducible builds, though these lack theoretical guarantees.Introducing new concepts, such as Transiently Stable Dynamic Linking and leaf static linking, could help alleviate certain challenges and contribute to improving the current status quo.}
+      \field{booktitle}{{{DebConf25}}}
+      \field{month}{7}
+      \field{shorttitle}{Static Linking}
+      \field{title}{Static Linking: Pitfalls, Harms and Challenges}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{10}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://hal.science/hal-05334923
+      \endverb
+      \verb{url}
+      \verb https://hal.science/hal-05334923
+      \endverb
+      \keyw{Linkers,Software maintenance}
+    \endentry
+    \entry{usenixassociation1986SummerUSENIX1986}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=9b9776d32067e6b5805eec49babe0605}{%
+           family={{USENIX Association}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {USENIX Association}%
+      }
+      \strng{namehash}{9b9776d32067e6b5805eec49babe0605}
+      \strng{fullhash}{9b9776d32067e6b5805eec49babe0605}
+      \strng{fullhashraw}{9b9776d32067e6b5805eec49babe0605}
+      \strng{bibnamehash}{9b9776d32067e6b5805eec49babe0605}
+      \strng{authorbibnamehash}{9b9776d32067e6b5805eec49babe0605}
+      \strng{authornamehash}{9b9776d32067e6b5805eec49babe0605}
+      \strng{authorfullhash}{9b9776d32067e6b5805eec49babe0605}
+      \strng{authorfullhashraw}{9b9776d32067e6b5805eec49babe0605}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summer Conference Proceedings June 9–13, 1986 Atlanta, Georgia USA}
+      \field{day}{9}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{pagetotal}{395-404}
+      \field{title}{1986 {{Summer USENIX Technical Conference}} \& {{Exhibition Proceedings}}}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{1986}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://archive.org/details/1986-proceedings-summer-tech-atlanta
+      \endverb
+      \verb{url}
+      \verb http://archive.org/details/1986-proceedings-summer-tech-atlanta
+      \endverb
+      \keyw{USENIX}
+    \endentry
+    \entry{kozirisFiftyYearsEvolution2015}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=a8110e953c68b2a1edacddb6e96e3f1a}{%
+           family={Koziris},
+           familyi={K\bibinitperiod},
+           given={Nectarios},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{a8110e953c68b2a1edacddb6e96e3f1a}
+      \strng{fullhash}{a8110e953c68b2a1edacddb6e96e3f1a}
+      \strng{fullhashraw}{a8110e953c68b2a1edacddb6e96e3f1a}
+      \strng{bibnamehash}{a8110e953c68b2a1edacddb6e96e3f1a}
+      \strng{authorbibnamehash}{a8110e953c68b2a1edacddb6e96e3f1a}
+      \strng{authornamehash}{a8110e953c68b2a1edacddb6e96e3f1a}
+      \strng{authorfullhash}{a8110e953c68b2a1edacddb6e96e3f1a}
+      \strng{authorfullhashraw}{a8110e953c68b2a1edacddb6e96e3f1a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The evolution of virtualization is an exciting history of enabling technologies that have offered the ability to organize and utilize the hardware resources more efficiently. We will start from the origins of the first IBM machines back in 1960's, where the notion of virtualization was originally introduced to partition the hardware resources more efficiently. This was well before the onset of the majority of the operating systems in the early 1970's, which were initially introduced as a software alternative to partition and expose hardware resources to multiple users. In the late 1980's and 1990's the software hypervisors allowed the multiplexing of PC hardware and enabled the use of virtual machines, which in the 2000's became a commodity that needed to be efficiently orchestrated and provisioned in bulk. The IaaS cloud era had arrived, bringing more interesting challenges for the dynamic, thin provisioning of hardware and software resources to applications. Nowadays, we are living in the times of "software defined everything". We have hyper-convergence in all our datacenter infrastructures, where all compute, network and storage resources are controlled by software. The talk will present this exciting long technology journey that started more than 50 years ago and still continues, always driven by the notion of virtualizing expensive hardware resources to multiple users.}
+      \field{booktitle}{Proceedings of the 19th {{Panhellenic Conference}} on {{Informatics}}}
+      \field{day}{1}
+      \field{isbn}{978-1-4503-3551-5}
+      \field{month}{10}
+      \field{series}{{{PCI}} '15}
+      \field{shorttitle}{Fifty Years of Evolution in Virtualization Technologies}
+      \field{title}{Fifty Years of Evolution in Virtualization Technologies: From the First {{IBM}} Machines to Modern Hyperconverged Infrastructures}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{3\bibrangedash 4}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/2801948.2802039
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/2801948.2802039
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/2801948.2802039
+      \endverb
+    \endentry
+    \entry{UnderstandingImageLayers}{online}{}{}
+      \list{organization}{1}{%
+        {Docker Documentation}%
+      }
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This concept page will teach you about the layers of container image.}
+      \field{langid}{english}
+      \field{title}{Understanding the Image Layers}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{04:29:50 +0530 +0530}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/
+      \endverb
+      \verb{url}
+      \verb https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/
+      \endverb
+    \endentry
+    \entry{Giallorenzo2021}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=59ec2277e593c4bc2ec6a6f2db160556}{%
+           family={Giallorenzo},
+           familyi={G\bibinitperiod},
+           given={Saverio},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f8fcdd8adfb3d92a2c6f420f7f24909e}{%
+           family={Mauro},
+           familyi={M\bibinitperiod},
+           given={Jacopo},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3f23c5366e0ea70fd4902ea89badd489}{%
+           family={Poulsen},
+           familyi={P\bibinitperiod},
+           given={Martin\bibnamedelima Gyde},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=ab2de94b981f9b87d7f60c6ab56a050c}{%
+           family={Siroky},
+           familyi={S\bibinitperiod},
+           given={Filip},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{eb7971a786c3ba6e83b02fd3bbd3a976}
+      \strng{fullhash}{39575b2b8b8e9cfa948332154d2e13f2}
+      \strng{fullhashraw}{39575b2b8b8e9cfa948332154d2e13f2}
+      \strng{bibnamehash}{39575b2b8b8e9cfa948332154d2e13f2}
+      \strng{authorbibnamehash}{39575b2b8b8e9cfa948332154d2e13f2}
+      \strng{authornamehash}{eb7971a786c3ba6e83b02fd3bbd3a976}
+      \strng{authorfullhash}{39575b2b8b8e9cfa948332154d2e13f2}
+      \strng{authorfullhashraw}{39575b2b8b8e9cfa948332154d2e13f2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{DevOps advocates the usage of Virtualization Technologies (VT), such as Virtual Machines and Containers. However, it is complex to predict how the usage of a given VT will impact on the performance of an application. In this paper, we present a collection of reference benchmarks that developers can use to orient when looking for the best-performing VT w.r.t their application profile. To gather our benchmarks in a resource-wise comprehensive and comparable way, we introduce VTmark: a semi-automatic open-source suite that assembles off-the-shelf tools for benchmarking the different resources used by applications (CPU, RAM, etc.). After performing a survey of VTs in the market, we use VTmark to report the benchmarks of 6 of the most widely adopted and popular ones, namely Docker, KVM, Podman, VMWare Workstation, VirtualBox, and Xen. To validate the accuracy of our reference benchmarks, we show how they correlate with the profile performance of a production-grade application ported and deployed on the considered VTs. Beyond our immediate results, VTmark let us shed light on some contradicting findings in the related literature and, by releasing VTmark , we provide DevOps with an open-source, extendable tool to assess the (resource-wise) costs of VTs.}
+      \field{issn}{26618907}
+      \field{journaltitle}{SN Computer Science}
+      \field{month}{9}
+      \field{number}{5}
+      \field{title}{Virtualization Costs: {{Benchmarking}} Containers and Virtual Machines against Bare-Metal}
+      \field{volume}{2}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{404\bibrangedash}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/S42979-021-00781-8/METRICS
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/article/10.1007/s42979-021-00781-8
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/article/10.1007/s42979-021-00781-8
+      \endverb
+      \keyw{Benchmarking,Cloud deployment,Virtualization}
+    \endentry
+    \entry{Hudak1989}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ebfbf9d5ed6e5a1698b8fe9fb2b322a4}{%
+           family={Hudak},
+           familyi={H\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACMPUB27New York, NY, USA}%
+      }
+      \strng{namehash}{ebfbf9d5ed6e5a1698b8fe9fb2b322a4}
+      \strng{fullhash}{ebfbf9d5ed6e5a1698b8fe9fb2b322a4}
+      \strng{fullhashraw}{ebfbf9d5ed6e5a1698b8fe9fb2b322a4}
+      \strng{bibnamehash}{ebfbf9d5ed6e5a1698b8fe9fb2b322a4}
+      \strng{authorbibnamehash}{ebfbf9d5ed6e5a1698b8fe9fb2b322a4}
+      \strng{authornamehash}{ebfbf9d5ed6e5a1698b8fe9fb2b322a4}
+      \strng{authorfullhash}{ebfbf9d5ed6e5a1698b8fe9fb2b322a4}
+      \strng{authorfullhashraw}{ebfbf9d5ed6e5a1698b8fe9fb2b322a4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The foundations of functional programming languages are examined from both historical and technical perspectives. Their evolution is traced through several critical periods: early work on lambda ca...}
+      \field{issn}{15577341}
+      \field{journaltitle}{ACM Computing Surveys (CSUR)}
+      \field{month}{9}
+      \field{number}{3}
+      \field{title}{Conception, Evolution, and Application of Functional Programming Languages}
+      \field{volume}{21}
+      \field{year}{1989}
+      \field{dateera}{ce}
+      \field{pages}{359\bibrangedash 411}
+      \range{pages}{53}
+      \verb{doi}
+      \verb 10.1145/72551.72554
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/72551.72554
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/72551.72554
+      \endverb
+      \keyw{Data abstraction,higher-order functions,lazy evaluation,nonprocedural languages,referential transparency,types,very high-level languages}
+    \endentry
+    \entry{Mernik2005}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=ad44b79af15ed460ebd677f4d43c5227}{%
+           family={Mernik},
+           familyi={M\bibinitperiod},
+           given={Marjan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6c683f40438a490555526e2d318412dd}{%
+           family={Cwi},
+           familyi={C\bibinitperiod},
+           given={Jan\bibnamedelima Heering},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=bac0d9ebf858e7f9d1353e7b6eae2b93}{%
+           family={Sloane},
+           familyi={S\bibinitperiod},
+           given={Anthony\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a49f9fc92760a46d22bb69e49ab06182}{%
+           family={Nl},
+           familyi={N\bibinitperiod},
+           given={Jan\bibnamedelima Heering@cwi},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=8758bad96655165c63546ebbb182eac2}{%
+           family={Sloane},
+           familyi={S\bibinitperiod},
+           given={;\bibnamedelima A\bibnamedelima M},
+           giveni={;\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{1892e3d51d604b69a58b02d51fd1967a}
+      \strng{fullhash}{48853d72cc2d1aa7e74d0e8be91cf5f9}
+      \strng{fullhashraw}{48853d72cc2d1aa7e74d0e8be91cf5f9}
+      \strng{bibnamehash}{48853d72cc2d1aa7e74d0e8be91cf5f9}
+      \strng{authorbibnamehash}{48853d72cc2d1aa7e74d0e8be91cf5f9}
+      \strng{authornamehash}{1892e3d51d604b69a58b02d51fd1967a}
+      \strng{authorfullhash}{48853d72cc2d1aa7e74d0e8be91cf5f9}
+      \strng{authorfullhashraw}{48853d72cc2d1aa7e74d0e8be91cf5f9}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Domain-specific languages (DSLs) are languages tailored to a specific application domain. They offer substantial gains in expressiveness and ease of use compared with general-purpose programming languages in their domain of application. DSL development is hard, requiring both domain knowledge and language development expertise. Few people have both. Not surprisingly, the decision to develop a DSL is often postponed indefinitely, if considered at all, and most DSLs never get beyond the application library stage. Although many articles have been written on the development of particular DSLs, there is very limited literature on DSL development methodologies and many questions remain regarding when and how to develop a DSL. To aid the DSL developer, we identify patterns in the decision, analysis, design, and implementation phases of DSL development. Our patterns improve and extend earlier work on DSL design patterns. We also discuss domain analysis tools and language development systems that may help to speed up DSL development. Finally, we present a number of open problems. © 2005 ACM.}
+      \field{issn}{03600300}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{number}{4}
+      \field{title}{When and How to Develop Domain-Specific Languages}
+      \field{volume}{37}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{pages}{316\bibrangedash 344}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1145/1118890.1118892
+      \endverb
+      \keyw{Application language,domain analysis,Domain analysis,Domain-specific language,language development system,Language development system}
+    \endentry
+    \entry{berzakEmbeddedDomainSpecific}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=23516cf82f3e631c5f173a998d04b658}{%
+           family={Berzak},
+           familyi={B\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{23516cf82f3e631c5f173a998d04b658}
+      \strng{fullhash}{23516cf82f3e631c5f173a998d04b658}
+      \strng{fullhashraw}{23516cf82f3e631c5f173a998d04b658}
+      \strng{bibnamehash}{23516cf82f3e631c5f173a998d04b658}
+      \strng{authorbibnamehash}{23516cf82f3e631c5f173a998d04b658}
+      \strng{authornamehash}{23516cf82f3e631c5f173a998d04b658}
+      \strng{authorfullhash}{23516cf82f3e631c5f173a998d04b658}
+      \strng{authorfullhashraw}{23516cf82f3e631c5f173a998d04b658}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Embedded {{Domain Specific Language}}: {{A Streamlined Approach}} for {{Framework Abstraction}}}
+    \endentry
+    \entry{Myers2016a}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=7f3139b9d8c689d2ae47ba9be98a69f0}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Brad\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1d34de1e022585975bb72dede5d077e0}{%
+           family={Ko},
+           familyi={K\bibinitperiod},
+           given={Andrew\bibnamedelima J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=01765539c6d9b6432b039c30f27876e5}{%
+           family={Latoza},
+           familyi={L\bibinitperiod},
+           given={Thomas\bibnamedelima D.},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=765bd7984d902d95f277b3896707c2a3}{%
+           family={Yoon},
+           familyi={Y\bibinitperiod},
+           given={Youngseok},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{5101182b1d087eaf5940b47c3d6844f6}
+      \strng{fullhash}{ea6b841c74398c5dacd7c43bcb85828c}
+      \strng{fullhashraw}{ea6b841c74398c5dacd7c43bcb85828c}
+      \strng{bibnamehash}{ea6b841c74398c5dacd7c43bcb85828c}
+      \strng{authorbibnamehash}{ea6b841c74398c5dacd7c43bcb85828c}
+      \strng{authornamehash}{5101182b1d087eaf5940b47c3d6844f6}
+      \strng{authorfullhash}{ea6b841c74398c5dacd7c43bcb85828c}
+      \strng{authorfullhashraw}{ea6b841c74398c5dacd7c43bcb85828c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Human-centered methods can help researchers better understand and meet programmers' needs. Because programming is a human activity, many of these methods can be used without change. However, some p...}
+      \field{issn}{00189162}
+      \field{journaltitle}{Computer}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{Programmers Are Users Too: {{Human}}-Centered Methods for Improving Programming Tools}
+      \field{volume}{49}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{44\bibrangedash 52}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/MC.2016.200
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1109/MC.2016.200
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1109/MC.2016.200
+      \endverb
+      \keyw{A/B testing,contextual inquiry,data mining,end-user software engineering,evaluation studies,exploratory lab studies,HCI,human-centered computing,human-computer interaction,log analysis,natural-programming elicitation,rapid prototyping,software development,software engineering,software psychology,studies of program constructs,think-aloud usability evaluation,user interfaces}
+    \endentry
+    \entry{hanenbergEmpiricalStudyImpact2013}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=252f42dbc9a8190ba7cbfaeb87376b41}{%
+           family={Hanenberg},
+           familyi={H\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b078914bcf5fbda0263ed40a690c5782}{%
+           family={Kleinschmager},
+           familyi={K\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=292c6187aba734847b0ddbb3e0459c18}{%
+           family={Robbes},
+           familyi={R\bibinitperiod},
+           given={Romain},
+           giveni={R\bibinitperiod}}}%
+        {{hash=41e7bb905a5091a583985ae3f539a7ad}{%
+           family={Tanter},
+           familyi={T\bibinitperiod},
+           given={Éric},
+           giveni={É\bibinitperiod}}}%
+        {{hash=e3bc0907f0f8c006de5b7d2a11a10cf6}{%
+           family={Stefik},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e44fea34998c58628b74da4f3c40bcf}
+      \strng{fullhash}{eed3bef88b64471e38582cd2c3dbdd16}
+      \strng{fullhashraw}{eed3bef88b64471e38582cd2c3dbdd16}
+      \strng{bibnamehash}{eed3bef88b64471e38582cd2c3dbdd16}
+      \strng{authorbibnamehash}{eed3bef88b64471e38582cd2c3dbdd16}
+      \strng{authornamehash}{2e44fea34998c58628b74da4f3c40bcf}
+      \strng{authorfullhash}{eed3bef88b64471e38582cd2c3dbdd16}
+      \strng{authorfullhashraw}{eed3bef88b64471e38582cd2c3dbdd16}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Static type systems play an essential role in contemporary programming languages. Despite their importance, whether static type systems impact human software development capabilities remains open. One frequently mentioned argument in favor of static type systems is that they improve the maintainability of software systems—an often-used claim for which there is little empirical evidence. This paper describes an experiment that tests whether static type systems improve the maintainability of software systems, in terms of understanding undocumented code, fixing type errors, and fixing semantic errors. The results show rigorous empirical evidence that static types are indeed beneficial to these activities, except when fixing semantic errors. We further conduct an exploratory analysis of the data in order to understand possible reasons for the effect of type systems on the three kinds of tasks used in this experiment. From the exploratory analysis, we conclude that developers using a dynamic type system tend to look at different files more frequently when doing programming tasks—which is a potential reason for the observed differences in time.}
+      \field{day}{1}
+      \field{journaltitle}{Empirical Software Engineering}
+      \field{month}{10}
+      \field{shortjournal}{Empirical Software Engineering}
+      \field{title}{An Empirical Study on the Impact of Static Typing on Software Maintainability}
+      \field{volume}{19}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1007/s10664-013-9289-1
+      \endverb
+    \endentry
+    \entry{paneStudyingLanguageStructure2001}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=965cff985feec7085a3c59bcfb9ed94c}{%
+           family={Pane},
+           familyi={P\bibinitperiod},
+           given={JOHN\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=b0298819bebbaced3e260777b9913108}{%
+           family={Ratanamahatana},
+           familyi={R\bibinitperiod},
+           given={CHOTIRAT\bibnamedelima “ANN”},
+           giveni={C\bibinitperiod\bibinitdelim “\bibinitperiod}}}%
+        {{hash=3855da7034812d424c8caf0a8a0f42de}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={BRAD\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c11ce84bc246dbf867246f47f92d9985}
+      \strng{fullhash}{ec881efcf27f4ca5c6669c0c12ef2cde}
+      \strng{fullhashraw}{ec881efcf27f4ca5c6669c0c12ef2cde}
+      \strng{bibnamehash}{ec881efcf27f4ca5c6669c0c12ef2cde}
+      \strng{authorbibnamehash}{ec881efcf27f4ca5c6669c0c12ef2cde}
+      \strng{authornamehash}{c11ce84bc246dbf867246f47f92d9985}
+      \strng{authorfullhash}{ec881efcf27f4ca5c6669c0c12ef2cde}
+      \strng{authorfullhashraw}{ec881efcf27f4ca5c6669c0c12ef2cde}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Programming may be more difficult than necessary because it requires solutions to be expressed in ways that are not familiar or natural for beginners. To identify what is natural, this article examines the ways that non-programmers express solutions to problems that were chosen to be representative of common programming tasks. The vocabulary and structure in these solutions is compared with the vocabulary and structure in modern programming languages, to identify the features and paradigms that seem to match these natural tendencies as well as those that do not. This information can be used by the designers of future programming languages to guide the selection and generation of language features. This design technique can result in languages that are easier to learn and use, because the languages will better match beginners' existing problem-solving abilities.}
+      \field{day}{1}
+      \field{issn}{1071-5819}
+      \field{journaltitle}{International Journal of Human-Computer Studies}
+      \field{month}{2}
+      \field{number}{2}
+      \field{shortjournal}{International Journal of Human-Computer Studies}
+      \field{title}{Studying the Language and Structure in Non-Programmers' Solutions to Programming Problems}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{54}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{237\bibrangedash 264}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1006/ijhc.2000.0410
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1071581900904105
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1071581900904105
+      \endverb
+    \endentry
+    \entry{panePDFMoreNatural2006}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=d63837c83ad4426ab4695317d318a5f2}{%
+           family={Pane},
+           familyi={P\bibinitperiod},
+           given={Jhon\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=7f3139b9d8c689d2ae47ba9be98a69f0}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Brad\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f63a28228a6a7e1c540ac8c1c10a72e5}
+      \strng{fullhash}{f63a28228a6a7e1c540ac8c1c10a72e5}
+      \strng{fullhashraw}{f63a28228a6a7e1c540ac8c1c10a72e5}
+      \strng{bibnamehash}{f63a28228a6a7e1c540ac8c1c10a72e5}
+      \strng{authorbibnamehash}{f63a28228a6a7e1c540ac8c1c10a72e5}
+      \strng{authornamehash}{f63a28228a6a7e1c540ac8c1c10a72e5}
+      \strng{authorfullhash}{f63a28228a6a7e1c540ac8c1c10a72e5}
+      \strng{authorfullhashraw}{f63a28228a6a7e1c540ac8c1c10a72e5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{PDF | Over the last six years, we have been working to create programming languages and environments that are more natural, by which we mean closer to... | Find, read and cite all the research you need on ResearchGate}
+      \field{booktitle}{{{ResearchGate}}}
+      \field{langid}{english}
+      \field{title}{({{PDF}}) {{More Natural Programming Languages}} and {{Environments}}}
+      \field{urlday}{17}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/1-4020-5386-X_3
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/227030070_More_Natural_Programming_Languages_and_Environments
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/227030070_More_Natural_Programming_Languages_and_Environments
+      \endverb
+    \endentry
+    \entry{PDFThinkAloud}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{({{PDF}}) {{The Think Aloud Method}} - {{A Practical Guide}} to {{Modelling CognitiveProcesses}}}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/215439100_The_Think_Aloud_Method_-_A_Practical_Guide_to_Modelling_CognitiveProcesses
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/215439100_The_Think_Aloud_Method_-_A_Practical_Guide_to_Modelling_CognitiveProcesses
+      \endverb
+    \endentry
+    \entry{PDFCognitiveDimensions}{article}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{PDF | The Cognitive Dimensions of Notations framework has been created to assist the designers of notational systems and information artifacts to... | Find, read and cite all the research you need on ResearchGate}
+      \field{journaltitle}{ResearchGate}
+      \field{langid}{english}
+      \field{shorttitle}{({{PDF}}) {{Cognitive Dimensions}} of {{Notations}}}
+      \field{title}{({{PDF}}) {{Cognitive Dimensions}} of {{Notations}}: {{Design Tools}} for {{Cognitive Technology}}}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/3-540-44617-6_31
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/226014093_Cognitive_Dimensions_of_Notations_Design_Tools_for_Cognitive_Technology
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/226014093_Cognitive_Dimensions_of_Notations_Design_Tools_for_Cognitive_Technology
+      \endverb
+    \endentry
+    \entry{mernikPDFComparisonXAML2009}{inproceedings}{}{}
+      \name{author}{7}{}{%
+        {{hash=ad44b79af15ed460ebd677f4d43c5227}{%
+           family={Mernik},
+           familyi={M\bibinitperiod},
+           given={Marjan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=22aede66fbee6dc1da07fcbd0171db47}{%
+           family={Kosar},
+           familyi={K\bibinitperiod},
+           given={Tomavz},
+           giveni={T\bibinitperiod}}}%
+        {{hash=254edfb69de028c3d0ca8c6fabec15f3}{%
+           family={Črepinšek},
+           familyi={Č\bibinitperiod},
+           given={Matej},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ac5b11c7191a796f898f65cef87e76c2}{%
+           family={Henriques},
+           familyi={H\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0b68fbe3145b43eda5d3d7ec759a2341}{%
+           family={Carneiro},
+           familyi={C\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ab0fa8dcb507dfdd19b62069c6e13019}{%
+           family={Varanda},
+           familyi={V\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ef480852b805bbb9909d9ed73ef504d6}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Nuno},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{1892e3d51d604b69a58b02d51fd1967a}
+      \strng{fullhash}{2b3afda305407d41e6576bb1c37962b8}
+      \strng{fullhashraw}{2b3afda305407d41e6576bb1c37962b8}
+      \strng{bibnamehash}{1892e3d51d604b69a58b02d51fd1967a}
+      \strng{authorbibnamehash}{1892e3d51d604b69a58b02d51fd1967a}
+      \strng{authornamehash}{1892e3d51d604b69a58b02d51fd1967a}
+      \strng{authorfullhash}{2b3afda305407d41e6576bb1c37962b8}
+      \strng{authorfullhashraw}{2b3afda305407d41e6576bb1c37962b8}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{PDF | On Jan 1, 2009, Marjan Mernik and others published Comparison of XAML and C\# Frorms using Cognitive Dimensions Framework | Find, read and cite all the research you need on ResearchGate}
+      \field{booktitle}{{{ResearchGate}}}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{title}{({{PDF}}) {{Comparison}} of {{XAML}} and {{C}}\# {{Frorms}} Using {{Cognitive Dimensions Framework}}}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/229433121_Comparison_of_XAML_and_C_Frorms_using_Cognitive_Dimensions_Framework
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/229433121_Comparison_of_XAML_and_C_Frorms_using_Cognitive_Dimensions_Framework
+      \endverb
+    \endentry
+    \entry{Nichols2001}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=077bff8640fc21a48da4b4bf708d120e}{%
+           family={Nichols},
+           familyi={N\bibinitperiod},
+           given={David\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=181d8be56043678a768c2ec16b8be770}{%
+           family={Thomson},
+           familyi={T\bibinitperiod},
+           given={Kirsten},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4e2bd93bd1e5623dbe28626ce2dd7175}{%
+           family={Yeates},
+           familyi={Y\bibinitperiod},
+           given={Stuart\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{75cadbf72d0d75f338c4e7832c52ce75}
+      \strng{fullhash}{0e124b20744123ee72b32e75cf216e6d}
+      \strng{fullhashraw}{0e124b20744123ee72b32e75cf216e6d}
+      \strng{bibnamehash}{0e124b20744123ee72b32e75cf216e6d}
+      \strng{authorbibnamehash}{0e124b20744123ee72b32e75cf216e6d}
+      \strng{authornamehash}{75cadbf72d0d75f338c4e7832c52ce75}
+      \strng{authorfullhash}{0e124b20744123ee72b32e75cf216e6d}
+      \strng{authorfullhashraw}{0e124b20744123ee72b32e75cf216e6d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Open-source is becoming an increasingly popular software development method. This paper reports a usability study of the open-source Greenstone Digital Library collection-building software. The problems highlighted by the study are analysed to identify their likely source within the social context of Greenstone's development environment. We discuss how characteristics of open-source software development influence the usability of resulting software products. © 2001 ACM.}
+      \field{isbn}{0473075598}
+      \field{journaltitle}{Proceedings - Symposium on Computer Human Interaction, CHINZ 2001}
+      \field{title}{Usability and Open-Source Software Development}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \field{pages}{49\bibrangedash 54}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1145/2331812.2331822
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/2331812.2331822
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/2331812.2331822
+      \endverb
+    \endentry
+    \entry{Llerena2025}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=9d2b3a59147db19af5290a778c04f01f}{%
+           family={Llerena},
+           familyi={L\bibinitperiod},
+           given={Lucrecia},
+           giveni={L\bibinitperiod}}}%
+        {{hash=83017630f1fa7be1f5c91c83486f16aa}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=485e2e5d7d5cf720a7311cd90446fab9}{%
+           family={Llerena},
+           familyi={L\bibinitperiod},
+           given={Rosa},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c6e3f7ef1e6035b30f0d744d0bae70ba}{%
+           family={Rodríguez},
+           familyi={R\bibinitperiod},
+           given={Nancy},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{c6ca9957fb21027d32a95ccab6c657da}
+      \strng{fullhash}{2d7c4c3d6f42542ba9a0c79eb93907b6}
+      \strng{fullhashraw}{2d7c4c3d6f42542ba9a0c79eb93907b6}
+      \strng{bibnamehash}{2d7c4c3d6f42542ba9a0c79eb93907b6}
+      \strng{authorbibnamehash}{2d7c4c3d6f42542ba9a0c79eb93907b6}
+      \strng{authornamehash}{c6ca9957fb21027d32a95ccab6c657da}
+      \strng{authorfullhash}{2d7c4c3d6f42542ba9a0c79eb93907b6}
+      \strng{authorfullhashraw}{2d7c4c3d6f42542ba9a0c79eb93907b6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Open-source software has experienced steady growth, driving increased research. However, open-source communities still need standardized processes to ensure software quality, and their characteristics make it challenging to adopt many usability techniques from human–computer interaction directly. Our study aims to adapt and evaluate the feasibility of three usability evaluation techniques—cognitive walkthrough, formal usability testing, and thinking aloud—across three open-source projects (Code::Blocks, Freeplane, and Scribus) from the development team’s perspective. We participated as volunteers in these projects, employing a multiple case study method. We found that usability techniques were not systematically adopted, and procedures specific to open-source projects were lacking. We also identified adverse conditions, such as limited user participation, that hindered adoption. We proposed adaptations to each technique and formalized procedures to address these challenges and apply them in open-source contexts. Additionally, we developed a framework for integrating usability evaluation into OSS projects. To address this, we detailed our framework’s phases, tasks, and artifacts to ensure reusability and adaptability across OSS contexts, providing practical steps for implementation and future validations. In conclusion, usability techniques must be adapted for open-source software, considering the projects’ unique characteristics and philosophy. Although obstacles exist, such as user participation, applying adapted usability techniques in open-source projects is feasible.}
+      \field{issn}{2227-9709}
+      \field{journaltitle}{Informatics 2025, Vol. 12, Page 12}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{How to Improve Usability in Open-Source Software Projects? {{An}} Analysis of Evaluation Techniques through a Multiple Case Study}
+      \field{volume}{12}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{pages}{12}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/INFORMATICS12010012
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2227-9709/12/1/12/htm https://www.mdpi.com/2227-9709/12/1/12
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2227-9709/12/1/12/htm%20https://www.mdpi.com/2227-9709/12/1/12
+      \endverb
+      \keyw{cognitive walkthrough,formal usability testing,open,source software,thinking aloud,usability techniques}
+    \endentry
+    \entry{Leroux2019}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=0c113d1187c94012225f16d4df10fd7f}{%
+           family={Leroux},
+           familyi={L\bibinitperiod},
+           given={Jesper.},
+           giveni={Jesper\bibinitperiod\bibinitdelim \bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nova Science Publishers, Incorporated}%
+      }
+      \strng{namehash}{0c113d1187c94012225f16d4df10fd7f}
+      \strng{fullhash}{0c113d1187c94012225f16d4df10fd7f}
+      \strng{fullhashraw}{0c113d1187c94012225f16d4df10fd7f}
+      \strng{bibnamehash}{0c113d1187c94012225f16d4df10fd7f}
+      \strng{authorbibnamehash}{0c113d1187c94012225f16d4df10fd7f}
+      \strng{authornamehash}{0c113d1187c94012225f16d4df10fd7f}
+      \strng{authorfullhash}{0c113d1187c94012225f16d4df10fd7f}
+      \strng{authorfullhashraw}{0c113d1187c94012225f16d4df10fd7f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Intro – Contents – Preface – Chapter 1 – Empowered or Disempowered? An Analysis of Usability Practitioners' Interventions in Open Source Projects – Abstract – 1. Introduction – 2. Perspectives on Empowerment – 2.1. Mainstream Perspectives on Power and Empowerment – 2.2. Critical Perspectives on Power and Empowerment – 3. Empowerment in Open Source Software Development – 3.1. Characterizing OSS Development – 3.2. Usability in OSS Development – 3.3. Theoretical Lens on Empowerment in This Chapter – 4. Research Design – 5. Empirical Illustrations – 5.1. Meaning}
+      \field{isbn}{978-1-53616-646-0}
+      \field{title}{Psychological Perspectives on Empowerment}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{130}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/337654009_Empowered_or_Disempowered_An_Analysis_of_Usability_Practitioners'_Interventions_in_Open_Source_Projects
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/337654009_Empowered_or_Disempowered_An_Analysis_of_Usability_Practitioners'_Interventions_in_Open_Source_Projects
+      \endverb
+    \endentry
+    \entry{Poltronieri2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=0592c4a6e8322a7258afab52991053ee}{%
+           family={Poltronieri},
+           familyi={P\bibinitperiod},
+           given={Ildevana},
+           giveni={I\bibinitperiod}}}%
+        {{hash=96be6d7215cb974777dddc0976fac5ec}{%
+           family={Zorzo},
+           familyi={Z\bibinitperiod},
+           given={Avelino\bibnamedelima Francisco},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=431d9acb766f1dfd7ded6c24556e27b7}{%
+           family={Bernardino},
+           familyi={B\bibinitperiod},
+           given={Maicon},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bcf0291bef2bb45a95515e9667100c0f}{%
+           family={Campos},
+           familyi={C\bibinitperiod},
+           given={Marcia\bibnamedelimb De\bibnamedelima Borba},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{4bfdcdbc4545886c270e54aedc6f0b01}
+      \strng{fullhash}{c471cc70dda55425c8981c58b4058883}
+      \strng{fullhashraw}{c471cc70dda55425c8981c58b4058883}
+      \strng{bibnamehash}{c471cc70dda55425c8981c58b4058883}
+      \strng{authorbibnamehash}{c471cc70dda55425c8981c58b4058883}
+      \strng{authornamehash}{4bfdcdbc4545886c270e54aedc6f0b01}
+      \strng{authorfullhash}{c471cc70dda55425c8981c58b4058883}
+      \strng{authorfullhashraw}{c471cc70dda55425c8981c58b4058883}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Software quality is a constant concern for software engineers. Hence, they are increasingly taking advantage of new methods to evaluate their products quality. For instance, the evaluation of languages developed for specific domains, which in the literature are known as Domain-Specific Languages (DSLs), is a growing concern. DSLs are languages used by different developers to solve problems of specific domains. Regarding the evaluation of these languages, several experimental studies that subjectively evaluate usability can be found in the literature, but few of them have taken advantage of applying Human-Computer Interaction (HCI) techniques. Therefore, the goal of this paper is to present a usability evaluation framework for DSLs, called Usa-DSL. In order to produce a first evaluation of the framework, we use a Focus Group method, in which seven subjects met to discuss our proposed framework. This discussion resulted in modifications of our initial proposal, which were incorporated in the final framework presented in this paper.}
+      \field{isbn}{9781450351911}
+      \field{journaltitle}{Proceedings of the ACM Symposium on Applied Computing}
+      \field{month}{4}
+      \field{title}{{{USA-DSL}}: {{USAbility}} Evaluation Framework for Domain-Specific Languages}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{2013\bibrangedash 2021}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/3167132.3167348
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3167132.3167348
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3167132.3167348
+      \endverb
+      \keyw{Domain specific languages,Usability evaluation,Usability testing}
+    \endentry
+    \entry{PDFNeedsAffect}{article}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{PDF | Subsumed under the umbrella of User Experience (UX), practitioners and academics of Human–Computer Interaction look for ways to broaden their... | Find, read and cite all the research you need on ResearchGate}
+      \field{journaltitle}{ResearchGate}
+      \field{langid}{english}
+      \field{title}{({{PDF}}) {{Needs}}, Affect, and Interactive Products-{{Facets}} of User Experience}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1016/j.intcom.2010.04.002
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/233864554_Needs_affect_and_interactive_products-Facets_of_user_experience
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/233864554_Needs_affect_and_interactive_products-Facets_of_user_experience
+      \endverb
+    \endentry
+    \entry{wutichSampleSizes102024}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2760db8e1bc224ca0537ab2dfc996e09}{%
+           family={Wutich},
+           familyi={W\bibinitperiod},
+           given={Amber},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4581f6da119df31e3b3d4b5292814b2e}{%
+           family={Beresford},
+           familyi={B\bibinitperiod},
+           given={Melissa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3e268a127838bf22a182f0bcc16cdf11}{%
+           family={Bernard},
+           familyi={B\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a180df63ca6ef986694deff4203299e}
+      \strng{fullhash}{416fabbaa52dfe879406bcc4a6e31fd3}
+      \strng{fullhashraw}{416fabbaa52dfe879406bcc4a6e31fd3}
+      \strng{bibnamehash}{416fabbaa52dfe879406bcc4a6e31fd3}
+      \strng{authorbibnamehash}{416fabbaa52dfe879406bcc4a6e31fd3}
+      \strng{authornamehash}{4a180df63ca6ef986694deff4203299e}
+      \strng{authorfullhash}{416fabbaa52dfe879406bcc4a6e31fd3}
+      \strng{authorfullhashraw}{416fabbaa52dfe879406bcc4a6e31fd3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{There has been a recent explosion of articles on minimum sample sizes needed for analyzing qualitative data. The purpose of this integrated review is to examine this literature for 10 types of qualitative data analysis (5 types of saturation and 5 common methods). Building on established reviews and expanding to new methods, our findings extract the following sample size guidelines: theme saturation (9 interviews; 4 focus groups), meaning saturation (24 interviews; 8 focus groups), theoretical saturation (20–30+ interviews), metatheme saturation (20–40 interviews per site), and saturation in salience (10 exhaustive free lists); two methods where power analysis determines sample size: classical content analysis (statistical power analysis) and qualitative content analysis (information power); and three methods with little or no sample size guidance: reflexive thematic analysis, schema analysis, and ethnography (current guidance indicates 50–81 data documents or 20–30 interviews may be adequate). Our review highlights areas in which the extant literature does not provide sufficient sample size guidance—not because it is epistemologically flawed, but because it is not yet comprehensive and nuanced enough. To address this, we conclude by proposing ways researchers can navigate and contribute to the complex literature on sample size estimates.}
+      \field{day}{25}
+      \field{journaltitle}{International Journal of Qualitative Methods}
+      \field{month}{10}
+      \field{shortjournal}{International Journal of Qualitative Methods}
+      \field{shorttitle}{Sample {{Sizes}} for 10 {{Types}} of {{Qualitative Data Analysis}}}
+      \field{title}{Sample {{Sizes}} for 10 {{Types}} of {{Qualitative Data Analysis}}: {{An Integrative Review}}, {{Empirical Guidance}}, and {{Next Steps}}}
+      \field{volume}{23}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1177/16094069241296206
+      \endverb
+    \endentry
+    \entry{rayoNixtyGenerateNix2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=400c89a6326b3c1bd032362bcce78b65}{%
+           family={Rayo},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{fullhash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{fullhashraw}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{bibnamehash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{authorbibnamehash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{authornamehash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{authorfullhash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{authorfullhashraw}{400c89a6326b3c1bd032362bcce78b65}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Nixty: {{Generate Nix Flakes}} Using {{Typescript}}}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/DanielRasho/Nixty
+      \endverb
+      \verb{url}
+      \verb https://github.com/DanielRasho/Nixty
+      \endverb
+    \endentry
+    \entry{MITLicense}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{{{MIT License}}}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://mit-license.org/
+      \endverb
+      \verb{url}
+      \verb https://mit-license.org/
+      \endverb
+    \endentry
+    \entry{GPower}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{G*{{Power}}}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower
+      \endverb
+      \verb{url}
+      \verb https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower
+      \endverb
+    \endentry
+    \entry{rayoNixEveryoneRepository}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=400c89a6326b3c1bd032362bcce78b65}{%
+           family={Rayo},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{fullhash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{fullhashraw}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{bibnamehash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{authorbibnamehash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{authornamehash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{authorfullhash}{400c89a6326b3c1bd032362bcce78b65}
+      \strng{authorfullhashraw}{400c89a6326b3c1bd032362bcce78b65}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nix for Everyone Repository}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/DanielRasho/Nix-for-Everyone-Thesis
+      \endverb
+      \verb{url}
+      \verb https://github.com/DanielRasho/Nix-for-Everyone-Thesis
+      \endverb
+    \endentry
+    \entry{hassenzahlPDFInterplayBeauty2026}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=db17d37ecdd86876546d10459c33e1a4}{%
+           family={Hassenzahl},
+           familyi={H\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{db17d37ecdd86876546d10459c33e1a4}
+      \strng{fullhash}{db17d37ecdd86876546d10459c33e1a4}
+      \strng{fullhashraw}{db17d37ecdd86876546d10459c33e1a4}
+      \strng{bibnamehash}{db17d37ecdd86876546d10459c33e1a4}
+      \strng{authorbibnamehash}{db17d37ecdd86876546d10459c33e1a4}
+      \strng{authornamehash}{db17d37ecdd86876546d10459c33e1a4}
+      \strng{authorfullhash}{db17d37ecdd86876546d10459c33e1a4}
+      \strng{authorfullhashraw}{db17d37ecdd86876546d10459c33e1a4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{PDF | Two studies considered the interplay between user-perceived usability (i.e., pragmatic attributes), hedonic attributes (e.g., stimulation,... | Find, read and cite all the research you need on ResearchGate}
+      \field{day}{17}
+      \field{journaltitle}{ResearchGate}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{4}
+      \field{title}{({{PDF}}) {{The Interplay}} of {{Beauty}}, {{Goodness}}, and {{Usability}} in {{Interactive Products}}}
+      \field{urlday}{31}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{19}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{319\bibrangedash 349}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1207/s15327051hci1904_2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/233864402_The_Interplay_of_Beauty_Goodness_and_Usability_in_Interactive_Products
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/233864402_The_Interplay_of_Beauty_Goodness_and_Usability_in_Interactive_Products
+      \endverb
+    \endentry
+    \entry{koch328NoteUse1972}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=9ed357a47b9bcbaeb653b5fe83f93b72}{%
+           family={Koch},
+           familyi={K\bibinitperiod},
+           given={Gary\bibnamedelima G.},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {[Wiley, International Biometric Society]}%
+      }
+      \strng{namehash}{9ed357a47b9bcbaeb653b5fe83f93b72}
+      \strng{fullhash}{9ed357a47b9bcbaeb653b5fe83f93b72}
+      \strng{fullhashraw}{9ed357a47b9bcbaeb653b5fe83f93b72}
+      \strng{bibnamehash}{9ed357a47b9bcbaeb653b5fe83f93b72}
+      \strng{authorbibnamehash}{9ed357a47b9bcbaeb653b5fe83f93b72}
+      \strng{authornamehash}{9ed357a47b9bcbaeb653b5fe83f93b72}
+      \strng{authorfullhash}{9ed357a47b9bcbaeb653b5fe83f93b72}
+      \strng{authorfullhashraw}{9ed357a47b9bcbaeb653b5fe83f93b72}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The two-period change-over design is often used in clinical trials in which subjects serve as their own controls. This paper is concerned with the statistical analysis of data arising from such subjects when assumptions like variance homogeneity and normality do not necessarily apply. Test procedures for hypotheses concerning direct effects and residual effects of treatments and period effects are formulated in terms of Wilcoxon statistics as calculated on appropriate within subject linear functions of the observations. Thus they may be readily applied to small sample-data.}
+      \field{eprinttype}{jstor}
+      \field{issn}{0006-341X}
+      \field{journaltitle}{Biometrics}
+      \field{number}{2}
+      \field{shorttitle}{328. {{Note}}}
+      \field{title}{328. {{Note}}: {{The Use}} of {{None-Parametric Methods}} in the {{Statistical Analysis}} of the {{Two-Period Change-Over Design}}}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{volume}{28}
+      \field{year}{1972}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{577\bibrangedash 584}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.2307/2556170
+      \endverb
+      \verb{eprint}
+      \verb 2556170
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/2556170
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/2556170
+      \endverb
+    \endentry
+    \entry{fielperesEffectSizesNonparametric}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=20e25647754c43969ea342e79dd48ada}{%
+           family={Fiel\bibnamedelima Peres},
+           familyi={F\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Fernanda},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{20e25647754c43969ea342e79dd48ada}
+      \strng{fullhash}{20e25647754c43969ea342e79dd48ada}
+      \strng{fullhashraw}{20e25647754c43969ea342e79dd48ada}
+      \strng{bibnamehash}{20e25647754c43969ea342e79dd48ada}
+      \strng{authorbibnamehash}{20e25647754c43969ea342e79dd48ada}
+      \strng{authornamehash}{20e25647754c43969ea342e79dd48ada}
+      \strng{authorfullhash}{20e25647754c43969ea342e79dd48ada}
+      \strng{authorfullhashraw}{20e25647754c43969ea342e79dd48ada}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{, • Reporting effect sizes is essential to complement P values, • The article reviews effect size measures for four nonparametric tests, • Guidance is given on how to classify the magnitude of effect sizes, • Practical examples illustrate how to calculate and interpret effect sizes, Effect size measures are important complements to P values, providing information about the magnitude and practical relevance of research findings. While widely discussed in the context of parametric tests, effect size estimation for nonparametric tests remains less explored. This article reviews standardized effect size measures applicable to four common nonparametric tests: Mann-Whitney, Wilcoxon signed-rank, Kruskal-Wallis, and Friedman. Commonly suggested classifications for these effect sizes are also discussed. This article aims to support researchers in reporting and interpreting effect sizes more effectively in nonparametric contexts.}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1330-0962}
+      \field{journaltitle}{Biochemia Medica}
+      \field{number}{1}
+      \field{shortjournal}{Biochem Med (Zagreb)}
+      \field{title}{Effect Sizes for Nonparametric Tests}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{volume}{36}
+      \field{urldateera}{ce}
+      \field{pages}{010101}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.11613/BM.2026.010101
+      \endverb
+      \verb{eprint}
+      \verb 41399660
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC12701665/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC12701665/
+      \endverb
+    \endentry
+    \entry{hornbaekMetaanalysisCorrelationsUsability2007}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=b3cb3dac3773372c10c6c79a6a132235}{%
+           family={Hornbæk},
+           familyi={H\bibinitperiod},
+           given={Kasper},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7e687458110db964b1821c91d613ff6c}{%
+           family={Law},
+           familyi={L\bibinitperiod},
+           given={Effie\bibnamedelima Lai-Chong},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinithyphendelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{b97e94aad28b143136b412d094038147}
+      \strng{fullhash}{b97e94aad28b143136b412d094038147}
+      \strng{fullhashraw}{b97e94aad28b143136b412d094038147}
+      \strng{bibnamehash}{b97e94aad28b143136b412d094038147}
+      \strng{authorbibnamehash}{b97e94aad28b143136b412d094038147}
+      \strng{authornamehash}{b97e94aad28b143136b412d094038147}
+      \strng{authorfullhash}{b97e94aad28b143136b412d094038147}
+      \strng{authorfullhashraw}{b97e94aad28b143136b412d094038147}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Understanding the relation between usability measures seems crucial to deepen our conception of usability and to select the right measures for usability studies. We present a meta-analysis of correlations among usability measures calculated from the raw data of 73 studies. Correlations are generally low: effectiveness measures (e.g., errors) and efficiency measures (e.g., time) have a correlation of .247 ± .059 (Pearson's product-moment correlation with 95\% confidence interval), efficiency and satisfaction (e.g., preference) one of .196 ± .064, and effectiveness and satisfaction one of .164 ± .062. Changes in task complexity do not influence these correlations, but use of more complex measures attenuates them. Standard questionnaires for measuring satisfaction appear more reliable than homegrown ones. Measures of users' perceptions of phenomena are generally not correlated with objective measures of the phenomena. Implications for how to measure usability are drawn and common models of usability are criticized.}
+      \field{booktitle}{Proceedings of the {{SIGCHI Conference}} on {{Human Factors}} in {{Computing Systems}}}
+      \field{day}{29}
+      \field{isbn}{978-1-59593-593-9}
+      \field{month}{4}
+      \field{series}{{{CHI}} '07}
+      \field{title}{Meta-Analysis of Correlations among Usability Measures}
+      \field{urlday}{11}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{617\bibrangedash 626}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/1240624.1240722
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/1240624.1240722
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/1240624.1240722
+      \endverb
+      \keyw{ISO 9241,meta analysis,subjective satisfaction,usability evaluation,usability measures}
+    \endentry
+    \entry{davisPerceivedUsefulnessPerceived1989a}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=dcb59a9c9bf67cc1c74d13fb3a9f33a7}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Fred\bibnamedelima D.},
+           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{fullhash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{fullhashraw}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{bibnamehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{authorbibnamehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{authornamehash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{authorfullhash}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \strng{authorfullhashraw}{dcb59a9c9bf67cc1c74d13fb3a9f33a7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Valid measurement scales for predicting user acceptance of computers are in short supply. Most subjective measures used in practice are unvalidated, and their relationship to system usage is unknown. The present research develops and validates new scales for two specific variables, perceived usefulness and perceived ease of use, which are hypothesized to be fundamental determinants of user acceptance. Definitions of these two variables were used to develop scale items that were pretested for content validity and then tested for reliability and construct validity in two studies involving a total of 152 users and four application programs. The measures were refined and streamlined, resulting in two six-item scales with reliabilities of .98 for usefulness and .94 for ease of use. The scales exhibited hgih convergent, discriminant, and factorial validity. Perceived usefulness was significnatly correlated with both self-reported current usage r = .63, Study 1) and self-predicted future usage r = .85, Study 2). Perceived ease of use was also significantly correlated with current usage r = .45, Study 1) and future usage r = .59, Study 2). In both studies, usefulness had a signficnatly greater correaltion with usage behavior than did ease of use. Regression analyses suggest that perceived ease of use may actually be a causal antecdent to perceived usefulness, as opposed to a parallel, direct determinant of system usage. Implications are drawn for future research on user acceptance.}
+      \field{day}{1}
+      \field{issn}{0276-7783}
+      \field{journaltitle}{MIS Quarterly}
+      \field{month}{9}
+      \field{number}{3}
+      \field{shortjournal}{MIS Q.}
+      \field{title}{Perceived Usefulness, Perceived Ease of Use, and User Acceptance of Information Technology}
+      \field{urlday}{13}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{volume}{13}
+      \field{year}{1989}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{319\bibrangedash 340}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.2307/249008
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2307/249008
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2307/249008
+      \endverb
+      \keyw{end user computing,user acceptance,user measurement}
+    \endentry
+    \entry{googleNeovimInterestTrends}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Contribute to DanielRasho/Thesis development by creating an account on GitHub.}
+      \field{langid}{english}
+      \field{shorttitle}{Feat}
+      \field{title}{Neovim {{Interest Trends Data}}}
+      \field{urlday}{8}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/DanielRasho/Thesis/tree/2f294d0bbaa88d5ce046758b6a5750c0476e8d88/Appendix/A
+      \endverb
+      \verb{url}
+      \verb https://github.com/DanielRasho/Thesis/tree/2f294d0bbaa88d5ce046758b6a5750c0476e8d88/Appendix/A
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

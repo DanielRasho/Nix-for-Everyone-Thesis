@@ -1,0 +1,26 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1}{\ignorespaces Dependencias de dos programas ficticios \texttt {FOO} y \texttt {BAR} en manejadores de paquetes vs. virtualización.}}{2}{figure.caption.14}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Manejo de paquetes en Nix con identificadores únicos permite coexistencia y reutilización de paquetes.}}{2}{figure.caption.15}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3}{\ignorespaces Grafo completo de dependencias de Firefox (21,295 paquetes, 37,926 relaciones \texttt {DEPENDS\textunderscore {}ON}).}}{9}{figure.caption.26}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Grafo de dependencias de \texttt {tu aplicación}.}}{10}{figure.caption.28}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Peores casos de resolución de dependencias en a) los modelos de manejadores de paquetes y b) virtualización.}}{15}{figure.caption.40}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama simplificado de los componentes principales de Nix.}}{16}{figure.caption.43}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Comparación visual de las derivaciones con las funciones puras.}}{17}{figure.caption.45}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de las fases que comprende la metodología.}}{21}{figure.caption.59}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9}{\ignorespaces Bloques de la interfaz de Nixty y cómo se componen hasta formar una \texttt {Definition}.}}{35}{figure.caption.92}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Nixty como capa de abstracción sobre Nix: genera el código Nixlang que el Nix Daemon evalúa para guardar los paquetes en la Nix Store.}}{38}{figure.caption.144}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11}{\ignorespaces Índice de interés de búsqueda de Neovim en Google entre 2014 y 2026. Se observa un aumento a finales de 2021, aproximadamente seis meses después de la introducción del soporte para Lua.}}{58}{figure.caption.179}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Dependencias ficticias de \texttt {VS Code} y \texttt {Discord}; ambos tienen una dependencia compartida en \texttt {Electron}, a su vez estas dependencias dependen de otras.}}{65}{figure.caption.211}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Los diferentes componentes a tomar en cuanta para describir un paquete de \emph {software}}}{66}{figure.caption.212}%

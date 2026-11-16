@@ -1,0 +1,116 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Lista de figuras}{\es@scroman {vi}}{section*.7}%
+\contentsline {chapter}{Lista de cuadros}{\es@scroman {vii}}{section*.8}%
+\contentsline {chapter}{Resumen}{\es@scroman {viii}}{section*.9}%
+\contentsline {chapter}{Abstract}{\es@scroman {ix}}{section*.11}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter*.13}%
+\contentsline {chapter}{\numberline {2}Justificación}{4}{chapter*.16}%
+\contentsline {chapter}{\numberline {3}Objetivos}{6}{chapter*.17}%
+\contentsline {section}{\numberline {3.1}Objetivo general}{6}{section*.18}%
+\contentsline {section}{\numberline {3.2}Objetivos específicos}{6}{section*.19}%
+\contentsline {chapter}{\numberline {4}Marco teórico}{7}{chapter*.23}%
+\contentsline {section}{\numberline {4.1}Despliegue de \emph {software}}{7}{section*.24}%
+\contentsline {section}{\numberline {4.2}Paquetes de \emph {software}}{8}{section*.25}%
+\contentsline {subsection}{\numberline {4.2.1}Clasificación de paquetes}{10}{subsection*.27}%
+\contentsline {subsubsection}{Librerías estáticas}{11}{section*.29}%
+\contentsline {subsubsection}{Librerías dinámicas}{11}{section*.31}%
+\contentsline {section}{\numberline {4.3}Manejadores de paquetes al rescate}{12}{section*.32}%
+\contentsline {subsection}{\numberline {4.3.1}Evolución y taxonomía de los modelos existentes}{12}{subsection*.33}%
+\contentsline {subsection}{\numberline {4.3.2}El problema de fondo: el paradigma imperativo}{13}{subsection*.37}%
+\contentsline {section}{\numberline {4.4}La virtualización es la solución\dots {} o no}{13}{section*.38}%
+\contentsline {section}{\numberline {4.5}Nix como solución}{14}{section*.39}%
+\contentsline {subsection}{\numberline {4.5.1}Cómo lo soluciona}{14}{subsection*.41}%
+\contentsline {subsection}{\numberline {4.5.2}Implementación}{15}{subsection*.42}%
+\contentsline {subsubsection}{Derivaciones}{16}{section*.44}%
+\contentsline {subsubsection}{Hashes}{16}{section*.46}%
+\contentsline {subsubsection}{Ambientes aislados}{17}{section*.47}%
+\contentsline {subsubsection}{Nix Store}{17}{section*.48}%
+\contentsline {subsubsection}{Nixlang}{18}{section*.49}%
+\contentsline {section}{\numberline {4.6}Fundamentos de lenguajes de programación}{18}{section*.50}%
+\contentsline {subsection}{\numberline {4.6.1}Imperativo vs. funcional}{18}{subsection*.51}%
+\contentsline {subsection}{\numberline {4.6.2}Laziness}{19}{subsection*.52}%
+\contentsline {subsection}{\numberline {4.6.3}DSL \& eDSL}{19}{subsection*.53}%
+\contentsline {section}{\numberline {4.7}Usabilidad en lenguajes de programación}{19}{section*.54}%
+\contentsline {subsection}{\numberline {4.7.1}Cómo se mide en la actualidad}{19}{subsection*.55}%
+\contentsline {subsection}{\numberline {4.7.2}Los proyectos de código abierto ignoran estos aspectos}{20}{subsection*.56}%
+\contentsline {subsection}{\numberline {4.7.3}Metodología para medir la usabilidad en lenguajes}{20}{subsection*.57}%
+\contentsline {chapter}{\numberline {5}Metodología}{21}{chapter*.58}%
+\contentsline {section}{\numberline {5.1}Confidencialidad}{21}{section*.60}%
+\contentsline {subsection}{\numberline {5.1.1}Reclutamiento de participantes}{22}{subsection*.61}%
+\contentsline {subsection}{\numberline {5.1.2}Codificación de participantes}{22}{subsection*.62}%
+\contentsline {subsection}{\numberline {5.1.3}Almacenamiento y eliminación de datos}{22}{subsection*.63}%
+\contentsline {subsection}{\numberline {5.1.4}Medidas de privacidad durante las grabaciones}{23}{subsection*.64}%
+\contentsline {section}{\numberline {5.2}Fase 1: Investigación preliminar}{23}{section*.65}%
+\contentsline {subsection}{\numberline {5.2.1}Población y muestra}{23}{subsection*.66}%
+\contentsline {subsection}{\numberline {5.2.2}Instrumentos}{24}{subsection*.67}%
+\contentsline {subsection}{\numberline {5.2.3}Procedimiento}{24}{subsection*.68}%
+\contentsline {subsection}{\numberline {5.2.4}Análisis de datos}{25}{subsection*.69}%
+\contentsline {section}{\numberline {5.3}Fase 2: Desarrollo del eDSL}{25}{section*.70}%
+\contentsline {section}{\numberline {5.4}Fase 3: Evaluación comparativa}{25}{section*.71}%
+\contentsline {subsection}{\numberline {5.4.1}Población y muestra}{25}{subsection*.72}%
+\contentsline {subsection}{\numberline {5.4.2}Instrumentos}{26}{subsection*.73}%
+\contentsline {subsection}{\numberline {5.4.3}Diseño experimental}{27}{subsection*.74}%
+\contentsline {subsection}{\numberline {5.4.4}Procedimiento}{27}{subsection*.75}%
+\contentsline {subsection}{\numberline {5.4.5}Métricas y análisis de datos}{27}{subsection*.76}%
+\contentsline {subsubsection}{Rendimiento}{27}{section*.77}%
+\contentsline {subsubsection}{Experiencia de desarrollo}{29}{section*.79}%
+\contentsline {subsubsection}{Análisis estadístico}{29}{section*.81}%
+\contentsline {chapter}{\numberline {6}Resultados}{32}{chapter*.82}%
+\contentsline {section}{\numberline {6.1}Fase 1}{32}{section*.83}%
+\contentsline {section}{\numberline {6.2}Fase 2}{34}{section*.90}%
+\contentsline {subsection}{\numberline {6.2.1}Diseño}{34}{subsection*.91}%
+\contentsline {subsection}{\numberline {6.2.2}Implementación}{37}{subsection*.143}%
+\contentsline {section}{\numberline {6.3}Fase 3}{38}{section*.151}%
+\contentsline {subsection}{\numberline {6.3.1}Rendimiento}{40}{subsection*.154}%
+\contentsline {subsection}{\numberline {6.3.2}Experiencia de desarrollo}{40}{subsection*.157}%
+\contentsline {chapter}{\numberline {7}Discusión}{44}{chapter*.162}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{47}{chapter*.163}%
+\contentsline {chapter}{\numberline {9}Recomendaciones}{49}{chapter*.169}%
+\contentsline {chapter}{\numberline {10}Bibliograf\'{\i }a}{50}{chapter*.174}%
+\contentsline {chapter}{\numberline {11}Anexos}{57}{chapter*.175}%
+\contentsline {section}{\numberline {11.1}Soluciones existentes a Nixlang}{57}{section*.176}%
+\contentsline {section}{\numberline {11.2}Interés en Neovim}{58}{section*.178}%
+\contentsline {section}{\numberline {11.3}Número de dependencias de Firefox}{58}{section*.180}%
+\contentsline {section}{\numberline {11.4}Consentimientos Informados}{59}{section*.182}%
+\contentsline {subsection}{\numberline {11.4.1}Plantilla Fase 1}{59}{subsection*.183}%
+\contentsline {subsubsection}{1. Introducción}{59}{section*.184}%
+\contentsline {subsubsection}{2. Propósito del Estudio}{59}{section*.185}%
+\contentsline {subsubsection}{3. Procedimientos del Estudio}{59}{section*.186}%
+\contentsline {subsubsection}{4. Posibles Riesgos y Beneficios}{60}{section*.187}%
+\contentsline {subsubsection}{5. Confidencialidad y Protección de Datos}{60}{section*.188}%
+\contentsline {subsubsection}{6. Participación Voluntaria}{60}{section*.189}%
+\contentsline {subsubsection}{7. Compensación}{60}{section*.190}%
+\contentsline {subsubsection}{8. Información de Contacto}{60}{section*.191}%
+\contentsline {subsubsection}{9. Reconocimiento}{61}{section*.192}%
+\contentsline {subsection}{\numberline {11.4.2}Plantilla Fase 3}{61}{subsection*.193}%
+\contentsline {subsubsection}{1. Introducción}{61}{section*.194}%
+\contentsline {subsubsection}{2. Propósito del Estudio}{61}{section*.195}%
+\contentsline {subsubsection}{3. Procedimientos del Estudio}{62}{section*.196}%
+\contentsline {subsubsection}{4. Posibles Riesgos y Beneficios}{62}{section*.197}%
+\contentsline {subsubsection}{5. Confidencialidad y Protección de Datos}{62}{section*.198}%
+\contentsline {subsubsection}{6. Participación Voluntaria}{63}{section*.199}%
+\contentsline {subsubsection}{7. Compensación}{63}{section*.200}%
+\contentsline {subsubsection}{8. Información de Contacto}{63}{section*.201}%
+\contentsline {subsubsection}{9. Reconocimiento}{63}{section*.202}%
+\contentsline {section}{\numberline {11.5}Cuestionarios Fase 1}{64}{section*.203}%
+\contentsline {subsection}{\numberline {11.5.1}Formulario de Programación Natural}{64}{subsection*.204}%
+\contentsline {subsubsection}{Instrucciones}{64}{section*.205}%
+\contentsline {subsubsection}{Información del Participante}{64}{section*.206}%
+\contentsline {subsubsection}{Contexto}{65}{section*.210}%
+\contentsline {subsubsection}{Sección 1 - Manejo de paquetes externos}{66}{section*.213}%
+\contentsline {subsubsection}{Sección 2 - Manejo de paquetes externos}{67}{section*.220}%
+\contentsline {subsection}{\numberline {11.5.2}Guia Entrevistador Pensar en Alto}{68}{subsection*.227}%
+\contentsline {subsubsection}{Introducción}{68}{section*.228}%
+\contentsline {subsubsection}{Recursos disponibles}{68}{section*.229}%
+\contentsline {subsubsection}{Durante la sesión}{68}{section*.230}%
+\contentsline {subsubsection}{Al finalizar}{69}{section*.231}%
+\contentsline {subsubsection}{Actividades}{69}{section*.232}%
+\contentsline {section}{\numberline {11.6}Cuestionarios Fase 2}{69}{section*.240}%
+\contentsline {subsection}{\numberline {11.6.1}Cuestionario de comprensión cognitiva de NixLang}{69}{subsection*.241}%
+\contentsline {subsubsection}{Instrucciones}{70}{section*.242}%
+\contentsline {subsubsection}{Respuestas Libres}{86}{section*.891}%
+\contentsline {subsection}{\numberline {11.6.2}Cuestionario de comprensión cognitiva de Nixty}{93}{subsection*.1121}%
+\contentsline {subsubsection}{Instrucciones}{93}{section*.1122}%
+\contentsline {subsubsection}{Respuestas Libres}{110}{section*.1778}%
+\contentsline {subsection}{\numberline {11.6.3}Encuesta de Satisfacción}{116}{subsection*.1966}%

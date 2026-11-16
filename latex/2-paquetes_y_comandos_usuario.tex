@@ -1,0 +1,116 @@
+% ==============================================================================
+% Paquetes y comandos definidos por el usuario
+% ==============================================================================
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{listings}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{babel}
+\usepackage{pmboxdraw}
+\usepackage{fontawesome5}
+
+% Las comillas dentro del código se escriben tal cual (babel en español las usa
+% como atajo para diéresis)
+\AtBeginDocument{\shorthandoff{"}}
+
+% Caracteres Unicode que pdflatex no trae por defecto
+\DeclareUnicodeCharacter{1F427}{\faLinux}
+\DeclareUnicodeCharacter{1F34E}{\faApple}
+\DeclareUnicodeCharacter{2753}{\textcolor{red}{\faQuestion}}
+\DeclareUnicodeCharacter{2600}{\faSun}
+\DeclareUnicodeCharacter{FE0F}{}
+
+% El código en línea no se separa en sílabas; esto evita que desborde el margen
+\setlength{\emergencystretch}{3em}
+% Permite cortar las URL de la bibliografía en cualquier carácter
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\setcounter{biburlnumpenalty}{9000}
+
+% Columna X de tabularx alineada a la izquierda
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% ------------------------------------------------------------------------------
+% Bloques de código
+% ------------------------------------------------------------------------------
+\definecolor{fondo-codigo}{gray}{0.97}
+\definecolor{fondo-caja}{gray}{0.90}
+\definecolor{codigo-clave}{HTML}{D73A49}
+\definecolor{codigo-cadena}{HTML}{298E0D}
+\definecolor{codigo-comentario}{HTML}{8A8A8A}
+
+\lstdefinelanguage{nix}{
+    morekeywords={let,in,if,then,else,with,inherit,rec,import,assert,or,true,false,null},
+    sensitive=true,
+    morecomment=[l]{\#},
+    morecomment=[s][\color{codigo-cadena}]{''}{''},
+    morestring=[b]",
+}
+
+\lstdefinelanguage{TypeScript}{
+    morekeywords={import,from,export,default,const,let,var,new,return,function,
+        if,else,for,while,true,false,null,undefined,type,interface,class,extends,
+        typeof,as,string,number,boolean},
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morecomment=[s][\color{codigo-cadena}]{`}{`},
+    morestring=[b]",
+    morestring=[b]',
+}
+
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{codigo-clave},
+    stringstyle=\color{codigo-cadena},
+    commentstyle=\color{codigo-comentario},
+    columns=fixed,
+    basewidth=0.525em,
+    keepspaces=true,
+    showstringspaces=false,
+    breaklines=true,
+    upquote=true,
+    aboveskip=0pt,
+    belowskip=0pt,
+    literate=
+        {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+        {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+        {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {ü}{{\"u}}1
+        {¿}{{\textquestiondown}}1 {¡}{{\textexclamdown}}1
+        {°}{{\textdegree}}1 {—}{{\textemdash}}1 {–}{{\textendash}}1
+        {─}{{\textSFx}}1 {│}{{\textSFxi}}1 {└}{{\textSFii}}1 {├}{{\textSFviii}}1
+        {☀}{{\faSun}}1 {️}{}0,
+}
+
+% Bloque de código con fondo gris
+\newtcolorbox{bloquecodigo}{
+    enhanced, breakable, colback=fondo-codigo, frame hidden, arc=4pt,
+    boxsep=0pt, left=12pt, right=12pt, top=12pt, bottom=12pt,
+}
+
+% Opción de selección múltiple: etiqueta a la izquierda del bloque de código
+\newtcolorbox{opcion}[1]{
+    enhanced, colback=fondo-codigo, frame hidden, arc=4pt,
+    boxsep=0pt, left=12pt, right=12pt, top=12pt, bottom=12pt,
+    enlarge left by=2em, width=\linewidth-2em,
+    overlay={\node[anchor=north east, inner sep=0pt, font=\bfseries]
+        at ([xshift=-1em]frame.north west) {#1};},
+}
+
+% Recuadro gris para textos que se leen al participante
+\newtcolorbox{cajagris}{
+    enhanced, colback=fondo-caja, frame hidden, arc=4pt,
+    boxsep=0pt, left=12pt, right=12pt, top=12pt, bottom=12pt,
+}
+
+% ------------------------------------------------------------------------------
+% Instrumentos de los anexos
+% ------------------------------------------------------------------------------
+% Casilla vacía para marcar
+\newcommand{\cuadrito}{{\setlength{\fboxsep}{0pt}\fbox{\rule{0pt}{0.45cm}\rule{0.45cm}{0pt}}}}
+% Casilla con su etiqueta
+\newcommand{\casilla}[1]{\cuadrito\hspace{0.4cm}#1\quad}
+% Línea para escribir a mano
+\newcommand{\lineafirma}{\rule[-1pt]{0.4\linewidth}{0.5pt}}
